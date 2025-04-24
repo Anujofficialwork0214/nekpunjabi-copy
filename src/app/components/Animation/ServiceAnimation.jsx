@@ -1,79 +1,46 @@
-import { useRef, useEffect } from 'react';
+
+"use client";
+import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Service from '../Home/Service';
 
-import Service from "../Home/Service"; 
-
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// --- Configuration ---
-const SHRINK_START_TRIGGER = 'top top';
-const SHRINK_END_TRIGGER = '+=75vh';
+const ServiceAnimation = () => {
+  const sectionRef = useRef(null);
+  const [shrinkReady, setShrinkReady] = useState(false);
 
-// Define target overall scale (0.0 to 1.0)
-// If you want it to end up 75% of its original size:
-const SHRINK_TARGET_SCALE = 0.75; // This will shrink both width AND height
+  useEffect(() => {
+    if (!shrinkReady || !sectionRef.current) return;
 
-const SHRINK_TARGET_Y = -300;      // How far the section moves up (negative value)
-const SHRINK_TARGET_OPACITY = 1;   // Keep it fully opaque, or change for fade (e.g., 0.5)
-// --------------------
+    const ctx = gsap.context(() => {
+      gsap.to(sectionRef.current, {
+        scale: 0.75, // Shrink the section visually
+        opacity: 0.5, // Reduce opacity for a smoother effect
+        ease: 'power2.inOut', // Smooth easing
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top+=200',  // Shrink when it is visible in viewport
+          end: 'bottom top',     // Shrink only when it moves out of view
+          scrub: 1,              // Make the animation sync with scroll
+          markers: false,        // Disable debugging markers after testing
+          toggleActions: 'play none reverse none',  // Ensures reverse effect
+          invalidateOnRefresh: true, // Refresh scroll triggers on resize
+        },
+      });
+    }, sectionRef);
 
-// Renamed component for clarity
-const FullWidthUniformShrinkingSection = () => {
-    const sectionRef = useRef(null); // Ref for the outer section that shrinks
+    return () => ctx.revert();
+  }, [shrinkReady]);
 
-    useEffect(() => {
-        // GSAP setup targeting the sectionRef
-        if (!sectionRef.current) {
-            console.warn("GSAP setup skipped: Section ref not ready.");
-            return;
-        }
-        const ctx = gsap.context(() => {
-            gsap.to(sectionRef.current, {
-                // Use scale for uniform shrinking (X and Y)
-                scale: SHRINK_TARGET_SCALE,
-                y: SHRINK_TARGET_Y,
-                opacity: SHRINK_TARGET_OPACITY,
-                ease: 'none',
-                // transformOrigin: 'center center', // Default is center, so usually not needed explicitly
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: SHRINK_START_TRIGGER,
-                    end: SHRINK_END_TRIGGER,
-                    scrub: 1,
-                   // markers: true,
-                    invalidateOnRefresh: true,
-                },
-            });
-        }, sectionRef);
-        return () => ctx.revert();
-    }, []);
-
-    return (
-        <>
-        
-
-            {/* The Full Width Section that Shrinks Uniformly & Centered */}
-            <section
-                ref={sectionRef}
-                className="w-full bg-gradient-to-b from-purple-300 to-purple-400 overflow-hidden" // Background still applies to the container
-                // Ensure will-change includes transform
-                style={{ willChange: 'transform, opacity' }}
-            >
-                 {/* The Invest component renders directly within the scaled section */}
-                 {/* All its contents will visually shrink due to the parent's scale */}
-               <Service/>
-
-            </section>
-
-            {/* Spacer div below */}
-            <div className="h-screen bg-gray-800 flex items-center justify-center">
-                 <p className="text-center text-3xl font-bold text-white">Content After Section</p>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <section ref={sectionRef} className="w-full overflow-hidden relative rounded-b-2xl">
+        <Service onComplete={() => setShrinkReady(true)} />
+      </section>
+    </>
+  );
 };
 
-
-export default FullWidthUniformShrinkingSection;
+export default  ServiceAnimation;

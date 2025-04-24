@@ -1,3 +1,4 @@
+"use client";
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,7 +15,7 @@ const SHRINK_TARGET_SCALE = 0.75;
 const SHRINK_TARGET_Y = -300;      
 const SHRINK_TARGET_OPACITY = 1;  
 
-const FullWidthUniformShrinkingSection = () => {
+const InvestAnimation = () => {
     const sectionRef = useRef(null); 
 
     useEffect(() => {
@@ -48,7 +49,7 @@ const FullWidthUniformShrinkingSection = () => {
         <>
          <section
                 ref={sectionRef}
-                className="w-full bg-gradient-to-b from-purple-300 to-purple-400 overflow-hidden" // Background still applies to the container
+                className="w-full overflow-hidden relative rounded-b-2xl"
                 
                 style={{ willChange: 'transform, opacity' }}
             >
@@ -63,4 +64,4 @@ const FullWidthUniformShrinkingSection = () => {
 };
 
 
-export default FullWidthUniformShrinkingSection;
+export default  InvestAnimation;

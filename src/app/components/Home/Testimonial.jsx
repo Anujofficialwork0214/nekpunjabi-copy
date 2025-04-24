@@ -2,7 +2,7 @@ import React from 'react'
 
 const demo = () => {
   return (
-    <div className='min-h-screen'>demo</div>
+    <div className='min-h-screen'>Testiomnial</div>
   )
 }
 
