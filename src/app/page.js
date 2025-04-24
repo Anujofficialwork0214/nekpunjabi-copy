@@ -8,7 +8,7 @@ import Advertise from "./components/Home/Advertise";
 import Testimonial from "./components/Home/Testimonial";
 import ContactPage from "./components/Home/ContactPage";
 import AboutAnimation from "./components/Animation/AboutAnimation";
-
+import AdvertiseAnimation from "./components/Animation/AdvertiseAnimation"
 export default function Home() {
   return (
     <>
@@ -17,7 +17,7 @@ export default function Home() {
       <ServiceAnimation />
       <TrustAnimation />
       <InvestAnimation />
-      <Advertise />
+      <AdvertiseAnimation/>
       <Testimonial />
       <ContactPage />
 
