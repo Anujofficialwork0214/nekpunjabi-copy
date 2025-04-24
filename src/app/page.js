@@ -9,6 +9,7 @@ import Testimonial from "./components/Home/Testimonial";
 import ContactPage from "./components/Home/ContactPage";
 import AboutAnimation from "./components/Animation/AboutAnimation";
 import AdvertiseAnimation from "./components/Animation/AdvertiseAnimation"
+import TestinomialAnimation from './Components/Animation/TestinomialAnimation'
 export default function Home() {
   return (
     <>
@@ -18,8 +19,8 @@ export default function Home() {
       <TrustAnimation />
       <InvestAnimation />
       <AdvertiseAnimation/>
-      <Testimonial />
-      <ContactPage />
+      <TestinomialAnimation />
+      {/* <ContactPage /> */}
 
 
     </>

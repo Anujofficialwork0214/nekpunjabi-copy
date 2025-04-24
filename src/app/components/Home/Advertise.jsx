@@ -28,7 +28,7 @@ const Advertise = () => {
   }, [textControls, extraImgControls]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-20">
+    <div className=" flex flex-col items-center justify-center px-4 py-20">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 w-full max-w-7xl">
 
         {/* Left Image */}
