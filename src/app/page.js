@@ -8,7 +8,7 @@ import Advertise from "./components/Home/Advertise";
 import Testimonial from "./components/Home/Testimonial";
 import ContactPage from "./components/Home/ContactPage";
 import AboutAnimation from "./components/Animation/AboutAnimation";
-import AdvertiseAnimation from "./components/Animation/AdvertiseAnimation"
+import AdvertiseAnimation from "./components/Animation/"
 export default function Home() {
   return (
     <>
