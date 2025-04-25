@@ -187,7 +187,7 @@ const RealEstateServices = ({ onComplete }) => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-gradient-to-b from-blue-300 to-blue-100 px-6 md:px-2 py-20 overflow-hidden"
+      className="relative bg-gradient-to-b from-blue-300 to-blue-100 px-6 md:px-20 py-20 overflow-hidden"
     >
       <div className="mb-16">
         <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2">
