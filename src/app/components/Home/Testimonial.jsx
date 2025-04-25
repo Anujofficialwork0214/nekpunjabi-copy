@@ -17,7 +17,7 @@ const testimonials = [
 
 const Demo = () => {
   return (
-    <div className="  px-6 py-10 overflow-hidden">
+    <div className="  px-6 py-8 overflow-hidden">
       
       {/* Heading */}
       <motion.div
