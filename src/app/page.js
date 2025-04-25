@@ -1,14 +1,12 @@
 "use client";
-import InvestAnimation from "./Components/Animation/InvestAnimation";
-import ServiceAnimation from "./Components/Animation/ServiceAnimation";
-import TrustAnimation from "./Components/Animation/TrustAnimation";
+import InvestAnimation from "./components/Animation/InvestAnimation";
+import ServiceAnimation from "./components/Animation/ServiceAnimation";
+import TrustAnimation from "./components/Animation/TrustAnimation";
 import HomePage from "./components/Home/HomePage";
 
-import Advertise from "./components/Home/Advertise";
-import Testimonial from "./components/Home/Testimonial";
-import ContactPage from "./components/Home/ContactPage";
 import AboutAnimation from "./components/Animation/AboutAnimation";
-
+import AdvertiseAnimation from "./components/Animation/AdvertiseAnimation"
+import TestinomialAnimation from './components/Animation/TestimonialAnimation'
 export default function Home() {
   return (
     <>
@@ -17,9 +15,9 @@ export default function Home() {
       <ServiceAnimation />
       <TrustAnimation />
       <InvestAnimation />
-      <Advertise />
-      <Testimonial />
-      <ContactPage />
+      <AdvertiseAnimation/>
+      <TestinomialAnimation />
+      {/* <ContactPage /> */}
 
 
     </>

@@ -81,7 +81,7 @@ const TrustSection = () => {
         <div className="flex-1">
           <h2
             ref={headingRef}
-            className="text-4xl md:text-5xl font-semibold text-black leading-snug"
+            className="text-3xl lg:-[64px] md:text-6xl  font-semibold text-black leading-snug"
           >
             Trust of more than <br />
             <span className="text-[#f7931e] italic font-bold">9 lakh</span> people
@@ -112,7 +112,7 @@ const TrustSection = () => {
         </div>
 
         {/* Right Section */}
-        <div ref={imageRef} className="relative rounded-2xl overflow-hidden shadow-lg">
+        {/* <div ref={imageRef} className="relative rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="/nek1.jpeg"
             alt="Buildings"
@@ -129,7 +129,27 @@ const TrustSection = () => {
               Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
             </span>
           </div>
-        </div>
+        </div> */}
+        {/* Right Section - Increased Height Only */}
+<div ref={imageRef} className="relative rounded-2xl overflow-hidden shadow-lg h-[600px] w-full max-w-md">
+  <Image
+    src="/nek1.jpeg"
+    alt="Buildings"
+    width={500}
+    height={600}
+    className="object-cover w-full h-full"
+  />
+  <div
+    ref={contactRef}
+    className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
+  >
+    <TbMessages className="text-lg" />
+    <span>
+      Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
+    </span>
+  </div>
+</div>
+
       </div>
     </section>
   );

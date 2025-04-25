@@ -2,7 +2,8 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import About from '../Home/About';
+
+import Advertise from '../Home/Advertise';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,13 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 const SHRINK_START_TRIGGER = 'top top';
 const SHRINK_END_TRIGGER = '+=100vh';
 
-const SHRINK_TARGET_SCALE = 0.75;
+const SHRINK_TARGET_SCALE = 0.75; 
 
-const SHRINK_TARGET_Y = -300;
-const SHRINK_TARGET_OPACITY = 1;
+const SHRINK_TARGET_Y = -300;      
+const SHRINK_TARGET_OPACITY = 1;  
 
-const AboutAnimation = () => {
-    const sectionRef = useRef(null);
+const AdvertiseAnimation = () => {
+    const sectionRef = useRef(null); 
 
     useEffect(() => {
        
@@ -36,7 +37,7 @@ const AboutAnimation = () => {
                     trigger: sectionRef.current,
                     start: SHRINK_START_TRIGGER,
                     end: SHRINK_END_TRIGGER,
-                    scrub: 2,
+                    scrub: 1,
                
                     invalidateOnRefresh: true,
                 },
@@ -49,12 +50,12 @@ const AboutAnimation = () => {
         <>
          <section
                 ref={sectionRef}
-                className="w-full overflow-hidden relative rounded-b-2xl "
+                className="w-full overflow-hidden relative rounded-b-2xl"
                 
                 style={{ willChange: 'transform, opacity' }}
             >
                
-               <About />
+                 <Advertise/>
 
             </section>
 
@@ -64,4 +65,4 @@ const AboutAnimation = () => {
 };
 
 
-export default AboutAnimation;
+export default  AdvertiseAnimation;
