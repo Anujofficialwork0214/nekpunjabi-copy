@@ -2,7 +2,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Invest from "../Home/Invest";
+
 import Testimonial from '../Home/Testimonial'; 
 
 
@@ -16,7 +16,7 @@ const SHRINK_TARGET_SCALE = 0.75;
 const SHRINK_TARGET_Y = -300;      
 const SHRINK_TARGET_OPACITY = 1;  
 
-const InvestAnimation = () => {
+const TestimonialAnimation = () => {
     const sectionRef = useRef(null); 
 
     useEffect(() => {
@@ -65,4 +65,4 @@ const InvestAnimation = () => {
 };
 
 
-export default  InvestAnimation;
+export default  TestimonialAnimation;
