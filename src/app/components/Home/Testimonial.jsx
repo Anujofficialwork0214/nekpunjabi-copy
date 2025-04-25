@@ -17,7 +17,7 @@ const testimonials = [
 
 const Demo = () => {
   return (
-    <div className=" bg-white px-6 py-10 overflow-hidden">
+    <div className="  px-6 py-10 overflow-hidden">
       
       {/* Heading */}
       <motion.div
@@ -54,20 +54,43 @@ const Demo = () => {
           </motion.div>
         ))}
       </div>
+{/* Image with motion text & button inside */}
+<motion.div
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 2, delay: 4 }}
+  className="relative flex justify-center"
+>
+  {/* Background image */}
+  <img
+    src="/contactCard.png"
+    alt="Contact Card"
+    className="w-full max-w-5xl h-auto rounded-lg shadow-lg object-cover"
+  />
 
-      {/* Image */}
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 3, delay: 4 }}
-        className="flex justify-center"
-      >
-        <img
-          src="/contactCard.png"
-          alt="Contact Card"
-          className="w-250 h-150 rounded-lg shadow-lg "
-        />
-      </motion.div>
+  {/* Overlay content inside image */}
+  <div className="absolute inset-0 flex flex-col justify-center items-end px-6 md:px-70 py-10 ">
+    <motion.h2
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.5, delay: 4.2 }}
+      className="text-white text-3xl md:text-5xl font-bold text-right leading-tight mb-4"
+    >
+      Let’s find the <span className="italic font-semibold">best<br />investment</span> for you
+    </motion.h2>
+
+    <motion.button
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.5, delay: 4.5 }}
+      className="bg-white text-gray-800 font-semibold px-6 py-2 rounded-full shadow-md"
+    >
+      Contact Us
+    </motion.button>
+  </div>
+</motion.div>
+
+
     </div>
   );
 };
