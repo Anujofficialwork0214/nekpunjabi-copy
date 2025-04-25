@@ -49,7 +49,7 @@ const AdvertiseAnimation = () => {
     return (
         <>
          <section
-                ref={sectionRef}
+                // ref={sectionRef}
                 className="w-full overflow-hidden relative rounded-b-2xl"
                 
                 style={{ willChange: 'transform, opacity' }}
