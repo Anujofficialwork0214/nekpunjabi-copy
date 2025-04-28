@@ -187,9 +187,9 @@ const RealEstateServices = ({ onComplete }) => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-gradient-to-b from-blue-300 to-blue-100 px-6 md:px-2 py-20 overflow-hidden"
+      className="relative bg-gradient-to-b from-blue-300 to-blue-100 px-6 md:px-20 py-20 overflow-hidden"
     >
-      <div className="mb-16">
+      {/* <div className="mb-16">
         <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2">
           <div className="w-3 h-3 bg-orange-400 rounded-full" />
           SERVICES
@@ -200,10 +200,23 @@ const RealEstateServices = ({ onComplete }) => {
         <p className="text-white max-w-2xl">
           From groundbreaking investments to crafting your dream home, we’re with you every step of the way.
         </p>
-      </div>
+      </div> */}
+      <div className="mb-16 flex flex-col items-center text-center sm:items-start sm:text-left">
+  <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2">
+    <div className="w-3 h-3 bg-orange-400 rounded-full" />
+    SERVICES
+  </div>
+  <h2 className="text-4xl font-medium lg:font-semibold text-white mb-4">
+    Unlock Your Real Estate Potential
+  </h2>
+  <p className="text-white max-w-2xl">
+    From groundbreaking investments to crafting your dream home, we’re with you every step of the way.
+  </p>
+</div>
 
-      <div className="relative h-[300px] mt-10 ">
-        <div className="absolute top-0 -left-[16px] h-full w-[2px] bg-white opacity-50 z-0" />
+
+      <div className="relative h-[300px] mt-10  ">
+        <div className="absolute top-0 -left-[16px] lg:-left-[16px] sm:-left-[20px]  h-full w-[2px] bg-white opacity-50 z-0 " />
 
         {services.map((service, index) => (
           <div
