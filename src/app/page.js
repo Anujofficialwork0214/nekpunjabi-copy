@@ -19,16 +19,18 @@ import HeroMobile from "./components/Home/HeroMobile";
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
+ 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); // page load hone ke saath bhi check ho jaye
+    handleResize(); // Check on page load
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
   return (
     <>
