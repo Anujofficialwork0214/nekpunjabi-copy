@@ -64,7 +64,7 @@ const HomePage = () => {
      
         <section
           ref={firstSectionRef}
-          className="relative h-screen flex flex-col items-center justify-center w-full overflow-hidden px-4"
+          className="relative h-[100vh] flex flex-col items-center justify-center w-full overflow-hidden px-4"
  
            style={{ backgroundImage: "url('/bg.svg')" }}
         >
