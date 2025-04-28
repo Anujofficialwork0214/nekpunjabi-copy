@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
+// Define the metadata here
 export const metadata = {
   title: "Nek Punjabi Estate ",
   description: "Nek Punjabi Estate simplifies real estate in Punjab, offering expert guidance and services for buying, selling, and investing in property.",
@@ -41,20 +41,16 @@ export const metadata = {
   },
 };
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-         <div className="container max-w-[1920px] overflow-x-hidden mx-auto">
+      <head>
+        {/* Optional: You can add a meta tag or other metadata here if necessary */}
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="container max-w-[1920px] overflow-x-hidden mx-auto">
           <Navbar />
-         
           {children}
-       
-
           <Footer />
         </div>
       </body>
