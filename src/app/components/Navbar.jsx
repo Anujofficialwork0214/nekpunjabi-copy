@@ -77,8 +77,8 @@ const Navbar = () => {
 
         <div id="nav-links" className="hidden md:flex space-x-6 font-medium text-lg">
           {[
-            { path: "/about", label: "About" },
-            { path: "/service", label: "Service" },
+            { path: "#about", label: "About" },
+            { path: "#services", label: "Service" },
           ].map(({ path, label }) => (
             <Link
               key={path}
@@ -121,8 +121,8 @@ const Navbar = () => {
 
         <div id="mobile-menu" className="flex flex-col items-end p-10 space-y-6 text-lg mt-10">
           {[
-            { path: "/about", label: "About" },
-            { path: "/service", label: "Services" },
+            { path: "#about", label: "About" },
+            { path: "#services", label: "Services" },
             { path: "/getAdvice", label: "Get Advice" },
           ].map(({ path, label }) => (
             <Link

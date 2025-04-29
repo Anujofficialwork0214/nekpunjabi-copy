@@ -186,6 +186,7 @@ const RealEstateServices = ({ onComplete }) => {
   
   return (
     <section
+      id='services'
       ref={containerRef}
       className="relative bg-gradient-to-b from-blue-300 to-blue-100 px-6 md:px-20 py-20 overflow-hidden"
     >

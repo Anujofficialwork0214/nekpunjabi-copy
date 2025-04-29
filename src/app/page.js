@@ -1,62 +1,89 @@
+
 "use client";
 import { useEffect, useState } from "react";
-import HomePage from "./components/Home/HomePage";
 
+
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+
+import HomePage from "./components/Home/HomePage";
 import AboutAnimation from "./components/Animation/AboutAnimation";
-import ServiceAnimation from "./components/Animation/ServiceAnimation";
+
 import TrustAnimation from "./components/Animation/TrustAnimation";
 import InvestAnimation from "./components/Animation/InvestAnimation";
 import AdvertiseAnimation from "./components/Animation/AdvertiseAnimation";
 import TestinomialAnimation from "./components/Animation/TestimonialAnimation";
-import About from "./components/Home/About"; 
-import Service from "./components/Home/Service"; 
-import TrustSection from "./components/Home/TrustSection";
-import Invest from "./components/Home/Invest"; 
-import Advertise from "./components/Home/Advertise";
-import Testinomial from "./components/Home/Testimonial"; 
 import HeroMobile from "./components/Home/HeroMobile";
+import About from "./components/Home/About";
+import Service from "./components/Home/Service";
+import TrustSection from "./components/Home/TrustSection";
+import Invest from "./components/Home/Invest";
+import Advertise from "./components/Home/Advertise";
+import Testinomial from "./components/Home/Testimonial";
+
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
- 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+    setHasMounted(true); 
 
-    handleResize(); // Check on page load
+   
+    const handleResize = debounce(() => {
+       
+        setIsMobile(window.innerWidth < 768);
+        console.log("Resized, isMobile:", window.innerWidth < 768); 
+    }, 150); 
+
+   
+    handleResize(); 
+
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    // Cleanup 
+    return () => {
+        window.removeEventListener("resize", handleResize);
+      
+    }
+  }, []); 
 
+  if (!hasMounted) {
+    return null; 
+  }
 
   return (
     <>
       {isMobile ? (
-        // Mobile view
-        <>
+        <div key="mobile-view"> 
           <HeroMobile />
           <About />
           <Service />
           <TrustSection />
           <Invest />
           <Advertise />
-          <Testinomial/>
-      
-        </>
+          <Testinomial />
+        </div>
       ) : (
-        // Desktop view
-        <>
+        <div key="desktop-view"> 
           <HomePage />
           <AboutAnimation />
-          <Service />
+          <Service /> 
           <TrustAnimation />
           <InvestAnimation />
           <AdvertiseAnimation />
           <TestinomialAnimation />
-        </>
+        </div>
       )}
     </>
   );
