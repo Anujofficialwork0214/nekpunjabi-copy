@@ -257,7 +257,7 @@ const Advertise = () => {
           {step >= 3 && (
             <motion.div
               key="youtube"
-              className="flex flex-col items-center justify-center w-full max-w-7xl ml-33 mt-10"
+              className="flex flex-col items-center justify-center align-center w-full max-w-7xl mx-30 mt-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
