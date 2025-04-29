@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,6 +11,22 @@ const HomePage = () => {
   const firstSectionRef = useRef(null);
   const textRef = useRef(null);
   const imageComContainerRef = useRef(null);
+  const [phone, setPhone] = useState('');
+
+  const handleChange = (e) => {
+    // Remove all non-digit characters
+    const cleaned = e.target.value.replace(/\D/g, '');
+    setPhone(cleaned);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent form reload
+    console.log('Submitted Phone Number:', phone);
+    setPhone(''); // Clear input field
+  };
+
+
+ 
  useGSAP(() => {
     
     const imageElement = imageComContainerRef.current?.querySelector('img') || imageComContainerRef.current;
@@ -70,29 +86,7 @@ const HomePage = () => {
            style={{ backgroundImage: "url('/bg.svg')" }}
         >
           
-          {/* <div
-            ref={textRef}
-            className="text-white text-center z-10 relative"
-          
-          >
-            <h1 className="text-5xl md:text-6xl font-semi-bold">
-              Invest With <span className="italic font-bold">Confidence</span> <br />
-              For Your <br /> Real Estate Future
-            </h1>
-            <p className="mt-4 mb-6">
-              Submit your number to receive the best advice from our experts.
-            </p>
-            <div className="flex items-center justify-center gap-2 backdrop-blur-sm p-2 rounded">
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="px-4 py-2  outline-none border-1 border-white rounded-lg text-black placeholder-white"
-              />
-              <button className="bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-full shadow-sm hover:shadow-md transition">
-                Submit
-              </button>
-            </div>
-          </div> */}
+        
             <motion.div
       ref={textRef}
       className="text-white text-center z-10 relative"
@@ -108,7 +102,7 @@ const HomePage = () => {
       }}
     >
       <motion.h1
-        className="text-xl md:text-7xl lg:text-6xl sm:text-3xl font-semibold lg:leading-[70px] md:leading-[60px] sm:leading-[30px] leading-[30px]"
+        className="text-xl md:text-7xl lg:text-[80px] sm:text-3xl font-medium lg:leading-[88px] md:leading-[60px] sm:leading-[30px] leading-[30px]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -132,14 +126,22 @@ const HomePage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <input
-          type="text"
-          placeholder="Phone Number"
-          className="px-4 py-2  outline-none border-1 border-white rounded-lg text-black placeholder-white"
-        />
-        <button className="bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-full shadow-sm hover:shadow-md transition">
-          Submit
-        </button>
+                      <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Phone Number"
+        value={phone}
+        onChange={handleChange}
+        maxLength={10}
+        className="px-4 py-2 outline-none border-2 border-white rounded-lg text-black placeholder-white"
+      />
+      <button
+        type="submit"
+        className="bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-[16px] shadow-sm hover:shadow-md transition ml-4"
+      >
+        Submit
+      </button>
+    </form>
       </motion.div>
     </motion.div>
 
