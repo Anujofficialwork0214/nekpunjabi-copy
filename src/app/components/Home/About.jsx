@@ -7,6 +7,7 @@ import { FaInstagram, FaYoutube } from 'react-icons/fa'
 function About() {
   return (
     <div
+      id='about'
       className="relative flex  items-center justify-center py-16 md:py-24"
       style={{
         background: 'linear-gradient(180deg, rgb(250, 123, 38) 0%, #F58106 36.76%)',
