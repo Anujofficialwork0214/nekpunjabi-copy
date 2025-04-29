@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import React, { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const Advertise = () => {
   const [step, setStep] = useState(0);
@@ -28,8 +28,8 @@ const Advertise = () => {
 
   return (
     <div ref={ref}>
-        {/* ✅ Mobile View */}
-        <div className="block lg:hidden">
+      {/* ✅ Mobile View */}
+      <div className="block lg:hidden">
         <div className="flex flex-col items-start justify-start px-4 py-20 w-full max-w-md mx-auto overflow-hidden">
           <div className="flex flex-col gap-8">
             {/* Static Heading and Paragraph */}
@@ -38,11 +38,17 @@ const Advertise = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h2 className="text-3xl font-semibold">
-                Stay <em>Informed</em>,<br />Stay <em>Inspired</em>
+              <h2
+                className="text-3xl font-semibold italic "
+                style={{ fontFamily: "Instrument Sans" }}
+              >
+                Stay <em>Informed</em>,<br />
+                Stay <em>Inspired</em>
               </h2>
-              <p className="text-gray-600 mt-2">
-                Join our community for the latest market insights, property showcases, and expert advice.
+
+              <p className="text-gray-600 mt-2 font-sans">
+                Join our community for the latest market insights, property
+                showcases, and expert advice.
               </p>
             </motion.div>
 
@@ -55,13 +61,34 @@ const Advertise = () => {
                 transition={{ duration: 1 }}
               >
                 <div className="w-2/3">
-                  <h3 className="text-lg font-semibold">Instagram</h3>
-                  <p className="text-gray-600 text-sm mt-1">
-                    Follow us on Instagram for a daily dose of stunning properties,
-                    expert advice, and real estate inspiration.
+                  <h3
+                    className="text-lg font-semibold mt-6 leading-5 tracking-normal"
+                    style={{ fontFamily: "Instrument Sans" }}
+                  >
+                    Instagram{" "}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm mt-1 font-sans">
+                    Follow us on Instagram for a daily dose of stunning
+                    properties, expert advice, and real estate inspiration.
                   </p>
-                  <div className="text-2xl font-bold mt-2">139K+</div>
-                  <div className="text-sm text-gray-500">Followers</div>
+                  <div
+                    className="text-2xl font-normal mt-4"
+                    style={{
+                      fontFamily: "Instrument Sans",
+                      fontSize: "24px",
+                      lineHeight: "24px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    139K+
+                  </div>
+                  <div
+                    className="text-sm text-gray-500"
+                    style={{ fontFamily: "Instrument Sans", fontSize: "16px" }}
+                  >
+                    Followers
+                  </div>
                 </div>
                 <img
                   src="/LeftImg.png"
@@ -79,19 +106,62 @@ const Advertise = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                <h3 className="text-lg font-semibold">YouTube</h3>
-                <p className="text-gray-600 text-sm">
-                  Subscribe to our YouTube channel, Nek Punjabi Estate, for in-depth property tours,
-                  informative guides, and expert analyses of the real estate market.
+                <h3
+                  className="text-lg font-semibold mt-6 leading-5 tracking-normal"
+                  style={{ fontFamily: "Instrument Sans" }}
+                >
+                  {" "}
+                  YouTube
+                </h3>
+                <p className=" font-sans text-gray-600 text-sm font-sans">
+                  Subscribe to our YouTube channel, Nek Punjabi Estate, for
+                  in-depth property tours, informative guides, and expert
+                  analyses of the real estate market.
                 </p>
                 <div className="flex gap-6 mt-2">
                   <div className="text-center">
-                    <div className="text-2xl font-semibold">100K+</div>
-                    <div className="text-sm text-gray-500">Subscribers</div>
+                    <div
+                      className="text-2xl font-normal mt-4"
+                      style={{
+                        fontFamily: "Instrument Sans",
+                        fontSize: "24px",
+                        lineHeight: "24px",
+                        letterSpacing: "0%",
+                      }}
+                    >
+                      100k+
+                    </div>
+                    <div
+                      className="text-sm text-gray-500"
+                      style={{
+                        fontFamily: "Instrument Sans",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Subscribers
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-semibold">139K+</div>
-                    <div className="text-sm text-gray-500">Views</div>
+                    <div
+                      className="text-2xl font-normal mt-4"
+                      style={{
+                        fontFamily: "Instrument Sans",
+                        fontSize: "24px",
+                        lineHeight: "24px",
+                        letterSpacing: "0%",
+                      }}
+                    >
+                      139K+
+                    </div>
+                    <div
+                      className="text-sm text-gray-500"
+                      style={{
+                        fontFamily: "Instrument Sans",
+                        fontSize: "16px",
+                      }}
+                    >
+                      View
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -99,7 +169,6 @@ const Advertise = () => {
           </div>
         </div>
       </div>
-
 
       {/* ✅ Desktop View */}
       <div className="hidden lg:block">
@@ -119,7 +188,10 @@ const Advertise = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
-                <img src="/imageLeft.png" className="w-full h-full relative z-10" />
+                <img
+                  src="/imageLeft.png"
+                  className="w-full h-full relative z-10"
+                />
                 {step >= 2 && (
                   <motion.img
                     src="/bgLeftImg.png"
@@ -139,19 +211,22 @@ const Advertise = () => {
                 exit={{ opacity: 0, y: -40, transition: { duration: 1 } }}
                 transition={{ duration: 1 }}
               >
-                <h2 className="text-4xl font-semibold">
-                  Stay <em>Informed</em>,<br />Stay <em>Inspired</em>
+                <h2 className="text-4xl font-semibold font-sans">
+                  Stay <em>Informed</em>,<br />
+                  Stay <em>Inspired</em>
                 </h2>
-                <p className="text-gray-600 mt-4">
-                  Join our community for the latest market insights,<br />
+                <p className="text-gray-600 mt-4 font-sans">
+                  Join our community for the latest market insights,
+                  <br />
                   property showcases, and expert advice.
                 </p>
-                <h3 className="text-xl font-semibold mt-6">Instagram ↗</h3>
-                <p className="text-gray-600">
-                  Follow us on Instagram for daily stunning properties and expert tips.
+                <h3 className="text-xl font-semibold  font-sans mt-6">Instagram </h3>
+                <p className="text-gray-600 font-sans">
+                  Follow us on Instagram for <br/> daily stunning properties and
+                  expert tips.
                 </p>
-                <div className="text-3xl font-bold mt-4">139K+</div>
-                <div className="text-sm text-gray-500">Followers</div>
+                <div className="text-3xl font-semibold font-sans mt-10">139K+</div>
+                <div className="text-sm text-gray-400 mt-2">Followers</div>
               </motion.div>
 
               {/* Right Image */}
@@ -161,7 +236,10 @@ const Advertise = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
-                <img src="/LeftImg.png" className="w-full h-full relative z-10" />
+                <img
+                  src="/LeftImg.png"
+                  className="w-full h-full relative z-10"
+                />
                 {step >= 2 && (
                   <motion.img
                     src="/bgRightImg..png"
@@ -179,7 +257,7 @@ const Advertise = () => {
           {step >= 3 && (
             <motion.div
               key="youtube"
-              className="flex flex-col items-center justify-center w-full max-w-7xl translate-x-[200px] mt-10"
+              className="flex flex-col items-center justify-center w-full max-w-7xl ml-33 mt-10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -204,7 +282,7 @@ const Advertise = () => {
                 />
 
                 <motion.p
-                  className="text-gray-600 mb-6 text-center"
+                  className="text-gray-600 mb-6 text-center font-sans"
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.3 }}
@@ -213,10 +291,10 @@ const Advertise = () => {
                   for in-depth property tours, informative guides, <br />
                   and expert analyses of <br />
                   the real estate market.
-                  <div className="text-3xl font-bold mt-4">100k+</div>
-                  <div className="text-sm text-gray-500">Subscribers</div>
-                  <div className="text-3xl font-bold mt-4">139k+</div>
-                  <div className="text-sm text-gray-500">View</div>
+                  <div className="text-3xl font-semibold font-sans mt-4">100k+</div>
+                  <div className="text-sm text-gray-500 font-sans">Subscribers</div>
+                  <div className="text-3xl font-bold mt-4  font-semibold font-sans">139k+</div>
+                  <div className="text-sm text-gray-500 font-sans">View</div>
                 </motion.p>
 
                 <motion.img
