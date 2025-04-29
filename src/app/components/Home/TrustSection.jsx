@@ -385,10 +385,9 @@
 
 // export default TrustSection;
 'use client';
-
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { TbMessages } from 'react-icons/tb';
+import { MdOutlineWifiCalling3 } from "react-icons/md";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -531,13 +530,14 @@ const TrustSection = () => {
             width={500}
             height={600}
             className="object-cover w-full h-full"
+            draggable="false" // Prevent dragging on mobile
           />
 
           <div
             ref={contactRef}
-            className="absolute top-4 right-4 sm:right-4 sm:left-auto sm:translate-x-0 left-1/2 -translate-x-1/2 bg-white text-black px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
+            className="absolute top-4 right-4 sm:right-4 sm:left-auto sm:translate-x-0 left-1/2 -translate-x-1/2 bg-white text-[#525252] px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
           >
-            <TbMessages className="text-lg" />
+            <MdOutlineWifiCalling3 className="text-xl" />
             <span>
               Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
             </span>

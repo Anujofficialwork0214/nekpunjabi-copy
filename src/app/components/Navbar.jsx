@@ -13,29 +13,6 @@ const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
   const pathname = usePathname();
 
-  // Animate on mount
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-  //   tl.from("#logo", {
-  //     y: -30,
-  //     opacity: 0,
-  //     duration: 0.5,
-  //     delay: 0.3,
-  //   });
-  //   tl.from("#nav-links a", {
-  //     y: -30,
-  //     opacity: 0,
-  //     duration: 0.5,
-  //     stagger: 0.2,
-  //   });
-  //   tl.from("#contact-button", {
-  //     y: -30,
-  //     opacity: 0,
-  //     duration: 0.5,
-  //   });
-  // }, []);
-
-
   useEffect(() => {
     if (menuOpen) {
       gsap.from("#mobile-menu a", {
@@ -50,20 +27,20 @@ const Navbar = () => {
   // Hide/show navbar on scroll
   useEffect(() => {
     let lastScrollY = window.scrollY;
-
+  
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        setHideNavbar(true); 
+        setHideNavbar(true);
       } else {
-        setHideNavbar(false); 
+        setHideNavbar(false);
       }
+      setMenuOpen(false); // 👉 Close mobile menu on scroll
       lastScrollY = window.scrollY;
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <header
       className={`fixed top-0 left-0 w-full px-6 py-4 backdrop-blur-lg bg-white/30  shadow-md z-50 font-poppins rounded-b-3xl transition-transform duration-500 ${
@@ -71,36 +48,40 @@ const Navbar = () => {
       }`}
     >
       <nav className="max-w-[1600px] mx-auto flex justify-between items-center">
-        <div id="logo">
-          <Image src="/neklogo.png" alt="QuadB Tech" width={120} height={40} />
-        </div>
+      <div id="logo">
+  <Link href="/">
+    <Image src="/neklogo.png" alt="QuadB Tech" width={120} height={40} />
+  </Link>
+</div>
 
-        <div id="nav-links" className="hidden md:flex space-x-6 font-medium text-lg">
-          {[
-            { path: "#about", label: "About" },
-            { path: "#services", label: "Service" },
-          ].map(({ path, label }) => (
-            <Link
-              key={path}
-              href={path}
-              className={`px-3 py-1 rounded-full text-white ${
-                pathname === path ? "border-2 font-semibold" : "hover:text-black"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-          <Link href="/getAdvice">
-            <button
-              id="contact-button"
-              className={`bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-full shadow-sm hover:shadow-md transition ${
-                pathname === "/getAdvice" ? "text-white" : "hover:text-black"
-              }`}
-            >
-              Get Advice
-            </button>
-          </Link>
-        </div>
+<div id="nav-links" className="hidden md:flex space-x-6 font-medium text-lg">
+  {[
+    { path: "#about", label: "About" },
+    { path: "#services", label: "Service" },
+  ].map(({ path, label }) => (
+    <Link
+      key={path}
+      href={path}
+      className={`px-3 py-1 rounded-full ${
+        pathname === path
+          ? "text-black border-2 font-semibold"
+          : "text-white hover:text-black"
+      }`}
+    >
+      {label}
+    </Link>
+  ))}
+  <Link href="/getAdvice">
+    <button
+      id="contact-button"
+      className={`bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-[16px] shadow-sm hover:shadow-md transition ${
+        pathname === "/getAdvice" ? "text-black" : "hover:text-black"
+      }`}
+    >
+      Get advice
+    </button>
+  </Link>
+</div>
 
         <button onClick={() => setMenuOpen(true)} className="md:hidden text-black">
           <RiMenu2Fill size={32} />
@@ -123,7 +104,7 @@ const Navbar = () => {
           {[
             { path: "#about", label: "About" },
             { path: "#services", label: "Services" },
-            { path: "/getAdvice", label: "Get Advice" },
+            { path: "/getAdvice", label: "Get advice" },
           ].map(({ path, label }) => (
             <Link
               key={path}

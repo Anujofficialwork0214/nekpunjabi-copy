@@ -324,6 +324,7 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Link from 'next/link';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiPhoneCall } from 'react-icons/fi'; 
 
@@ -511,13 +512,21 @@ const WhyInvest = () => {
   </div>
 
   {/* Right Side: Contact Button */}
-  <button
+  {/* <button
     ref={buttonRef}
     className="flex items-center gap-2 bg-white text-black font-medium py-2 px-4 rounded-lg mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
   >
     <FiPhoneCall className="text-sm" />
     Contact us now
-  </button>
+  </button> */}
+         <Link
+          href="/getAdvice"
+          ref={buttonRef}
+  className="flex items-center gap-2 bg-white text-black font-medium py-2 px-4 rounded-lg mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
+>
+  <FiPhoneCall className="text-sm" />
+  Contact us now
+</Link>
 </div>
 
 

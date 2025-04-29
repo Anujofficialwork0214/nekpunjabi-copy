@@ -60,8 +60,8 @@ export default async function handler(req, res) {
   }
 
   // Log the request body and reCAPTCHA response
-  console.log("Request body:", req.body);
-  console.log("reCAPTCHA verification response:", recaptchaData);
+  // console.log("Request body:", req.body);
+  // console.log("reCAPTCHA verification response:", recaptchaData);
 
   // Configure Nodemailer transporter
   const transporter = nodemailer.createTransport({

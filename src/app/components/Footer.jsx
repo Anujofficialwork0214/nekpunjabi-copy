@@ -17,8 +17,9 @@ export default function Footer() {
 
         {/* Links */}
         <div className="flex space-x-6 text-sm text-gray-300">
-          <a href="#" className="hover:text-white">About Us</a>
-          <a href="#" className="hover:text-white">Contact Us</a>
+          <a href="#about" className="hover:text-white">About Us</a>
+          <a href="#services" className="hover:text-white">Services</a>
+          <a href="/getAdvice" className="hover:text-white">Contact Us</a>
         </div>
 
         {/* Social Icons */}
