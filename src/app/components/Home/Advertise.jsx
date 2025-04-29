@@ -8,7 +8,7 @@ const Advertise = () => {
 
   useEffect(() => {
     if (isInView) {
-      setStep(0); // Restart animation every time it comes into view
+      setStep(0);
     }
   }, [isInView]);
 
@@ -27,141 +27,210 @@ const Advertise = () => {
   }, [step]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center justify-center px-4 py-20 w-full overflow-hidden">
-      <AnimatePresence mode="wait">
-        {step <= 2 && (
-          <motion.div
-            key="instagram"
-            className="flex flex-col lg:flex-row items-center justify-center gap-12 w-full max-w-7xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 1 } }}
-          >
-            {/* Left Image */}
+    <div ref={ref}>
+        {/* ✅ Mobile View */}
+        <div className="block lg:hidden">
+        <div className="flex flex-col items-start justify-start px-4 py-20 w-full max-w-md mx-auto overflow-hidden">
+          <div className="flex flex-col gap-8">
+            {/* Static Heading and Paragraph */}
             <motion.div
-              className="relative w-[250px] h-[450px]"
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <img src="/imageLeft.png" className="w-full h-full relative z-10" />
-              {step >= 2 && (
-                <motion.img
-                  src="/bgLeftImg.png"
-                  className="absolute top-4 left-4 w-full h-full z-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                />
-              )}
-            </motion.div>
-
-            {/* Text Section */}
-            <motion.div
-              className="text-center max-w-xl"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -40, transition: { duration: 1 } }}
-              transition={{ duration: 1 }}
-            >
-              <h2 className="text-4xl font-semibold">
-                Stay <em>Informed</em>,<br />Stay <em>Inspired</em>
-              </h2>
-              <p className="text-gray-600 mt-4">
-                Join our community for the latest market insights,<br />
-                property showcases, and expert advice.
-              </p>
-              <h3 className="text-xl font-semibold mt-6">Instagram ↗</h3>
-              <p className="text-gray-600">
-                Follow us on Instagram for daily stunning properties and expert tips.
-              </p>
-              <div className="text-3xl font-bold mt-4">139K+</div>
-              <div className="text-sm text-gray-500">Followers</div>
-            </motion.div>
-
-            {/* Right Image */}
-            <motion.div
-              className="relative w-[250px] h-[450px]"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <img src="/LeftImg.png" className="w-full h-full relative z-10" />
-              {step >= 2 && (
-                <motion.img
-                  src="/bgRightImg..png"
-                  className="absolute top-4 right-4 w-full h-full z-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                />
-              )}
-            </motion.div>
-          </motion.div>
-        )}
-
-        {step >= 3 && (
-          <motion.div
-            key="youtube"
-            className="flex flex-col items-center justify-center w-full max-w-7xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <motion.h2
-              className="text-3xl font-semibold mb-4"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              YouTube ↗
-            </motion.h2>
-
-            <div className="flex gap-8 flex-wrap justify-center">
-              <motion.img
-                src="/YoutubeLeft.png"
-                className="w-[300px] h-auto rounded-xl "
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
-              />
-
-              <motion.p
-                className="text-gray-600 mb-6 text-center"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-              >
-                Subscribe to our YouTube channel, Nek Punjabi Estate, <br />
-                for in-depth property tours, informative guides, <br />
-                and expert analyses of <br />
-                the real estate market.
-              </motion.p>
-
-              <motion.img
-                src="/YoutubeRight.png"
-                className="w-[300px] h-auto rounded-xl"
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
-              />
-            </div>
-
-            <motion.div
-              className="-mt-20 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
+              transition={{ duration: 1 }}
             >
-              <div className="text-3xl font-semibold">100K+</div>
-              <div className="text-sm text-gray-500">Subscribers</div>
-              <div className="text-3xl font-semibold mt-2">139K+</div>
-              <div className="text-sm text-gray-500">Views</div>
+              <h2 className="text-3xl font-semibold">
+                Stay <em>Informed</em>,<br />Stay <em>Inspired</em>
+              </h2>
+              <p className="text-gray-600 mt-2">
+                Join our community for the latest market insights, property showcases, and expert advice.
+              </p>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            {/* Instagram Row */}
+            {step >= 1 && (
+              <motion.div
+                className="flex justify-between items-start"
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <div className="w-2/3">
+                  <h3 className="text-lg font-semibold">Instagram</h3>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Follow us on Instagram for a daily dose of stunning properties,
+                    expert advice, and real estate inspiration.
+                  </p>
+                  <div className="text-2xl font-bold mt-2">139K+</div>
+                  <div className="text-sm text-gray-500">Followers</div>
+                </div>
+                <img
+                  src="/LeftImg.png"
+                  alt="Instagram"
+                  className="w-[100px] h-auto ml-2 rounded-xl"
+                />
+              </motion.div>
+            )}
+
+            {/* YouTube Row */}
+            {step >= 2 && (
+              <motion.div
+                className="flex flex-col gap-4"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <h3 className="text-lg font-semibold">YouTube</h3>
+                <p className="text-gray-600 text-sm">
+                  Subscribe to our YouTube channel, Nek Punjabi Estate, for in-depth property tours,
+                  informative guides, and expert analyses of the real estate market.
+                </p>
+                <div className="flex gap-6 mt-2">
+                  <div className="text-center">
+                    <div className="text-2xl font-semibold">100K+</div>
+                    <div className="text-sm text-gray-500">Subscribers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-semibold">139K+</div>
+                    <div className="text-sm text-gray-500">Views</div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </div>
+
+
+      {/* ✅ Desktop View */}
+      <div className="hidden lg:block">
+        <AnimatePresence mode="wait">
+          {step <= 2 && (
+            <motion.div
+              key="desktop"
+              className="flex flex-col lg:flex-row items-center justify-center gap-12 w-full max-w-7xl px-4 py-20 mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 1 } }}
+            >
+              {/* Left Image */}
+              <motion.div
+                className="relative w-[250px] h-[450px]"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <img src="/imageLeft.png" className="w-full h-full relative z-10" />
+                {step >= 2 && (
+                  <motion.img
+                    src="/bgLeftImg.png"
+                    className="absolute top-4 left-4 w-full h-full z-20"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  />
+                )}
+              </motion.div>
+
+              {/* Text */}
+              <motion.div
+                className="text-center max-w-xl"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -40, transition: { duration: 1 } }}
+                transition={{ duration: 1 }}
+              >
+                <h2 className="text-4xl font-semibold">
+                  Stay <em>Informed</em>,<br />Stay <em>Inspired</em>
+                </h2>
+                <p className="text-gray-600 mt-4">
+                  Join our community for the latest market insights,<br />
+                  property showcases, and expert advice.
+                </p>
+                <h3 className="text-xl font-semibold mt-6">Instagram ↗</h3>
+                <p className="text-gray-600">
+                  Follow us on Instagram for daily stunning properties and expert tips.
+                </p>
+                <div className="text-3xl font-bold mt-4">139K+</div>
+                <div className="text-sm text-gray-500">Followers</div>
+              </motion.div>
+
+              {/* Right Image */}
+              <motion.div
+                className="relative w-[250px] h-[450px]"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <img src="/LeftImg.png" className="w-full h-full relative z-10" />
+                {step >= 2 && (
+                  <motion.img
+                    src="/bgRightImg..png"
+                    className="absolute top-4 right-4 w-full h-full z-20"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  />
+                )}
+              </motion.div>
+            </motion.div>
+          )}
+
+          {/* Desktop YouTube section */}
+          {step >= 3 && (
+            <motion.div
+              key="youtube"
+              className="flex flex-col items-center justify-center w-full max-w-7xl translate-x-[200px] mt-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <motion.h2
+                className="text-3xl font-semibold mb-4"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                YouTube ↗
+              </motion.h2>
+
+              <div className="flex gap-8 flex-wrap justify-center">
+                <motion.img
+                  src="/YoutubeLeft.png"
+                  className="w-[300px] h-auto rounded-xl translate-y-[-95px]"
+                  initial={{ opacity: 0, x: -100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                />
+
+                <motion.p
+                  className="text-gray-600 mb-6 text-center"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                >
+                  Subscribe to our YouTube channel, Nek Punjabi Estate, <br />
+                  for in-depth property tours, informative guides, <br />
+                  and expert analyses of <br />
+                  the real estate market.
+                  <div className="text-3xl font-bold mt-4">100k+</div>
+                  <div className="text-sm text-gray-500">Subscribers</div>
+                  <div className="text-3xl font-bold mt-4">139k+</div>
+                  <div className="text-sm text-gray-500">View</div>
+                </motion.p>
+
+                <motion.img
+                  src="/YoutubeRight.png"
+                  className="w-[300px] h-auto rounded-xl translate-y-[-95px]"
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };
