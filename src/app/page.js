@@ -26,7 +26,8 @@ import TestinomialAnimation from "./components/Animation/TestimonialAnimation";
 import HeroMobile from "./components/Home/HeroMobile";
 import About from "./components/Home/About";
 import Service from "./components/Home/Service";
-import TrustSection from "./components/Home/TrustSection";
+
+import TrustMobile from "./components/Home/TrustMobile";
 import Invest from "./components/Home/Invest";
 import Advertise from "./components/Home/Advertise";
 import Testinomial from "./components/Home/Testimonial";
@@ -69,7 +70,7 @@ export default function Home() {
           <HeroMobile />
           <About />
           <Service />
-          <TrustSection />
+          <TrustMobile />
           <Invest />
           <Advertise />
           <Testinomial />
