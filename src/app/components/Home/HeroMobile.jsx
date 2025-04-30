@@ -1,8 +1,21 @@
 'use client';
-
+import React, {useState } from "react";
 import Image from "next/image";
 
 const HeroMobile = () => {
+    const [phone, setPhone] = useState('');
+  
+    const handleChange = (e) => {
+      // Remove all non-digit characters
+      const cleaned = e.target.value.replace(/\D/g, '');
+      setPhone(cleaned);
+    };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault(); // Prevent form reload
+      console.log('Submitted Phone Number:', phone);
+      setPhone(''); // Clear input field
+    };
   return (
     <section
       className="relative pt-40 flex flex-col items-center justify-center w-full overflow-hidden"
@@ -19,16 +32,41 @@ const HeroMobile = () => {
             Submit your number to receive the best advice from our experts.
           </p>
 
-          <div className="flex flex-col items-center gap-4 backdrop-blur-sm p-2 rounded">
+          {/* <div className="flex flex-col items-center gap-4 backdrop-blur-sm p-2 rounded">
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Phone Number"
+                placeholder="Phone Number"
+                value={phone}
+                onChange={handleChange}
+                maxLength={10}
               className="px-4 py-2 outline-none border border-white rounded-lg text-black placeholder-white"
             />
-            <button className="bg-white text-[#99BDE5] w-full text-lg font-medium px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition">
+              <button 
+                type="submit"
+                className="bg-white text-[#99BDE5] w-full text-lg font-medium px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition">
               Submit
-            </button>
-          </div>
+              </button>
+              </form>
+          </div> */}
+          <div className="flex flex-col items-center gap-4 backdrop-blur-sm p-2 rounded">
+  <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+    <input
+      type="text"
+      placeholder="Phone Number"
+      value={phone}
+      onChange={handleChange}
+      maxLength={10}
+      className="px-4 py-2 outline-none border border-white rounded-lg text-black placeholder-white"
+    />
+    <button 
+      type="submit"
+      className="bg-white text-[#99BDE5] w-full text-lg font-medium px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition">
+      Submit
+    </button>
+  </form>
+</div>
+
         </div>
       </div>
 

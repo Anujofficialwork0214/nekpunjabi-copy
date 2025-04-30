@@ -40,7 +40,7 @@ const Advertise = () => {
             >
               <h2
                 className="text-3xl font-semibold italic "
-                style={{ fontFamily: "Instrument Sans" }}
+                // style={{ fontFamily: "Instrument Sans" }}
               >
                 Stay <em>Informed</em>,<br />
                 Stay <em>Inspired</em>
@@ -63,7 +63,7 @@ const Advertise = () => {
                 <div className="w-2/3">
                   <h3
                     className="text-lg font-semibold mt-6 leading-5 tracking-normal"
-                    style={{ fontFamily: "Instrument Sans" }}
+                    // style={{ fontFamily: "Instrument Sans" }}
                   >
                     Instagram{" "}
                   </h3>
@@ -75,7 +75,7 @@ const Advertise = () => {
                   <div
                     className="text-2xl font-normal mt-4"
                     style={{
-                      fontFamily: "Instrument Sans",
+                      // fontFamily: "Instrument Sans",
                       fontSize: "24px",
                       lineHeight: "24px",
                       letterSpacing: "0%",
@@ -85,7 +85,7 @@ const Advertise = () => {
                   </div>
                   <div
                     className="text-sm text-gray-500"
-                    style={{ fontFamily: "Instrument Sans", fontSize: "16px" }}
+                    style={{  fontSize: "16px" }}
                   >
                     Followers
                   </div>
@@ -108,12 +108,12 @@ const Advertise = () => {
               >
                 <h3
                   className="text-lg font-semibold mt-6 leading-5 tracking-normal"
-                  style={{ fontFamily: "Instrument Sans" }}
+                  // style={{ fontFamily: "Instrument Sans" }}
                 >
                   {" "}
                   YouTube
                 </h3>
-                <p className=" font-sans text-gray-600 text-sm font-sans">
+                <p className=" font-sans text-gray-600 text-sm ">
                   Subscribe to our YouTube channel, Nek Punjabi Estate, for
                   in-depth property tours, informative guides, and expert
                   analyses of the real estate market.
@@ -123,7 +123,7 @@ const Advertise = () => {
                     <div
                       className="text-2xl font-normal mt-4"
                       style={{
-                        fontFamily: "Instrument Sans",
+                        // fontFamily: "Instrument Sans",
                         fontSize: "24px",
                         lineHeight: "24px",
                         letterSpacing: "0%",
@@ -134,7 +134,7 @@ const Advertise = () => {
                     <div
                       className="text-sm text-gray-500"
                       style={{
-                        fontFamily: "Instrument Sans",
+                        // fontFamily: "Instrument Sans",
                         fontSize: "16px",
                       }}
                     >
@@ -145,7 +145,7 @@ const Advertise = () => {
                     <div
                       className="text-2xl font-normal mt-4"
                       style={{
-                        fontFamily: "Instrument Sans",
+                        // fontFamily: "Instrument Sans",
                         fontSize: "24px",
                         lineHeight: "24px",
                         letterSpacing: "0%",
@@ -156,7 +156,7 @@ const Advertise = () => {
                     <div
                       className="text-sm text-gray-500"
                       style={{
-                        fontFamily: "Instrument Sans",
+                        // fontFamily: "Instrument Sans",
                         fontSize: "16px",
                       }}
                     >

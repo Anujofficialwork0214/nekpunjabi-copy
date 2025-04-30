@@ -92,7 +92,12 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative bg-[#99BAE5] pt-30">
+    <section 
+    className="relative pt-30"
+    style={{
+      backgroundImage:
+        'linear-gradient(to right top, #7d91a9, #849bb8, #8ba5c7, #92b0d6, #99bae5)',
+    }} >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
@@ -108,14 +113,22 @@ export default function ContactSection() {
       {/* Content Wrapper */}
       <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-20">
         {/* Text Section */}
-        <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6">
+        {/* <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6">
           <h2 className="text-5xl font-bold">Get in Touch</h2>
           <p className="text-base max-w-md">
             If you'd like to know more information about us and any of our
             services, please get in touch with the below details or the contact
             form provided.
           </p>
-        </div>
+        </div> */}
+<div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6 text-center lg:text-left">
+<h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
+  <p className="text-base max-w-md mx-auto lg:mx-0">
+    If you'd like to know more information about us and any of our
+    services, please get in touch with the below details or the contact
+    form provided.
+  </p>
+</div>
 
         {/* Form Section */}
         <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
