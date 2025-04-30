@@ -50,7 +50,7 @@ const Navbar = () => {
       <nav className="max-w-[1600px] mx-auto flex justify-between items-center">
       <div id="logo">
   <Link href="/">
-    <Image src="/neklogo.png" alt="QuadB Tech" width={120} height={40} />
+    <Image src="/neklogo.png" alt="nekPunjabi" width={120} height={40} />
   </Link>
 </div>
 
