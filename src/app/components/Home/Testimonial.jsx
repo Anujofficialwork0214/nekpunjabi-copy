@@ -32,7 +32,7 @@ const Demo = () => {
       </motion.div>
 
       {/* Testimonials */}
-      <div className="flex flex-col lg:flex-row justify-between gap-6 mb-10">
+      {/* <div className="flex flex-col lg:flex-row justify-between gap-6 mb-10">
         {testimonials.map((t, index) => (
           <motion.div
             key={index}
@@ -53,7 +53,36 @@ const Demo = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </div> */}
+           <motion.div
+  initial={{ opacity: 0, x: 200 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
+>
+  <div className="flex flex-col lg:flex-row justify-between gap-6 mb-10">
+    {testimonials.map((t, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 + index * 0.3 }}
+        className="flex-1 bg-white p-6"
+      >
+        <div className="flex mb-4 text-yellow-400">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} />
+          ))}
+        </div>
+        <p className="text-lg text-gray-800 mb-4">"{t.text}"</p>
+        <div>
+          <p className="font-semibold text-black">{t.name}</p>
+          <p className="text-gray-600">{t.location}</p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
 {/* Image with motion text & button inside */}
 <motion.div
   initial={{ opacity: 0, y: 60 }}
