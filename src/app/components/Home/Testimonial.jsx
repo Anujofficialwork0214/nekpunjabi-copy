@@ -130,7 +130,7 @@ const Demo = () => {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.5, delay: 4.5 }}
-      className="bg-white text-gray-800 font-semibold px-5 py-2 rounded-full shadow-md"
+      className="bg-white text-blue-300 font-semibold px-5 py-2 rounded-full shadow-md"
     >
       Contact Us
     </motion.button>
