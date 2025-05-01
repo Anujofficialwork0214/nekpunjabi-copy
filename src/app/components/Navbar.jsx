@@ -42,8 +42,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header
-      className={`fixed top-0 left-0 w-full px-6 py-4 backdrop-blur-lg bg-white/30  shadow-md z-50 font-poppins rounded-b-3xl transition-transform duration-500 ${
+    <header className={`fixed top-0 left-0 w-full px-6 py-4 backdrop-blur-lg bg-white/30  shadow-md z-50 font-poppins rounded-b-3xl transition-transform duration-500 ${
         hideNavbar ? "-translate-y-full" : "translate-y-0"
       }`}
     >
