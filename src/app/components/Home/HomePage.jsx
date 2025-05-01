@@ -26,11 +26,41 @@ const HomePage = () => {
     setPhone(cleaned);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form reload
-    console.log('Submitted Phone Number:', phone);
-    setPhone(''); // Clear input field
-    setShowSuccessPopup(true); 
+  
+    if (!phone) {
+      console.log("Please enter a valid phone number.");
+      return;
+    }
+  
+    setShowSuccessPopup(false); // Reset success popup state
+  
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          phone: phone, // Send the phone number
+        }),
+      });
+  
+      const data = await res.json();
+  
+      if (data.success) {
+        console.log("Phone number submitted successfully!");
+        setShowSuccessPopup(true); // Show success popup
+      } else {
+        console.log("Failed to submit phone number.");
+      }
+    } catch (error) {
+      console.error("An error occurred while submitting the phone number:", error);
+    } finally {
+      setPhone(''); // Clear input field
+      setShowSuccessPopup(true); 
+    }
   };
 
  
