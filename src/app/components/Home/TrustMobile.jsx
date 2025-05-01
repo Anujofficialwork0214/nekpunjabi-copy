@@ -148,14 +148,14 @@ const TrustSection = () => {
 
   <div className="flex items-center border-b  border-gray-300 w-full pb-4">
     <h3 className="text-4xl font-semibold text-[#292929]">10+</h3>
-    <p className="ml-8 text-sm italic text-[#292929]">
+    <p className="ml-12 text-sm italic text-[#292929]">
       Years of <br /> Expertise
     </p>
   </div>
 
   <div className="flex items-center">
     <h3 className="text-4xl font-semibold text-[#292929]">400</h3>
-    <p className="ml-8 text-sm italic text-[#292929]">
+    <p className="ml-12 text-sm italic text-[#292929]">
       Successful <br /> Investments
     </p>
   </div>
