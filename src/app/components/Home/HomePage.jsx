@@ -5,17 +5,24 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImageCom from "./ImageCom";
 import { motion } from "framer-motion";
+import SuccessPopup from "../SuccessPopup";
+
 gsap.registerPlugin(ScrollTrigger);
+
+
+
 const HomePage = () => {
   const containerRef = useRef(null);
   const firstSectionRef = useRef(null);
   const textRef = useRef(null);
   const imageComContainerRef = useRef(null);
   const [phone, setPhone] = useState('');
+  const [placeholder, setPlaceholder] = useState("Phone Number");
+
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false); 
 
   const handleChange = (e) => {
-    // Remove all non-digit characters
-    const cleaned = e.target.value.replace(/\D/g, '');
+    const cleaned = e.target.value.replace(/\D/g, ''); 
     setPhone(cleaned);
   };
 
@@ -23,8 +30,8 @@ const HomePage = () => {
     e.preventDefault(); // Prevent form reload
     console.log('Submitted Phone Number:', phone);
     setPhone(''); // Clear input field
+    setShowSuccessPopup(true); 
   };
-
 
  
  useGSAP(() => {
@@ -127,15 +134,17 @@ const HomePage = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
       >
                       <form onSubmit={handleSubmit}>
-      <input
+        <input
         type="text"
-        placeholder="Phone Number"
+        placeholder={placeholder}
         value={phone}
         onChange={handleChange}
+        onFocus={() => setPlaceholder("")}
+        onBlur={() => !phone && setPlaceholder("Phone Number")}
         maxLength={10}
         className="px-4 py-2 outline-none border-2 border-white rounded-lg text-black placeholder-white"
-      />
-      <button
+        />
+       <button
         type="submit"
         className="bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-[16px] shadow-sm hover:shadow-md transition ml-4"
       >
@@ -158,6 +167,7 @@ const HomePage = () => {
           
        
         </section>
+        {showSuccessPopup && <SuccessPopup onClose={() => setShowSuccessPopup(false)} />}
       </div>
 
     
