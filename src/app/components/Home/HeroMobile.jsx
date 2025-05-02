@@ -1,21 +1,54 @@
 'use client';
 import React, {useState } from "react";
 import Image from "next/image";
-
+import SuccessPopup from "../SuccessPopup";
 const HeroMobile = () => {
-    const [phone, setPhone] = useState('');
+  const [phone, setPhone] = useState('');
+    const [placeholder, setPlaceholder] = useState("Phone Number");
+    const [errorMessage, setErrorMessage] = useState("");
   
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false); 
+
     const handleChange = (e) => {
-      // Remove all non-digit characters
-      const cleaned = e.target.value.replace(/\D/g, '');
+      const cleaned = e.target.value.replace(/\D/g, ''); 
       setPhone(cleaned);
     };
-  
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault(); // Prevent form reload
-      console.log('Submitted Phone Number:', phone);
-      setPhone(''); // Clear input field
+    
+      if (phone.length !== 10) {
+        setErrorMessage("Please enter a valid 10-digit phone number.");
+        return;
+      }
+    
+      setErrorMessage(""); // Clear any previous error
+      setShowSuccessPopup(false); // Reset success popup state
+    
+      try {
+        const res = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ phone }),
+        });
+    
+        const data = await res.json();
+    
+        if (data.success) {
+          console.log("Phone number submitted successfully!");
+          setShowSuccessPopup(true);
+        } else {
+          console.log("Failed to submit phone number.");
+        }
+      } catch (error) {
+        console.error("An error occurred while submitting the phone number:", error);
+      } finally {
+        setPhone('');
+        setShowSuccessPopup(true);
+      }
     };
+    
   return (
     <section
       className="relative pt-40 flex flex-col items-center justify-center w-full overflow-hidden"
@@ -32,30 +65,16 @@ const HeroMobile = () => {
             Submit your number to receive the best advice from our experts.
           </p>
 
-          {/* <div className="flex flex-col items-center gap-4 backdrop-blur-sm p-2 rounded">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-                placeholder="Phone Number"
-                value={phone}
-                onChange={handleChange}
-                maxLength={10}
-              className="px-4 py-2 outline-none border border-white rounded-lg text-black placeholder-white"
-            />
-              <button 
-                type="submit"
-                className="bg-white text-[#99BDE5] w-full text-lg font-medium px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition">
-              Submit
-              </button>
-              </form>
-          </div> */}
+      
           <div className="flex flex-col items-center gap-4 backdrop-blur-sm p-2 rounded">
   <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
     <input
       type="text"
       placeholder="Phone Number"
       value={phone}
-      onChange={handleChange}
+                onChange={handleChange}
+                onFocus={() => setPlaceholder("")}
+                onBlur={() => !phone && setPlaceholder("Phone Number")}
       maxLength={10}
       className="px-4 py-2 outline-none border border-white rounded-lg text-black placeholder-white"
     />
@@ -63,7 +82,10 @@ const HeroMobile = () => {
       type="submit"
       className="bg-white text-[#99BDE5] w-full text-lg font-medium px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition">
       Submit
-    </button>
+              </button>
+              {errorMessage && (
+    <p className="text-red-500 text-sm mt-1">{errorMessage}</p>
+  )}
   </form>
 </div>
 
@@ -95,6 +117,7 @@ const HeroMobile = () => {
           />
         </div>
       </div>
+      {showSuccessPopup && <SuccessPopup onClose={() => setShowSuccessPopup(false)} />}
     </section>
   );
 };

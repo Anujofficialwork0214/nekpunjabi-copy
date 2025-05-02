@@ -126,7 +126,7 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="space-y-4">
           <input
   type="text"
-  placeholder="Your Name"
+  placeholder="Name"
   value={name}
   onChange={(e) => {
     const input = e.target.value;
@@ -135,7 +135,7 @@ export default function ContactSection() {
     }
   }}
   onBlur={() => setName((prev) => prev.trim())} 
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white"
+ className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
 <input
@@ -149,7 +149,7 @@ export default function ContactSection() {
     }
   }}
   maxLength={10}
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white"
+ className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
 <input
@@ -163,7 +163,7 @@ export default function ContactSection() {
     }
   }}
   onBlur={() => setLocation((prev) => prev.trim())}
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white"
+ className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
 

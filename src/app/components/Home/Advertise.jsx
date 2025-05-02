@@ -30,7 +30,7 @@ const Advertise = () => {
     <div ref={ref}>
       {/* ✅ Mobile View */}
       <div className="block lg:hidden">
-        <div className="flex flex-col items-start justify-start px-4 py-20 w-full max-w-md mx-auto overflow-hidden">
+        <div className="flex flex-col items-start justify-start px-8 py-20 w-full max-w-md mx-auto overflow-hidden">
           <div className="flex flex-col gap-8">
             {/* Static Heading and Paragraph */}
             <motion.div
@@ -46,7 +46,7 @@ const Advertise = () => {
                 Stay <em>Inspired</em>
               </h2>
 
-              <p className="text-gray-600 mt-2 font-sans">
+              <p className="text-gray-600 mt-2 font-sans w-[70%]">
                 Join our community for the latest market insights, property
                 showcases, and expert advice.
               </p>
@@ -113,7 +113,7 @@ const Advertise = () => {
                   {" "}
                   YouTube
                 </h3>
-                <p className=" font-sans text-gray-600 text-sm ">
+                <p className=" font-sans text-gray-600 text-sm w-[70%]">
                   Subscribe to our YouTube channel, Nek Punjabi Estate, for
                   in-depth property tours, informative guides, and expert
                   analyses of the real estate market.
