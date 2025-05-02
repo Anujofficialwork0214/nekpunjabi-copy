@@ -8,8 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // const SHRINK_START_TRIGGER = 'top top';
 // const SHRINK_END_TRIGGER = '+=100vh';
+// const SHRINK_START_TRIGGER = 'bottom bottom';
+// const SHRINK_END_TRIGGER = '+=100';
 const SHRINK_START_TRIGGER = 'bottom bottom';
-const SHRINK_END_TRIGGER = '+=100';
+// const SHRINK_END_TRIGGER = '+=100';
+const SHRINK_END_TRIGGER = 'bottom+=500 bottom';
 const SHRINK_TARGET_SCALE = 0.75; 
 
 const SHRINK_TARGET_Y = -300;      

@@ -94,6 +94,7 @@ const Advertise = () => {
                   src="/LeftImg.png"
                   alt="Instagram"
                   className="w-[100px] h-auto ml-2 rounded-xl"
+                    draggable="false"
                 />
               </motion.div>
             )}
@@ -191,11 +192,13 @@ const Advertise = () => {
                 <img
                   src="/imageLeft.png"
                   className="w-full h-full relative z-10"
+                    draggable="false"
                 />
                 {step >= 2 && (
                   <motion.img
                     src="/bgLeftImg.png"
                     className="absolute top-4 left-4 w-full h-full z-20"
+                      draggable="false"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -239,11 +242,13 @@ const Advertise = () => {
                 <img
                   src="/LeftImg.png"
                   className="w-full h-full relative z-10"
+                    draggable="false"
                 />
                 {step >= 2 && (
                   <motion.img
                     src="/bgRightImg..png"
                     className="absolute top-4 right-4 w-full h-full z-20"
+                      draggable="false"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -276,6 +281,7 @@ const Advertise = () => {
                 <motion.img
                   src="/YoutubeLeft.png"
                   className="w-[300px] h-auto rounded-xl translate-y-[-95px]"
+                    draggable="false"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.6 }}
@@ -293,13 +299,14 @@ const Advertise = () => {
                   the real estate market.
                   <div className="text-3xl font-semibold font-sans mt-4">100k+</div>
                   <div className="text-sm text-gray-500 font-sans">Subscribers</div>
-                  <div className="text-3xl font-bold mt-4  font-semibold font-sans">139k+</div>
+                  <div className="text-3xl mt-4 font-semibold font-sans">139k+</div>
                   <div className="text-sm text-gray-500 font-sans">View</div>
                 </motion.p>
 
                 <motion.img
                   src="/YoutubeRight.png"
                   className="w-[300px] h-auto rounded-xl translate-y-[-95px]"
+                    draggable="false"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.6 }}

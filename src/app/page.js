@@ -1,21 +1,6 @@
 
 "use client";
 import { useEffect, useState } from "react";
-
-
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-
 import HomePage from "./components/Home/HomePage";
 import AboutAnimation from "./components/Animation/AboutAnimation";
 
@@ -31,7 +16,17 @@ import TrustMobile from "./components/Home/TrustMobile";
 import Invest from "./components/Home/Invest";
 import Advertise from "./components/Home/Advertise";
 import Testinomial from "./components/Home/Testimonial";
-
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
