@@ -1,10 +1,8 @@
-
 "use client";
 import { useState } from "react";
 import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 import SuccessPopup from "../components/SuccessPopup";
-
 export default function ContactSection() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -98,7 +96,7 @@ export default function ContactSection() {
       backgroundImage:
         'linear-gradient(to right top, #7d91a9, #849bb8, #8ba5c7, #92b0d6, #99bae5)',
     }} >
-      {/* Background Image with Overlay */}
+      
       <div className="absolute inset-0">
         <Image
           src="/images/contact-bg.jpg"
@@ -112,15 +110,7 @@ export default function ContactSection() {
 
       {/* Content Wrapper */}
       <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-20">
-        {/* Text Section */}
-        {/* <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6">
-          <h2 className="text-5xl font-bold">Get in Touch</h2>
-          <p className="text-base max-w-md">
-            If you'd like to know more information about us and any of our
-            services, please get in touch with the below details or the contact
-            form provided.
-          </p>
-        </div> */}
+    
 <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6 text-center lg:text-left">
 <h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
   <p className="text-base max-w-md mx-auto lg:mx-0">
@@ -141,10 +131,10 @@ export default function ContactSection() {
   onChange={(e) => {
     const input = e.target.value;
     if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-      setName(input.replace(/^\s+/, "")); // disallow leading spaces
+      setName(input.replace(/^\s+/, "")); 
     }
   }}
-  onBlur={() => setName((prev) => prev.trim())} // remove trailing/extra spaces on blur
+  onBlur={() => setName((prev) => prev.trim())} 
   className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
@@ -154,7 +144,7 @@ export default function ContactSection() {
   value={phone}
   onChange={(e) => {
     const input = e.target.value;
-    if (/^\d*$/.test(input)) { // allow only digits
+    if (/^\d*$/.test(input)) { 
       setPhone(input);
     }
   }}
@@ -169,7 +159,7 @@ export default function ContactSection() {
   onChange={(e) => {
     const input = e.target.value;
     if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-      setLocation(input.replace(/^\s+/, "")); // disallow leading spaces
+      setLocation(input.replace(/^\s+/, "")); 
     }
   }}
   onBlur={() => setLocation((prev) => prev.trim())}
