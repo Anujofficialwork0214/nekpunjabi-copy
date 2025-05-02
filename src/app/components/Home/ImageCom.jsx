@@ -22,6 +22,7 @@ const ImageCom = () => {
           width={1920}
           height={800}
           className="w-full h-auto object-cover"
+           draggable="false"
         />
       </div>
     </div>
