@@ -219,16 +219,18 @@ const HomePage = () => {
     </form> */}
               <form onSubmit={handleSubmit}>
 
-  <input
-    type="text"
-    placeholder={placeholder}
-    value={phone}
-    onChange={handleChange}
-    onFocus={() => setPlaceholder("")}
-    onBlur={() => !phone && setPlaceholder("Phone Number")}
-    maxLength={10}
-    className="px-4 py-2 outline-none border-2 border-white rounded-lg text-white placeholder-white "
-  />
+              <input
+  type="text"
+  placeholder={placeholder}
+  value={phone}
+  onChange={handleChange}
+  onFocus={() => setPlaceholder("")}
+  onBlur={() => !phone && setPlaceholder("Phone Number")}
+  maxLength={10}
+  className="px-16 py-2 outline-none border-2 border-white rounded-lg text-white placeholder-white text-left placeholder:translate-x-[-40px]"
+  
+/>
+
 
   <button
     type="submit"
