@@ -14,7 +14,7 @@ function About() {
       }}
     >
       {/* Content */}
-      <div className="relative z-10 max-w-3xl p-6 md:p-10 mx-auto w-full">
+      <div className="relative z-10 max-w-3xl p-6 md:p-10 mx-auto w-full md:ml-110">
         <motion.h2
           className="text-4xl font-bold text-white mb-6 text-center md:text-left md:translate-x-[-220px] md:translate-y-[70px]"
           initial={{ y: 50, opacity: 0 }}
@@ -26,7 +26,7 @@ function About() {
         </motion.h2>
 
         <motion.p
-          className="mb-12 text-lg text-white text-center md:text-left"
+          className="mb-12 text-lg text-white text-center md:text-left md:ml-10"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
@@ -39,7 +39,7 @@ function About() {
         </motion.p>
 
         <motion.blockquote
-          className="italic text-xl font-medium my-10 text-white flex justify-center md:justify-start md:text-left"
+          className="italic text-xl font-medium my-10 text-white flex justify-center md:justify-start md:text-left md:ml-10"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
@@ -60,7 +60,7 @@ function About() {
         </motion.blockquote>
 
               <motion.p
-          className="mb-6 text-lg text-white text-center md:text-left"
+          className="mb-6 text-lg text-white text-center md:text-left md:ml-10"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
@@ -70,7 +70,7 @@ function About() {
           through safe and sound real estate investments
         </motion.p>
         <motion.p
-          className="uppercase text-sm tracking-wide text-white text-center md:text-left" // Centered text
+          className="uppercase text-sm tracking-wide text-white text-center md:text-left md:ml-10" // Centered text
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
@@ -85,7 +85,7 @@ function About() {
           <div className="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-start md:justify-start gap-10 md:gap-16 relative z-10">
 
           
-            <div className="flex justify-center w-full md:w-auto md:justify-start shrink-0">
+            <div className="flex justify-center w-full md:w-auto md:justify-start shrink-0 md:ml-10">
                 {/* Centered on mobile by parent (items-center), aligned start on md+ */}
               <svg width="138" height="100" viewBox="0 0 138 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <g clipPath="url(#clip0_67179_27533)">
