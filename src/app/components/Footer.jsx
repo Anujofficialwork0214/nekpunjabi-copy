@@ -10,19 +10,19 @@ export default function Footer() {
   return (
     <footer className="bg-[#1e1e1e] text-white px-4 md:px-16 py-10 -mt-40">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6  mt-40">
-        {/* Logo */}
+
         <div className="mb-4 md:mb-0">
           <img src="/neklogo.png" alt="Nek Punjab Estate" className="w-24" />
         </div>
 
-        {/* Links */}
+
         <div className="flex space-x-6 text-sm text-gray-300">
           <a href="#about" className="hover:text-white">About Us</a>
           <a href="#services" className="hover:text-white">Services</a>
           <a href="/getAdvice" className="hover:text-white">Contact Us</a>
         </div>
 
-        {/* Social Icons */}
+
         <div className="flex space-x-4 text-gray-300">
           <a href="#"><FaFacebookF className="hover:text-white" /></a>
           <a href="#"><FaInstagram className="hover:text-white" /></a>
@@ -32,10 +32,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Divider */}
+
       <div className="border-t border-gray-700 my-6" />
 
-      {/* Bottom Text */}
+
       <div className="text-center text-xs text-gray-400">
         <p>© 2025 Nek Punjabi. All rights reserved. &nbsp; | &nbsp;
           <a href="#" className="hover:text-white">Terms of Service</a>

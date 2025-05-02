@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ImageCom = () => {
   return (
     <div
-      className="w-screen h-screen bg-center flex flex-col items-center justify-center px-4 relative overflow-hidden z-0"
+      className="w-screen h-screen bg-center flex flex-col items-center justify-center px-4 relative overflow-hidden z-0 bg-no-repeat bg-cover bg-cente"
       style={{ backgroundImage: "url('/one (1).png')" }}
     >
       {/* Orange gradient overlay */}

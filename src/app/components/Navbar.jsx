@@ -1,13 +1,9 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { RiMenu2Fill } from "react-icons/ri";
-import { FaXmark } from "react-icons/fa6";
 import gsap from "gsap";
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hideNavbar, setHideNavbar] = useState(false);
@@ -24,7 +20,7 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
-  // Hide/show navbar on scroll
+ 
   useEffect(() => {
     let lastScrollY = window.scrollY;
   
@@ -34,7 +30,7 @@ const Navbar = () => {
       } else {
         setHideNavbar(false);
       }
-      setMenuOpen(false); // 👉 Close mobile menu on scroll
+      setMenuOpen(false); 
       lastScrollY = window.scrollY;
     };
   
@@ -47,16 +43,25 @@ const Navbar = () => {
       }`}
     >
       <nav className="max-w-[1600px] mx-auto flex justify-between items-center">
-      <div id="logo">
+  
+        <div id="logo" className="w-[100px] sm:w-[120px]">
   <Link href="/">
-    <Image src="/neklogo.png" alt="nekPunjabi" width={120} height={40} />
+    <Image
+      src="/neklogo.png"
+      alt="nekPunjabi"
+      width={0}
+      height={0}
+      sizes="100vw"
+      className="w-full h-auto"
+    />
   </Link>
 </div>
+
 
 <div id="nav-links" className="hidden md:flex space-x-6 font-medium text-lg">
   {[
     { path: "#about", label: "About" },
-    { path: "#services", label: "Service" },
+    { path: "#services", label: "Services" },
   ].map(({ path, label }) => (
     <Link
       key={path}
@@ -73,7 +78,7 @@ const Navbar = () => {
   <Link href="/getAdvice">
     <button
       id="contact-button"
-      className={`bg-white text-[#99BDE5] text-lg font-medium px-6 py-2 rounded-[16px] shadow-sm hover:shadow-md transition ${
+      className={`bg-white text-[#99BDE5] text-lg font-medium px-6 py-2  rounded-[16px] shadow-sm hover:shadow-md transition ${
         pathname === "/getAdvice" ? "text-black" : "hover:text-black"
       }`}
     >
@@ -82,42 +87,18 @@ const Navbar = () => {
   </Link>
 </div>
 
-        <button onClick={() => setMenuOpen(true)} className="md:hidden text-black">
-          <RiMenu2Fill size={32} />
-        </button>
+ <Link href="/getAdvice" className="block sm:block md:hidden">
+  <button
+    id="contact-button"
+    className={`bg-white text-[#99BDE5] text-[12px] font-medium px-4 py-2 rounded-[12px] shadow-sm hover:shadow-md transition ${
+      pathname === "/getAdvice" ? "text-black" : "hover:text-black"
+    }`}
+  >
+    Get advice
+  </button>
+</Link>
+
       </nav>
-
-      {/* Mobile Menu */}
-      <div
-        className={`fixed top-0 right-0 h-screen w-2/3 sm:w-2/5 shadow-lg bg-white p-6 transition-transform duration-500 z-50 ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex justify-between items-center w-full">
-          <button onClick={() => setMenuOpen(false)} className="text-black">
-            <FaXmark size={32} />
-          </button>
-        </div>
-
-        <div id="mobile-menu" className="flex flex-col items-end p-10 space-y-6 text-lg mt-10">
-          {[
-            { path: "#about", label: "About" },
-            { path: "#services", label: "Services" },
-            { path: "/getAdvice", label: "Get advice" },
-          ].map(({ path, label }) => (
-            <Link
-              key={path}
-              href={path}
-              onClick={() => setMenuOpen(false)}
-              className={`px-4 py-2 rounded-full ${
-                pathname === path ? "border-2 font-semibold" : ""
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
-      </div>
     </header>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle } from "lucide-react"; // Optional, or use your own icon
+import { CheckCircle } from "lucide-react"; 
 
 const SuccessPopup = ({ onClose }) => {
   return (
