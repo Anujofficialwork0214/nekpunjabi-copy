@@ -26,7 +26,7 @@ function About() {
         </motion.h2>
 
         <motion.p
-          className="mb-6 text-lg text-white text-center md:text-left"
+          className="mb-12 text-lg text-white text-center md:text-left"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
@@ -39,7 +39,7 @@ function About() {
         </motion.p>
 
         <motion.blockquote
-          className="italic text-xl font-medium mb-10 text-white flex justify-center md:justify-start md:text-left"
+          className="italic text-xl font-medium my-10 text-white flex justify-center md:justify-start md:text-left"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}

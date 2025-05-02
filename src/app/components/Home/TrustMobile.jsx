@@ -120,9 +120,12 @@ const TrustSection = () => {
               className="absolute top-4 left-1/2 -translate-x-1/2 bg-white text-[#525252] px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
             >
               <MdOutlineWifiCalling3 className="text-xl" />
-              <span className="whitespace-nowrap">
-                Contact us now to get the <br /> best advice with our experts
-              </span>
+
+              <div className="text-left whitespace-nowrap">
+                <span>
+                  Contact us now to get the <br /> best advice with our experts
+                </span>
+              </div>
             </div>
 
           </div>
