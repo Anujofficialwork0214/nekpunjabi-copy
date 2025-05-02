@@ -227,7 +227,8 @@ const HomePage = () => {
   onFocus={() => setPlaceholder("")}
   onBlur={() => !phone && setPlaceholder("Phone Number")}
   maxLength={10}
-  className="px-16 py-2 outline-none border-2 border-white rounded-lg text-white placeholder-white text-left placeholder:translate-x-[-40px]"
+  className="pl-4 pr-28 py-2 outline-none border-2 border-white rounded-lg text-white placeholder-white text-left"
+
   
 />
 
