@@ -190,7 +190,7 @@ const WhyInvest = () => {
         <div className="w-12 h-12 z-30 rounded-full border-2 p-2 border-white bg-[#FEE6CC] text-[#f7931e] font-bold text-lg flex items-center justify-center shadow-md mb-4">
           {item.number}
         </div>
-        <p className="text-sm text-gray-300 leading-snug">
+        <p className="text-sm text-gray-300 leading-snug text-left">
           {item.title}
           <br />
           {item.subtitle}
