@@ -60,8 +60,8 @@ const Navbar = () => {
 
 <div id="nav-links" className="hidden md:flex space-x-6 font-medium text-lg">
   {[
-    { path: "#about", label: "About" },
-    { path: "#services", label: "Services" },
+    { path: "/about", label: "About" },
+    { path: "/services", label: "Services" },
   ].map(({ path, label }) => (
     <Link
       key={path}
