@@ -121,7 +121,7 @@ const RealEstateServices = () => {
       id='services'
      
       ref={sectionRef}
-      className=" w-full relative bg-gradient-to-b from-[#6c9dce] to-blue-100 overflow-hidden"
+      className="scroll-mt-20 w-full relative bg-gradient-to-b from-[#6c9dce] to-blue-100 overflow-hidden"
     >
       <div className="container mx-auto px-6 md:px-20 py-20 relative z-10">
   <div className="mb-16 flex flex-col items-center text-center sm:items-start sm:text-left">

@@ -1,15 +1,17 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
+import { RiMenu2Fill } from "react-icons/ri";
+import { FaXmark } from "react-icons/fa6";
 import gsap from "gsap";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hideNavbar, setHideNavbar] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     if (menuOpen) {
@@ -22,6 +24,7 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
+  // Hide/show navbar on scroll
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -31,7 +34,7 @@ const Navbar = () => {
       } else {
         setHideNavbar(false);
       }
-      setMenuOpen(false);
+      setMenuOpen(false); // Close mobile menu on scroll
       lastScrollY = window.scrollY;
     };
 
@@ -39,16 +42,26 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setHideNavbar(false); // Reset hideNavbar when scrolling to a section
+  // Custom scroll or redirect handler
+  const handleNavClick = (e, path) => {
+    if (pathname === "/" && path.startsWith("/#")) {
+      e.preventDefault();
+      const id = path.replace("/#", "");
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push(path);
     }
   };
 
   return (
-    <header className={`fixed top-0 left-0 w-full px-6 py-4 backdrop-blur-lg bg-white/30 shadow-md z-50 font-poppins rounded-b-3xl transition-transform duration-500 ${hideNavbar ? "-translate-y-full" : "translate-y-0"}`}>
+    <header
+      className={`fixed top-0 left-0 w-full px-6 py-4 backdrop-blur-lg bg-white/30 shadow-md z-50 font-poppins rounded-b-3xl transition-transform duration-500 ${
+        hideNavbar ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <nav className="max-w-[1600px] mx-auto flex justify-between items-center">
         <div id="logo" className="w-[100px] sm:w-[120px]">
           <Link href="/">
@@ -65,21 +78,23 @@ const Navbar = () => {
 
         <div id="nav-links" className="hidden md:flex space-x-6 font-medium text-lg">
           {[
-            { path: "/#about", label: "About" }, // Full path to section
-            { path: "/#services", label: "Services" }, // Full path to section
+            { path: "/#about", label: "About" },
+            { path: "/#services", label: "Services" },
           ].map(({ path, label }) => (
-            <Link key={path} href={path}>
-              <button
-                className={`px-3 py-1 rounded-full ${
-                  pathname === path
-                    ? "text-black border-2 font-semibold"
-                    : "text-white hover:text-black"
-                }`}
-              >
-                {label}
-              </button>
-            </Link>
+            <a
+              key={path}
+              href={path}
+              onClick={(e) => handleNavClick(e, path)}
+              className={`px-3 py-1 rounded-full ${
+                pathname === path
+                  ? "text-black border-2 font-semibold"
+                  : "text-white hover:text-black"
+              }`}
+            >
+              {label}
+            </a>
           ))}
+
           <Link href="/getAdvice">
             <button
               id="contact-button"
@@ -103,6 +118,8 @@ const Navbar = () => {
           </button>
         </Link>
       </nav>
+
+   
     </header>
   );
 };

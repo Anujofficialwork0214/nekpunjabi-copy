@@ -7,7 +7,7 @@ function About() {
   return (
     <div
       id='about'
-      className="relative flex  items-center justify-center py-16 md:py-24"
+      className="scroll-mt-20 relative flex  items-center justify-center py-16 md:py-24"
       style={{
         background: 'linear-gradient(180deg, rgb(250, 123, 38) 0%, #F58106 36.76%)',
       }}
@@ -79,7 +79,7 @@ function About() {
         </motion.p>
 
         
-        <div className="w-full py-12 px-0 md:px-4 text-white relative overflow-hidden">
+        <div className="w-full py-12 px-0  text-white relative overflow-hidden">
        
           <div className="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-start md:justify-start gap-10 md:gap-16 relative z-10">
 
