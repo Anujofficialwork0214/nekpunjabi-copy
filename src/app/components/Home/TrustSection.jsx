@@ -105,7 +105,7 @@ const TrustSection = () => {
           {/* Stats */}
           <div
             ref={statsRef}
-            className="mt-10 mx-auto lg:mx-0 flex justify-start gap-x-20 flex-col px-4"
+            className="mt-10 mx-auto lg:mx-0 flex justify-start gap-x-20 flex-col px-4 "
           >
             <div className="flex items-center border-b pb-4  my-4">
               <h3 className="text-4xl font-semibold text-[#292929]">500+</h3>
@@ -123,7 +123,7 @@ const TrustSection = () => {
 
             <div className="flex items-center mb-4 my-4">
               <h3 className="text-4xl font-semibold text-[#292929]">400</h3>
-              <p className="ml-12 text-sm italic text-[#292929] ">
+              <p className="ml-10 text-sm italic text-[#292929] ">
                 Successful <br /> Investments
               </p>
             </div>
