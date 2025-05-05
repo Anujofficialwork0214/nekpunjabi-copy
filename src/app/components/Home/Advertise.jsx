@@ -184,20 +184,20 @@ const Advertise = () => {
             >
               {/* Left Image */}
               <motion.div
-                className="relative w-[250px] h-[450px]"
+                className="relative w-[250px] h-[450px] mr-6"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
                 <img
                   src="/imageLeft.png"
-                  className="w-full h-full relative z-10"
+                  className="h-80 w-70 relative z-10"
                     draggable="false"
                 />
                 {step >= 2 && (
                   <motion.img
                     src="/bgLeftImg.png"
-                    className="absolute top-4 left-4 w-full h-full z-20"
+                    className="absolute top-4 left-4 w-70 h-80 z-20"
                       draggable="false"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -214,40 +214,47 @@ const Advertise = () => {
                 exit={{ opacity: 0, y: -40, transition: { duration: 1 } }}
                 transition={{ duration: 1 }}
               >
-                <h2 className="text-4xl font-semibold font-sans">
+                <h2 className="text-6xl font-semibold font-sans">
                   Stay <em>Informed</em>,<br />
                   Stay <em>Inspired</em>
                 </h2>
-                <p className="text-gray-600 mt-4 font-sans">
+                <p className="text-gray-900 mt-4 font-sans">
                   Join our community for the latest market insights,
                   <br />
                   property showcases, and expert advice.
                 </p>
-                <h3 className="text-xl font-semibold  font-sans mt-6">Instagram </h3>
-                <p className="text-gray-600 font-sans">
-                  Follow us on Instagram for <br/> daily stunning properties and
-                  expert tips.
+                <h3 className="text-3xl font-semibold font-sans mt-6 ml-30 flex items-center mt-20 ">
+  Instagram
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+    stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="7" y1="17" x2="17" y2="7" />
+    <polyline points="7 7 17 7 17 17" />
+  </svg>
+</h3>
+
+                <p className="text-gray-900 font-sans ">
+                Follow us on Instagram for a daily dose of stunning <br/>properties, expert advice, and real estate inspiration.
                 </p>
-                <div className="text-3xl font-semibold font-sans mt-10">139K+</div>
-                <div className="text-sm text-gray-400 mt-2">Followers</div>
+                <div className="text-5xl  font-sans mt-10">139K+</div>
+                <div className="text-sm text-gray-900 mt-2">Followers</div>
               </motion.div>
 
               {/* Right Image */}
               <motion.div
-                className="relative w-[250px] h-[450px]"
+                className="relative w-[250px] h-[450px] ml-6"
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
                 <img
                   src="/LeftImg.png"
-                  className="w-full h-full relative z-10"
+                  className="w-70 h-80 relative z-10"
                     draggable="false"
                 />
                 {step >= 2 && (
                   <motion.img
                     src="/bgRightImg..png"
-                    className="absolute top-4 right-4 w-full h-full z-20"
+                    className="absolute top-4 right-4 w-70 h-80 z-20"
                       draggable="false"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -260,60 +267,72 @@ const Advertise = () => {
 
           {/* Desktop YouTube section */}
           {step >= 3 && (
-            <motion.div
-              key="youtube"
-              className="flex flex-col items-center justify-center align-center w-full max-w-7xl mx-30 mt-20 px-4 py-20 mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <motion.h2
-                className="text-3xl font-semibold mb-4"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-              >
-                YouTube ↗
-              </motion.h2>
+  <motion.div
+    key="youtube"
+    className="flex flex-col items-center justify-center align-center w-full max-w-7xl mx-30 mt-20 px-4 py-20 mx-auto"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 1 }}
+  >
+    <motion.h2
+      className="text-4xl font-sans font-semibold mb-6 flex items-center justify-start"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      YouTube
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
+        <path d="M2 2H18M18 2V18M18 2L2 18" stroke="#292929" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </motion.h2>
 
-              <div className="flex gap-8 flex-wrap justify-center">
-                <motion.img
-                  src="/YoutubeLeft.png"
-                  className="w-[300px] h-auto rounded-xl translate-y-[-95px]"
-                    draggable="false"
-                  initial={{ opacity: 0, x: -100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                />
+    <div className="flex gap-12 flex-wrap justify-center">
+      <motion.div
+        className="w-[300px] h-[300px] max-h-[300px] rounded-xl overflow-hidden -mt-20"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
+        <motion.img
+          src="/YoutubeLeft.png"
+          className="w-80 h-70 "
+          draggable="false"
+        />
+      </motion.div>
 
-                <motion.p
-                  className="text-gray-600 mb-6 text-center font-sans"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.3 }}
-                >
-                  Subscribe to our YouTube channel, Nek Punjabi Estate, <br />
-                  for in-depth property tours, informative guides, <br />
-                  and expert analyses of <br />
-                  the real estate market.
-                  <div className="text-3xl font-semibold font-sans mt-4">100k+</div>
-                  <div className="text-sm text-gray-500 font-sans">Subscribers</div>
-                  <div className="text-3xl mt-4 font-semibold font-sans">139k+</div>
-                  <div className="text-sm text-gray-500 font-sans">View</div>
-                </motion.p>
+      <motion.p
+        className="text-gray-900 mb-6 text-center font-sans"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        Subscribe to our YouTube channel, <br /> Nek Punjabi Estate,
+        for in-depth property tours,<br /> informative guides,
+        and expert analyses of <br />
+        the real estate market.
+        <div className="text-6xl font-sans mt-10">100k+</div>
+        <div className="text-10px text-gray-900 font-sans">Subscribers</div>
+        <div className="text-6xl mt-10 font-sans">139k+</div>
+        <div className="text-10px text-gray-900 font-sans">View</div>
+      </motion.p>
 
-                <motion.img
-                  src="/YoutubeRight.png"
-                  className="w-[300px] h-auto rounded-xl translate-y-[-95px]"
-                    draggable="false"
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                />
-              </div>
-            </motion.div>
-          )}
+      <motion.div
+        className="w-[300px] h-[300px] max-h-[300px] rounded-xl overflow-hidden -mt-20"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
+        <motion.img
+          src="/YoutubeRight.png"
+          className="w-80 h-70 "
+          draggable="false"
+        />
+      </motion.div>
+    </div>
+  </motion.div>
+)}
+
         </AnimatePresence>
       </div>
     </div>
