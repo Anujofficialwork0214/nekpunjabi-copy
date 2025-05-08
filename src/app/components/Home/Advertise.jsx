@@ -232,7 +232,7 @@ const Advertise = () => {
   </svg>
 </h3>
 
-                <p className="text-gray-900 font-sans ">
+                <p className="text-gray-900 font-sans mt-2 ">
                 Follow us on Instagram for a daily dose of stunning <br/>properties, expert advice, and real estate inspiration.
                 </p>
                 <div className="text-5xl  font-sans mt-10">139K+</div>
