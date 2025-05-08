@@ -13,7 +13,7 @@ import AboutAnimation from "./components/Animation/AboutAnimation";
 import TrustAnimation from "./components/Animation/TrustAnimation";
 import InvestAnimation from "./components/Animation/InvestAnimation";
 import AdvertiseAnimation from "./components/Animation/AdvertiseAnimation";
-import TestinomialAnimation from "./components/Animation/TestimonialAnimation";
+// import TestinomialAnimation from "./components/Animation/TestimonialAnimation";
 import HeroMobile from "./components/Home/HeroMobile";
 import About from "./components/Home/About";
 import Service from "./components/Home/Service";
@@ -79,7 +79,7 @@ export default function Home() {
           <TrustAnimation />
           <InvestAnimation />
           <AdvertiseAnimation />
-          <TestinomialAnimation />
+          {/* <TestinomialAnimation /> */}
         </div>
       )}
     </>
