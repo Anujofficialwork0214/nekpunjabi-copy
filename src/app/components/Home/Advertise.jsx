@@ -62,13 +62,13 @@ const Advertise = () => {
               >
                 <div className="w-2/3">
                   <h3
-                    className="text-lg font-semibold mt-6 leading-5 tracking-normal"
+                    className="text-lg font-semibold mt-6 leading-5 tracking-normal text-[#292929]"
                     // style={{ fontFamily: "Instrument Sans" }}
                   >
                     Instagram{" "}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mt-1 font-sans">
+                  <p className="text-gray-600 text-sm mt-1 font-sans leading-[20px]">
                     Follow us on Instagram for a daily dose of stunning
                     properties, expert advice, and real estate inspiration.
                   </p>
@@ -108,19 +108,19 @@ const Advertise = () => {
                 transition={{ duration: 1 }}
               >
                 <h3
-                  className="text-lg font-semibold mt-6 leading-5 tracking-normal"
+                  className="text-lg font-semibold mt-6 leading-5 tracking-normal text-[#292929]"
                   // style={{ fontFamily: "Instrument Sans" }}
                 >
                   {" "}
                   YouTube
                 </h3>
-                <p className=" font-sans text-gray-600 text-sm w-[70%]">
+                <p className="font-sans text-gray-600 text-sm leading-[20px] w-[70%]">
                   Subscribe to our YouTube channel, Nek Punjabi Estate, for
                   in-depth property tours, informative guides, and expert
                   analyses of the real estate market.
                 </p>
                 <div className="flex gap-6 mt-2">
-                  <div className="text-center">
+                  <div className="text-left">
                     <div
                       className="text-2xl font-normal mt-4"
                       style={{
@@ -142,7 +142,7 @@ const Advertise = () => {
                       Subscribers
                     </div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-left">
                     <div
                       className="text-2xl font-normal mt-4"
                       style={{
@@ -155,7 +155,7 @@ const Advertise = () => {
                       139K+
                     </div>
                     <div
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 text-left"
                       style={{
                         // fontFamily: "Instrument Sans",
                         fontSize: "16px",
@@ -283,7 +283,7 @@ const Advertise = () => {
     >
       YouTube
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
-        <path d="M2 2H18M18 2V18M18 2L2 18" stroke="#292929" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 2H18M18 2V18M18 2L2 18" stroke="#292929" strokeWidth="2.4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </motion.h2>
 
