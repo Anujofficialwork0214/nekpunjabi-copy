@@ -76,7 +76,7 @@ const HeroMobile = () => {
                 onFocus={() => setPlaceholder("")}
                 onBlur={() => !phone && setPlaceholder("Phone Number")}
       maxLength={10}
-      className="px-4 py-2 outline-none border border-white rounded-lg text-black placeholder-white"
+      className="px-4 py-2 outline-none border border-white rounded-lg placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-whitee"
     />
     <button 
       type="submit"
