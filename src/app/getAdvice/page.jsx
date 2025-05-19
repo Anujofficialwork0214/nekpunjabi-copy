@@ -101,11 +101,15 @@ export default function ContactSection() {
 
   return (
     <section   className="relative pt-30"
-    style={{
-      backgroundImage:
-        'linear-gradient(to right top, #7d91a9, #849bb8, #8ba5c7, #92b0d6, #99bae5)',
-    }}
-      
+     style={{
+  backgroundImage: `
+    linear-gradient(180deg, rgba(255, 255, 255, 0.00) -32.49%, rgba(125, 145, 168, 0.45) 28.16%, #7DA7DE 100%),
+    url('/bg.svg')
+  `,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+}}
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
@@ -145,10 +149,10 @@ export default function ContactSection() {
   onChange={(e) => {
     const input = e.target.value;
     if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-      setName(input.replace(/^\s+/, "")); // disallow leading spaces
+      setName(input.replace(/^\s+/, "")); 
     }
   }}
-  onBlur={() => setName((prev) => prev.trim())} // remove trailing/extra spaces on blur
+  onBlur={() => setName((prev) => prev.trim())} 
   className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
@@ -158,7 +162,7 @@ export default function ContactSection() {
   value={phone}
   onChange={(e) => {
     const input = e.target.value;
-    if (/^\d*$/.test(input)) { // allow only digits
+    if (/^\d*$/.test(input)) {
       setPhone(input);
     }
   }}
@@ -173,25 +177,36 @@ export default function ContactSection() {
   onChange={(e) => {
     const input = e.target.value;
     if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-      setLocation(input.replace(/^\s+/, "")); // disallow leading spaces
+      setLocation(input.replace(/^\s+/, "")); 
     }
   }}
   onBlur={() => setLocation((prev) => prev.trim())}
   className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
             />
-            <select
-  value={investmentSize}
-  onChange={(e) => setInvestmentSize(e.target.value)}
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-white"
->
-  <option value="" disabled hidden>Select Investment Size</option>
-  <option value="< 1cr" className="text-black">&lt; 1cr</option>
-  <option value="1 - 3 cr" className="text-black">1 - 3 cr</option>
-  <option value="3 - 5 cr" className="text-black">3 - 5 cr</option>
-  <option value="> 5 cr" className="text-black">&gt; 5 cr</option>
-</select>
 
-
+<div className="text-white">
+  <p className="mb-2">Select Investment size</p>
+  <div className="grid grid-cols-2 gap-3">
+    {[
+      { label: "<1 Cr", value: "< 1cr" },
+      { label: "1 - 3 Cr", value: "1 - 3 cr" },
+      { label: "3 - 5 Cr", value: "3 - 5 cr" },
+      { label: ">5 Cr", value: "> 5 cr" },
+    ].map((option) => (
+      <button
+        key={option.value}
+        onClick={() => setInvestmentSize(option.value)}
+        className={`rounded-xl border px-4 py-3 text-center transition-all duration-200 ${
+          investmentSize === option.value
+            ? "bg-white text-black font-semibold"
+            : "border-white text-white hover:bg-white/20"
+        }`}
+      >
+        {option.label}
+      </button>
+    ))}
+  </div>
+</div>
 
             {/* reCAPTCHA */}
             <div className="flex justify-center mb-4">
@@ -227,4 +242,14 @@ export default function ContactSection() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
