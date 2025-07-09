@@ -76,14 +76,14 @@ export default function Footer() {
       whileInView="visible"
       viewport={{ once: true }}
       custom={1}
-      className={`bg-[#1e1e1e] text-white px-4 md:px-16 py-10 -mt-40 ${InstrumentSans.className} `}
+      className={`bg-[#1e1e1e] text-white px-4  md:px-16 py-10 -mt-40 ${InstrumentSans.className} `}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 mt-40">
         {/* Logo */}
         <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[58px] h-[30.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" />
 
         {/* Links */}
-        <nav className="flex space-x-6 text-sm text-gray-300">
+        <nav className="flex space-x-6 font-[500] text-sm text-gray-300">
           <a href="#about" className="text-[#CCCCCC] hover:text-white">
             About Us
           </a>
