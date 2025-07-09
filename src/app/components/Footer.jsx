@@ -125,7 +125,7 @@ export default function Footer() {
       <hr className="border-gray-700 my-6" />
 
       {/* Bottom Text */}
-      <span className=" flex  flex-col md:flex-row  justify-center items-center  text-sx md:text-sm text-[#CCCCCC]">
+      <span className=" flex  flex-col md:flex-row  justify-center items-center  text-[12px] md:text-sm text-[#CCCCCC]">
         <p>© 2025 Nek Punjabi. All rights reserved.</p>
         <a href="#" className="hover:text-white pl-0 md:pl-4">
           Terms of Service
