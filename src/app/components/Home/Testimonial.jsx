@@ -31,17 +31,17 @@ const Demo = () => {
   }, [isMobile]);
 
   return (
-    <div className="px-4 py-8 overflow-hidden ">
+    <div className="px-4 py-8 overflow-hidden  ">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2, delay: 4 }}
-        className="relative w-full max-w-5xl mx-auto rounded-[20px] overflow-hidden"
+        className="relative w-full md:max-w-5xl mx-auto rounded-[12px] md:rounded-[20px] overflow-hidden"
       >
         <img
           src="/contactCard.png"
           alt="Contact Card"
-          className="w-full h-[400px] xl:h-[500px] object-cover"
+          className=" h-[240px]  w-full md:h-[400px] xl:h-[500px]  md:object-cover"
         />
 
         {/* Overlay content */}
@@ -50,7 +50,7 @@ const Demo = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, delay: 4.2 }}
-            className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-right leading-tight mb-4"
+            className="text-white text-2xl  md:text-4xl lg:text-5xl font-bold text-right leading-tight mb-4"
           >
             Let’s find the <span className="italic font-semibold">best<br />investment</span> for you
           </motion.h2>
@@ -59,7 +59,7 @@ const Demo = () => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, delay: 4.5 }}
-              className="bg-white text-[#99BDE5] font-semibold px-6 py-2 rounded-[16px] border-[2px]"
+              className="bg-white text-[#99BDE5] font-semibold px-6 py-2 rounded-[16px] border-[2px] text-[14px] md:text-[20px]"
             >
               Contact Us
             </motion.button>
