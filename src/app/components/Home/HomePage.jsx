@@ -166,13 +166,13 @@ const HomePage = () => {
      
         <section
           ref={firstSectionRef}
-          className="relative h-[100vh] flex flex-col items-center justify-center w-full overflow-hidden px-4 bg-no-repeat bg-cover bg-center"
+          className="relative h-[100vh] flex flex-col items-center justify-center w-full overflow-hidden  bg-no-repeat bg-cover bg-center"
  
           //  style={{ backgroundImage: "url('/bg.svg')" }}
          
      style={{
   backgroundImage: `
-    linear-gradient(180deg, rgba(255, 255, 255, 0.00) -32.49%, rgba(125, 145, 168, 0.45) 28.16%, #7DA7DE 100%),
+    linear-gradient(180deg, #99BAE5 100%, #99BAE5 100%, #99BAE5 100%),
     url('/bg.svg')
   `,
   backgroundSize: 'cover',
@@ -197,10 +197,11 @@ const HomePage = () => {
     },
   }}
 >
-  <div className="flex flex-col md:flex-row items-start justify-between gap-10 max-w-7xl mx-auto">
+ <div className="flex flex-col md:flex-row items-start justify-between gap-5 2xl:gap-20 max-w-8xl mx-auto">
+
     {/* Left Section - Heading */}
     <motion.div
-      className="w-full md:w-1/2 text-center  md:text-left"
+      className="w-full md:w-1/2 text-center  md:text-left mt-20 lg:px-5 xl:px-4 2xl:px-4 "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -214,7 +215,7 @@ const HomePage = () => {
 
     {/* Right Section - Form */}
     <motion.div
-      className="w-full md:w-1/2"
+      className="w-full md:w-1/2  lg:px-4   xl:px-4 2xl:px-3  "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.6 }}
@@ -227,9 +228,9 @@ const HomePage = () => {
       >
         Submit your number to receive the best advice from our experts.
       </motion.p>
-      {message && <p className="text-gray-800 text-sm mb-2">{message}</p>}
+      {message && <p className="text-[#FFFFFFA3] text-sm mb-2">{message}</p>}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 ">
         <input
           type="text"
           placeholder="Name"
@@ -241,7 +242,7 @@ const HomePage = () => {
             }
           }}
           onBlur={() => setName((prev) => prev.trim())}
-          className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+          className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
         />
 
         <input
@@ -255,7 +256,7 @@ const HomePage = () => {
             }
           }}
           maxLength={10}
-           className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+           className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
         />
 
         <input
@@ -269,32 +270,34 @@ const HomePage = () => {
             }
           }}
           onBlur={() => setLocation((prev) => prev.trim())}
-           className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+           className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
         />
 
 
-<div className="text-white">
+<div className="text-white ">
   <p className="mb-2">Select Investment size</p>
-  <div className="grid grid-cols-2 gap-3">
-    {[
-      { label: "<1 Cr", value: "< 1cr" },
-      { label: "1 - 3 Cr", value: "1 - 3 cr" },
-      { label: "3 - 5 Cr", value: "3 - 5 cr" },
-      { label: ">5 Cr", value: "> 5 cr" },
-    ].map((option) => (
-      <button
-        key={option.value}
-        onClick={() => setInvestmentSize(option.value)}
-        className={`rounded-xl border px-4 py-3 text-center transition-all duration-200 ${
-          investmentSize === option.value
-            ? "bg-white text-black font-semibold"
-            : "border-white text-white hover:bg-white/20"
-        }`}
-      >
-        {option.label}
-      </button>
-    ))}
-  </div>
+<div className="grid grid-cols-2 gap-3">
+  {[
+    { label: "<1 Cr", value: "< 1cr" },
+    { label: "1 - 3 Cr", value: "1 - 3 cr" },
+    { label: "3 - 5 Cr", value: "3 - 5 cr" },
+    { label: ">5 Cr", value: "> 5 cr" },
+  ].map((option) => (
+    <button
+      key={option.value}
+      onClick={() => setInvestmentSize(option.value)}
+      className={`rounded-xl border-2 px-4 py-4 text-center transition-all duration-200 ${
+        investmentSize === option.value
+          ? "bg-white text-black font-semibold"
+          : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
+      }`}
+    >
+      {option.label}
+    </button>
+  ))}
+</div>
+
+
 </div>
 
         <div className="col-span-1 md:col-span-2 flex justify-center mb-2">
@@ -307,7 +310,7 @@ const HomePage = () => {
 
         <button
           type="submit"
-          className="w-full py-3 rounded-lg bg-white text-blue-400 font-semibold hover:bg-blue-500 hover:text-black transition"
+          className="w-full py-3 rounded-2xl bg-white text-blue-400 font-semibold hover:bg-blue-500 hover:text-black transition"
           disabled={loading}
         >
           {loading ? "Sending..." : "Send message"}

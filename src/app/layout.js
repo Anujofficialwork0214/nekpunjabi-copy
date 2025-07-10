@@ -1,17 +1,26 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
+
 import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 
 // Define the metadata here
@@ -48,7 +57,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Optional: You can add a meta tag or other metadata here if necessary */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <body className={`${instrumentSans.variable}  antialiased`}>
         <div className="container max-w-[1920px] overflow-x-hidden mx-auto">
           <Navbar />
           {children}

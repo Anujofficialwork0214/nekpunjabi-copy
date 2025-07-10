@@ -62,7 +62,7 @@ const Navbar = () => {
         hideNavbar ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <nav className="max-w-[1600px] mx-auto flex justify-between items-center">
+      <nav className="max-w-[1920px] mx-auto flex justify-between items-center">
         <div id="logo" className="w-[100px] sm:w-[120px]">
           <Link href="/">
             <Image

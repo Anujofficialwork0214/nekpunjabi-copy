@@ -29,3 +29,62 @@ body {
 body {
   font-family: 'Instrument Sans', sans-serif;
 }
+
+@media (min-width: 1920px) {
+  .ml-3xl--80 {
+    margin-left: -90rem; /* Equivalent to Tailwind's -ml-80 */
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1435px) {
+  .ml-only-1280 {
+    margin-left: 8rem; /* ml-40 */
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .ml-1800-1920 {
+    margin-left: -24rem; /* example: ml-24 (adjust as needed) */
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1250px) {
+  .ml-only-1200 {
+    margin-left: 12rem; /* ml-40 */
+  }
+}
+
+
+@media (min-width: 1600px) and (max-width: 1700px) {
+  .ml-1600-1700 {
+    margin-left: -13rem !important;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .ml-1800-1920 {
+    margin-left: -16rem !important;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .px-1800-1920 {
+    padding-left: -12rem;     /* corrected: no negative padding */
+    padding-right: 6.5rem;
+   
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .ml-1800-1920-service {
+    margin-left: -4rem; /* example: ml-24 (adjust as needed) */
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .ml-1800-1920-about {
+    margin-left: -30rem !important;
+  }
+}
+
+
