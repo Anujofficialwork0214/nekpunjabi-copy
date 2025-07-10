@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 // Define the metadata here
 export const metadata = {
   title: "Nek Punjabi Estate ",
