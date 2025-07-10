@@ -64,7 +64,7 @@ export default function Home() {
       {isMobile ? (
         <div key="mobile-view">
           <HeroMobile />
-          <About />
+         <AboutAnimation />
           <Service />
           <TrustMobile />
           <Invest />
