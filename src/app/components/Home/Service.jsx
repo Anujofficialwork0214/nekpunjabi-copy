@@ -172,30 +172,30 @@ const RealEstateServices = () => {
               </motion.p>
             </div>
 
-            <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-7 2xl:-ml-10">
+            <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13  gap-x-4 ">
               {/* Vertical Line */}
               <motion.div 
                initial={{ y: 50, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
                  viewport={{ once: true }}
-              className="absolute top-0 left-4 h-full w-[2px] bg-white opacity-50 z-0" />
+              className="absolute top-0 left-4 h-full w-[2px] bg-white opacity-50 z-0 space-x-4" />
 
               <motion.div 
                initial={{ y: 50, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
                  viewport={{ once: true }}
-              ref={itemsWrapperRef} className="absolute top-0 left-0 w-full">
+              ref={itemsWrapperRef} className="absolute top-0 left-0 w-full gap-4">
                 {services.map((service) => (
                   <div
                     key={service.title}
-                    className="relative w-full mb-6 py-2 pl-10 service-item "
+                    className="relative w-full mb-6 py-2 pl-16 service-item gap-x-4  "
                     style={{ minHeight: `${ITEM_VERTICAL_SPACE}px` }}
                   >
                     {/*  Marker */}
-                    <div className="absolute left-3 top-2 w-3 h-3 bg-white rotate-45 z-10" />
-                    <h3 className="text-white font-medium text-xl mb-2 italic !font-[600]">{service.title}</h3>
+                    <div className="absolute left-3 top-2 w-3 h-3 bg-white rotate-45 z-10 " />
+                    <h3 className="text-white font-medium text-xl mb-2 italic !font-[600] -mt-2">{service.title}</h3>
                     <p className="text-white max-w-xl ">{service.description}</p>
                   </div>
                 ))}
