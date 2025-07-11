@@ -134,13 +134,13 @@ const TrustSection = () => {
         </div>
         <div
   ref={imageRef}
-  className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[682px]"
+  className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[602px]"
 >
   <Image
     src="/nek1.jpeg"
     alt="Buildings"
     width={581}
-    height={682}
+    height={602}
     className="object-cover w-full h-full"
     draggable="false"
   />
