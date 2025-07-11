@@ -215,7 +215,7 @@ const HomePage = () => {
 
     {/* Right Section - Form */}
     <motion.div
-      className="w-full md:w-1/2  lg:px-4   xl:px-4 2xl:px-3  "
+      className="w-full md:w-1/2  lg:px-4   xl:px-4 2xl:px-3 !font-[500] "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.6 }}

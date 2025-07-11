@@ -89,6 +89,8 @@ const ServiceAnimation = ({ onComplete }) => {
       );
     }, sectionRef);
 
+    
+
     return () => {
       ScrollTrigger.getAll().forEach(trigger => {
         if (trigger.vars.trigger === sectionRef.current) {

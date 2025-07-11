@@ -84,7 +84,8 @@ const TrustSection = () => {
   return (
 
     <section ref={mainRef} className="bg-white py-8 px-4 md:px-16 overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-10  ">
+     <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
+
 
         <div className="flex-1 text-center lg:text-left">
           <h2
@@ -103,52 +104,58 @@ const TrustSection = () => {
           </p>
 
           {/* Stats */}
-          <div
-            ref={statsRef}
-            className="mt-10 mx-auto lg:mx-0 flex justify-start gap-x-20 flex-col px-4 "
-          >
-            <div className="flex items-center border-b pb-4  my-4">
-              <h3 className="text-4xl font-semibold text-[#292929]">500+</h3>
-              <p className="ml-8 text-sm italic text-[#292929] ">
-                Clients <br /> Served
-              </p>
-            </div>
+     <div
+  ref={statsRef}
+  className="mt-30 mx-auto lg:mx-0 flex flex-col gap-y-8 px-1"
+>
+  <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14">
+    <h3 className="text-4xl !font-[500] text-[#292929] w-20">500+</h3>
+    <p className="text-sm italic text-[#292929] !font-[500]">
+      Clients <br /> Served
+    </p>
+  </div>
 
-            <div className="flex items-center border-b pb-4 my-4">
-              <h3 className="text-4xl font-semibold text-[#292929]">10+</h3>
-              <p className="ml-12 text-sm italic text-[#292929] ">
-                Years of <br /> Expertise
-              </p>
-            </div>
+  <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14">
+    <h3 className="text-4xl !font-[500] text-[#292929] w-20">10+</h3>
+    <p className="text-sm italic text-[#292929] !font-[500]">
+      Years of <br /> Expertise
+    </p>
+  </div>
 
-            <div className="flex items-center mb-4 my-4">
-              <h3 className="text-4xl font-semibold text-[#292929]">400</h3>
-              <p className="ml-10 text-sm italic text-[#292929] ">
-                Successful <br /> Investments
-              </p>
-            </div>
-          </div>
+  <div className="flex items-start gap-x-14">
+    <h3 className="text-4xl !font-[500] text-[#292929] w-20">400</h3>
+    <p className="text-sm italic text-[#292929] !font-[500]">
+      Successful <br /> Investments
+    </p>
+  </div>
+</div>
+
+
         </div>
-        <div ref={imageRef} className="relative rounded-2xl overflow-hidden shadow-lg h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full max-w-md">
-          <Image
-            src="/nek1.jpeg"
-            alt="Buildings"
-            width={500}
-            height={600}
-            className="object-cover w-full h-full"
-            draggable="false" 
-          />
+        <div
+  ref={imageRef}
+  className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[602px]"
+>
+  <Image
+    src="/nek1.jpeg"
+    alt="Buildings"
+    width={581}
+    height={602}
+    className="object-cover w-full h-full"
+    draggable="false"
+  />
 
-          <div
-            ref={contactRef}
-            className="absolute top-4 right-4 sm:right-4 sm:left-auto sm:translate-x-0 left-1/2 -translate-x-1/2 bg-white text-[#525252] px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
-          >
-            <MdOutlineWifiCalling3 className="text-xl" />
-            <span>
-              Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
-            </span>
-          </div>
-        </div>
+  <div
+    ref={contactRef}
+    className="absolute top-4 right-4 sm:right-4 sm:left-auto sm:translate-x-0 left-1/2 -translate-x-1/2 bg-white text-[#525252] px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
+  >
+    <MdOutlineWifiCalling3 className="text-xl" />
+    <span>
+      Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
+    </span>
+  </div>
+</div>
+
       </div>
     </section>
   );

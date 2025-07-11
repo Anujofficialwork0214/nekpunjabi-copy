@@ -66,22 +66,23 @@ const AboutAnimation = () => {
              }}
            >
              {/* Content */}
-          <div className="relative z-10 text-left ml-only-1280  ml-1800-1920-about  ml-only-1200  ml-1600-1700 
+          <div className="relative z-10 text-left ml-only-1280  ml-1800-1920-about  ml-only-1200  ml-1600-1700 ml-custom-900-1199 
   sm:ml-10 
   md:ml-20 
   lg:ml-30 
   xl:-ml-10 
-  2xl:-ml-37">
+  2xl:-ml-30">
 
-               <motion.h2
-                 className="text-4xl font-bold text-white mb-6 text-center  md:text-left  md:translate-x-[-180px] md:translate-y-[70px]"
-                 initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ duration: 0.6, ease: 'easeOut',delay: 0.5 }}
-                 viewport={{ once: true }}
-               >
-                 About Us
-               </motion.h2>
+             <motion.h2
+  className="text-4xl !font-[600] text-white mb-6 text-center md:text-left md:translate-x-[-180px] md:translate-y-[70px]"
+  initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+  viewport={{ once: true }}
+>
+  About Us
+</motion.h2>
+
        
              <motion.div
   className="mb-12 text-white text-center font-regular  "
@@ -91,24 +92,32 @@ const AboutAnimation = () => {
   viewport={{ once: true }}
 >
   {/* ✅ For 1200px and above */}
-  <div className="hidden xl:block text-[18px] leading-[28px]">
-    <p>Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. We aim to make real estate</p>
- <p className='-ml-2'> terms easy to understand, share helpful housing tips, keep you updated, and explore investment tips. With a</p> 
-  <p className='ml-6'>strong presence and a commitment to client satisfaction, we offer expert guidance for all your real estate needs.</p>
-  </div>
-
- {/* ✅ Simulating 900–1199px with lg:block and xl:hidden */}
-<div className="hidden lg:block xl:hidden text-[17px] leading-[24px] max-w-[700px] mx-auto text-center px-4">
-  <p>
-    Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. <br />
-    We aim to make real estate terms easy to understand.
-    We share helpful housing <br /> tips, keep you updated,
-    and offer expert guidance for all your real estate needs.
+<div className="hidden xl:block text-[18px] leading-[28px] !font-[400]">
+  <p>Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. We aim to make real estate</p>
+  <p className="-ml-2">
+    terms easy to understand, share helpful housing tips, keep you updated, and explore investment tips. With a
+  </p>
+  <p className="ml-6">
+    strong presence and a commitment to client satisfaction, we offer expert guidance for all your real estate needs.
   </p>
 </div>
 
+{/* ✅ Simulating 900–1199px with lg:block and xl:hidden */}
+<div className="hidden lg:block xl:hidden text-[17px] leading-[24px] max-w-[1270px] mx-auto text-center px-4 line-clamp-1024-1099 custom-4-lines !font-[400]">
+  <p>
+    Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. We aim to make real estate
+  </p>
+  <p>
+    terms easy to understand, share helpful housing tips, keep you updated, and explore investment tips. With a
+  </p>
+  <p className="ml-6">
+    strong presence and a commitment to client satisfaction, we offer expert guidance for all your real estate needs.
+  </p>
+</div>
+
+
 {/* ✅ For below 900px (mobile) */}
-<div className="block lg:hidden text-[15px] leading-[22px] max-w-[650px] mx-auto text-center px-4">
+<div className="block lg:hidden text-[15px] leading-[22px] max-w-[650px] mx-auto text-center px-4 ">
   <p>
     Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. We aim to make real estate terms easy to understand, share helpful housing tips, keep you updated, and explore investment tips. With a strong presence and commitment to client satisfaction, we offer expert guidance for all your real estate needs.
   </p>
@@ -119,7 +128,7 @@ const AboutAnimation = () => {
 
        
                <motion.blockquote
-                 className="italic text-xl font-medium my-10 text-white flex justify-center md:justify-start md:text-left ml-6 "
+                 className="italic text-xl font-medium my-4 text-white flex justify-center md:justify-start md:text-left ml-6  md:ml-6 custom-5-lines "
                  initial={{ y: 50, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 1.5 }}
@@ -140,7 +149,7 @@ const AboutAnimation = () => {
                </motion.blockquote>
        
                      <motion.p
-                 className="mb-6 text-lg text-white text-center md:text-left ml-6 "
+                 className="mb-6 text-lg text-white text-center md:text-left ml-6 font-[500]   custom-4-lines custom-5-lines  "
                  initial={{ y: 50, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
@@ -150,7 +159,7 @@ const AboutAnimation = () => {
                  <p>generational wealth through safe and sound real estate investments</p>
                </motion.p>
                <motion.p
-                 className="uppercase text-sm tracking-wide text-white text-center md:text-left ml-6 mt-15 " // Centered text
+                 className="uppercase text-sm tracking-wide text-white  font-[600]  text-center md:text-left ml-6 mt-15 custom-4-lines custom-5-lines   " // Centered text
                  initial={{ y: 20, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 2.5 }}
@@ -170,7 +179,7 @@ const AboutAnimation = () => {
                  whileInView={{ y: 0, opacity: 3.5 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 2.8 }}
                  viewport={{ once: true }}
-                    className="flex justify-center w-full md:w-auto md:justify-start shrink-0 ">
+                    className="flex justify-center w-full md:w-auto md:justify-start shrink-0   -ml-10 md:ml-0  ">
                        {/* Centered on mobile by parent (items-center), aligned start on md+ */}
                      <svg width="138" height="100" viewBox="0 0 138 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_67179_27533)">
@@ -205,7 +214,7 @@ const AboutAnimation = () => {
        
             
                  
-                   <div className="flex flex-row items-center justify-center gap-8 md:gap-16 w-full md:w-auto">
+                   <div className="flex flex-row items-center justify-center gap-8 md:gap-16 w-full md:w-auto -ml-10 md:ml-0  ">
                     
                      <motion.div 
                       initial={{ y: 20, opacity: 0 }}
@@ -243,7 +252,7 @@ const AboutAnimation = () => {
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 3.5 }}
                  viewport={{ once: true }}
                  
-                className='hidden md:block absolute bottom-0 right-0 md:translate-x-[250px] translate-y-3xl  translate-y-3xl-1 translate-y-3xl-2 md:translate-y-[90px]  xl:translate-x-[-20px] xl:translate-y-[130px] 2xl:translate-y-[82px] pointer-events-none opacity-80 md:opacity-100'>
+                className='hidden xl:block absolute bottom-0 right-0 md:translate-x-[250px] translate-y-3xl  translate-y-3xl-1 translate-y-3xl-2 md:translate-y-[90px]  xl:translate-x-[-20px] xl:translate-y-[130px] 2xl:translate-y-[82px] pointer-events-none opacity-80 md:opacity-100'>
                  <svg width="344" height="284" viewBox="0 0 344 284" fill="none" xmlns="http://www.w3.org/2000/svg">
                    <path fillRule="evenodd" clipRule="evenodd" d="M0 163.095V319.362C0 334.02 8.62133 352.827 19.4291 362.267C54.9972 393.327 103.503 380.173 120.699 346.133C127.709 332.258 128.087 328.383 128.087 308.259L128.056 172.452C128.444 139.231 161.785 116.279 191.571 131.206C198.975 134.916 200.192 136.516 205.596 141.941C215.331 151.718 213.274 160.878 217.528 165.878C220.818 169.748 219.979 169.945 222.02 174.193C211.166 174.193 206.28 173.769 199.778 178.426C194.322 182.338 191.275 190.25 191.275 198.959C191.275 208.782 195.208 215.497 198.664 222.31C200.555 226.041 202.202 228.507 204.57 231.776L210.917 240.801C223.756 237.812 243.164 214.248 248.609 199.078C256.34 177.535 255.889 154.314 245.376 133.76C225.02 93.9538 174.794 78.1515 137.755 96.762C127.9 101.715 122.025 105.539 114.637 112.927C100.197 127.372 90.3944 146.806 90.5084 169.069L90.5136 289.473C90.5136 300.84 91.9539 319.487 88.2236 327.32C75.732 353.589 35.0138 345.693 35.0138 316.798V167.365C35.0138 135.537 48.5313 110.554 62.1627 90.3426C72.2658 75.3537 90.5343 61.0747 105.715 51.9145C119.533 43.5781 141.112 36.879 158.096 35.1278C199.456 30.8689 242.454 47.0339 268.779 73.6388C281.297 86.291 285.115 92.6534 293.794 107.544C303.71 124.574 312.383 156.313 308.497 184.675C306.104 202.13 310.539 312.912 307.461 323.683C305.705 329.823 302.519 333.672 298.234 337.506C296.348 339.195 293.472 341.087 290.877 342.107C278.219 347.076 263.567 341.517 257.505 332.548C250.967 322.87 252.759 316.425 252.759 301.431C252.759 290.125 253.288 277.54 252.775 266.401C251.609 241.081 216.041 241.102 216.041 267.272V313.383C216.041 333.942 223.756 349.806 234.18 360.143C239.807 365.723 245.335 370.173 253.039 373.733C301.052 395.928 344.128 354.324 344.128 324.486V160.536C344.128 139.506 336.201 113.922 327.336 96.2024C316.938 75.4211 301.374 53.904 283.141 39.6353C254.63 17.3152 218.331 0 179.323 0C148.759 0 124.32 3.04648 98.7619 15.9318C80.2343 25.2733 77.4987 27.0297 61.1109 39.7597L50.2358 49.3809C47.9147 51.3031 47.7126 52.5673 45.4899 54.8781C19.4653 81.9389 0 123.584 0 163.095Z" fill="white" fillOpacity="0.08"/>
                  </svg>
