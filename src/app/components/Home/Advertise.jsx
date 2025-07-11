@@ -367,25 +367,32 @@ const Advertise = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5 });
 
-  useEffect(() => {
+   useEffect(() => {
     if (isInView) {
-      setStep(0);
+      setStep(0); // Reset to step 0 when visible
     }
   }, [isInView]);
 
   useEffect(() => {
-    let timers = [];
+   if (!isInView) return; // Prevent step update if not in view
+
+    const timers = [];
 
     if (step === 0) {
-      timers.push(setTimeout(() => setStep(1), 3000));
+      timers.push(setTimeout(() => setStep(1), 1000));
     } else if (step === 1) {
       timers.push(setTimeout(() => setStep(2), 1000));
     } else if (step === 2) {
       timers.push(setTimeout(() => setStep(3), 1000));
     }
 
-    return () => timers.forEach(clearTimeout);
-  }, [step]);
+    return () => {
+      timers.forEach(clearTimeout);
+    };
+  }, [step, isInView]);
+
+ // console.log(isInView, step);
+
 
   return (
     <div ref={ref} className={`${InstrumentSans.className}`}>
