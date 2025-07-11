@@ -75,10 +75,10 @@ export default function Footer() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      custom={1}
-      className={`bg-[#1e1e1e] text-white px-4  md:px-16 py-10  -mt-20 md:-mt-40 ${InstrumentSans.className} `}
+      custom={2}
+      className={`bg-[#1e1e1e] text-white px-4  md:px-16 py-10  -mt-20 md:-mt-37 ${InstrumentSans.className} `}
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 mt-20 md:mt-40">
+      <div className=" mx-auto flex flex-col md:flex-row items-center justify-between  mt-20 md:mt-31">
         {/* Logo */}
         <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[58px] h-[30.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" />
 
@@ -122,7 +122,7 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <hr className="border-gray-700 my-6" />
+      <hr className="border-gray-700 my-6  md:my-14" />
 
       {/* Bottom Text */}
       <span className=" flex  flex-col md:flex-row  justify-center items-center  text-[12px] md:text-sm text-[#CCCCCC]">

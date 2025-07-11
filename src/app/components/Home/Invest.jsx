@@ -139,9 +139,9 @@ const WhyInvest = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#1F1F1F] text-white py-16 px-4 md:px-20 overflow-hidden"
+      className="bg-[#1F1F1F] text-white py-16 px-4 md:px-10  overflow-hidden"
     >
-      <div className="flex flex-col md:flex-row justify-between items-center md:items-center mb-16 text-center md:text-left">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-16 text-center md:text-left">
         <div>
           <h2
             ref={headingRef}
@@ -153,7 +153,7 @@ const WhyInvest = () => {
           </h2>
           <p
             ref={paragraphRef}
-            className="text-[14px] xl:text-[16px] text-[#FFFFFF] mt-4 max-w-md leading-[23px] "
+            className="text-[14px] xl:text-[16px] text-[#FFFFFF] mt-4 md:mt-2 lg:pl-4  leading-[23px] "
           >
             Discover why thousands trust Nek Punjabi Estate <br />
             for reliable and profitable real estate investments.
@@ -164,16 +164,16 @@ const WhyInvest = () => {
         <Link
           href="/getAdvice"
           ref={buttonRef}
-          className="flex items-center gap-2 bg-white text-[#525252] font-medium py-2 px-4 rounded-2xl mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
+          className="flex items-center  justify-center gap-2 bg-white text-[#525252] font-medium lg:h-[52px] lg:w-[203px] rounded-[15.56px]  mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
         >
-          <FiPhoneCall className="text-sm w-[20px] h-[20px]" />
-          <p className="text-[16px] lg:text-lg">Contact us now</p>
+          <FiPhoneCall className="text-sm w-[14.35px] h-[13.62px]" />
+          <p className="text-[16px] lg:text-[17.5px]">Contact us now</p>
         </Link>
       </div>
       <div className="pt-12">
         <div
           ref={gridContainerRef}
-          className="relative px-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8"
+          className="relative px-4 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8"
         >
           <div
             ref={lineRef}
@@ -193,7 +193,7 @@ const WhyInvest = () => {
                   {item.number}
                 </div>
               </span>
-              <p className="text-sm lg:text-lg xl:text-xl text-[#FFFFFF]  text-center lg:text-left">
+              <p className="text-sm lg:text-lg 2xl:text-xl text-[#FFFFFF]  text-center lg:text-left">
                 {item.title}
                 <br />
                 {item.subtitle}
