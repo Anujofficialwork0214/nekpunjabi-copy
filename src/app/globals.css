@@ -87,4 +87,23 @@ body {
   }
 }
 
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .translate-y-3xl {
+    transform: translateY(3.5rem) !important; /* Shift down by 6rem (96px) */
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1700px) {
+  .translate-y-3xl-1 {
+    transform: translateY(2.8rem) !important; /* Shift down by 6rem (96px) */
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .translate-y-3xl-2 {
+    transform: translateY(0.8rem) !important; /* Shift down by 6rem (96px) */
+  }
+}
+
+
 
