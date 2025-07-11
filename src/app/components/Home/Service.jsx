@@ -134,7 +134,7 @@ const RealEstateServices = () => {
           />
             <div className="mb-16 flex flex-col items-center text-center sm:items-start sm:text-left xl:-ml-7  2xl:-ml-10 ">
             
-              <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2 ">
+              <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2  ">
               
                 <div />
                 <motion.div
@@ -142,7 +142,7 @@ const RealEstateServices = () => {
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
                  viewport={{ once: true }}
-                 className='-ml-1 -ml-1 flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 className='-ml-2  flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.4" y="0.4" width="17.2" height="17.2" rx="8.6" stroke="white" stroke-width="0.8"/>
                 <rect x="3" y="3" width="12" height="12" rx="6" fill="#F58106"/>
                 </svg>
@@ -159,7 +159,7 @@ const RealEstateServices = () => {
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
                  viewport={{ once: true }}
-              className="text-4xl font-medium lg:font-semibold text-white mb-4 !font-[600]'">
+              className="text-4xl font-medium lg:font-semibold text-white mb-4 !font-[600] mt-4">
                 Unlock Your Real Estate Potential
               </motion.h2>
               <motion.p
@@ -172,7 +172,8 @@ const RealEstateServices = () => {
               </motion.p>
             </div>
 
-            <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13  gap-x-4 ">
+           <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13 ml-[-12px] sm:ml-0">
+
               {/* Vertical Line */}
               <motion.div 
                initial={{ y: 50, opacity: 0 }}
@@ -190,7 +191,7 @@ const RealEstateServices = () => {
                 {services.map((service) => (
                   <div
                     key={service.title}
-                    className="relative w-full mb-6 py-2 pl-16 service-item gap-x-4  "
+                    className="relative w-full mb-6 py-2 md:pl-16 pl-10 service-item gap-x-4  "
                     style={{ minHeight: `${ITEM_VERTICAL_SPACE}px` }}
                   >
                     {/*  Marker */}
