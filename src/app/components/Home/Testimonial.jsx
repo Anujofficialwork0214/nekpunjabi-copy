@@ -36,16 +36,16 @@ const Demo = () => {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2, delay: 4 }}
-        className="relative w-full md:max-w-5xl mx-auto rounded-[12px] md:rounded-[20px] overflow-hidden"
+        className="relative w-full  lg:max-w-[1200px]  mx-auto  rounded-[12px] md:rounded-[20px] overflow-hidden"
       >
         <img
           src="/contactCard.png"
           alt="Contact Card"
-          className=" h-[240px]  w-full md:h-[400px] xl:h-[500px]  md:object-cover"
+          className=" h-[240px]  w-full  md:h-[400px] lg:h-[500px]  md:object-cover"
         />
 
         {/* Overlay content */}
-        <div className="absolute inset-0 flex flex-col justify-center items-end p-4 sm:p-8 md:p-12">
+        <div className="absolute inset-0 flex flex-col  items-end  top-8 right-12 md:top-14 md:right-13 ">
           <motion.h2
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -59,7 +59,7 @@ const Demo = () => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, delay: 4.5 }}
-              className="bg-white text-[#99BDE5] font-semibold px-6 py-2 rounded-[16px] border-[2px] text-[14px] md:text-[20px]"
+              className="bg-white text-[#99BDE5]  font-[500] px-6 py-2 rounded-[16px] border-[2px] text-[14px] md:text-[20px]"
             >
               Contact Us
             </motion.button>
