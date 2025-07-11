@@ -132,31 +132,32 @@ const TrustSection = () => {
         </div>
 
 
-        <div
-          ref={statsRef}
-          className="mt-4 lg:mx-0 flex flex-col justify-start gap-y-8 px-2 items-start w-full"
-        >
-          <div className="flex items-center border-b border-gray-300 w-full pb-4">
-            <h3 className="text-4xl font-semibold text-[#292929]">500+</h3>
-            <p className="ml-8 text-sm italic text-[#292929]">
-              Clients <br /> Served
-            </p>
-          </div>
+    <div
+  ref={statsRef}
+  className="mt-4 lg:mx-0 flex flex-col justify-start gap-y-8 px-2 items-start w-full"
+>
+  <div className="flex items-center border-b border-gray-300 w-[75%] pb-4 gap-x-10">
+    <h3 className="text-4xl font-semibold text-[#292929] w-20">500+</h3>
+    <p className="text-sm italic text-[#292929] leading-snug">
+      Clients <br /> Served
+    </p>
+  </div>
 
-          <div className="flex items-center border-b  border-gray-300 w-full pb-4">
-            <h3 className="text-4xl font-semibold text-[#292929]">10+</h3>
-            <p className="ml-12 text-sm italic text-[#292929]">
-              Years of <br /> Expertise
-            </p>
-          </div>
+  <div className="flex items-center border-b border-gray-300 w-[75%] pb-4 gap-x-10">
+    <h3 className="text-4xl font-semibold text-[#292929] w-20">10+</h3>
+    <p className="text-sm italic text-[#292929] leading-snug">
+      Years of <br /> Expertise
+    </p>
+  </div>
 
-          <div className="flex items-center">
-            <h3 className="text-4xl font-semibold text-[#292929]">400</h3>
-            <p className="ml-12 text-sm italic text-[#292929]">
-              Successful <br /> Investments
-            </p>
-          </div>
-        </div>
+  <div className="flex items-center w-[75%] gap-x-10">
+    <h3 className="text-4xl font-semibold text-[#292929] w-20">400</h3>
+    <p className="text-sm italic text-[#292929] leading-snug">
+      Successful <br /> Investments
+    </p>
+  </div>
+</div>
+
 
       </div>
     </section>
