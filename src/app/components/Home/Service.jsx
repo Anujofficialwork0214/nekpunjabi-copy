@@ -2,6 +2,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,35 +136,70 @@ const RealEstateServices = () => {
             
               <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2 ">
               
-                <div className="w-3 h-3 bg-orange-400 rounded-full" />
-                SERVICES
+                <div />
+                <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                 viewport={{ once: true }}
+                 className='-ml-1 -ml-1 flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.4" y="0.4" width="17.2" height="17.2" rx="8.6" stroke="white" stroke-width="0.8"/>
+                <rect x="3" y="3" width="12" height="12" rx="6" fill="#F58106"/>
+                </svg>
+                </motion.div>
+                  <motion.div 
+                    initial={{ y: 50, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                 viewport={{ once: true }}
+                   className=' !font-[500]'> SERVICES</motion.div>
               </div>
-              <h2 className="text-4xl font-medium lg:font-semibold text-white mb-4">
+              <motion.h2 
+               initial={{ y: 10, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
+                 viewport={{ once: true }}
+              className="text-4xl font-medium lg:font-semibold text-white mb-4 !font-[600]'">
                 Unlock Your Real Estate Potential
-              </h2>
-              <p className="text-white max-w-2xl">
+              </motion.h2>
+              <motion.p
+               initial={{ y: -10, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
+                 viewport={{ once: true }}
+               className="text-white max-w-2xl">
                 From groundbreaking investments to crafting your dream home, we’re with you every step of the way.
-              </p>
+              </motion.p>
             </div>
 
             <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-7 2xl:-ml-10">
               {/* Vertical Line */}
-              <div className="absolute top-0 left-4 h-full w-[2px] bg-white opacity-50 z-0" />
+              <motion.div 
+               initial={{ y: 50, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                 viewport={{ once: true }}
+              className="absolute top-0 left-4 h-full w-[2px] bg-white opacity-50 z-0" />
 
-              <div ref={itemsWrapperRef} className="absolute top-0 left-0 w-full">
+              <motion.div 
+               initial={{ y: 50, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
+                 viewport={{ once: true }}
+              ref={itemsWrapperRef} className="absolute top-0 left-0 w-full">
                 {services.map((service) => (
                   <div
                     key={service.title}
-                    className="relative w-full mb-6 py-2 pl-10 service-item"
+                    className="relative w-full mb-6 py-2 pl-10 service-item "
                     style={{ minHeight: `${ITEM_VERTICAL_SPACE}px` }}
                   >
                     {/*  Marker */}
                     <div className="absolute left-3 top-2 w-3 h-3 bg-white rotate-45 z-10" />
-                    <h3 className="text-white font-medium text-xl mb-2 italic">{service.title}</h3>
+                    <h3 className="text-white font-medium text-xl mb-2 italic !font-[600]">{service.title}</h3>
                     <p className="text-white max-w-xl ">{service.description}</p>
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         
