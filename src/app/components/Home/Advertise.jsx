@@ -363,36 +363,38 @@ const InstrumentSans = Instrument_Sans({
   subsets: ["latin"],
 });
 const Advertise = () => {
-  const [step, setStep] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 });
+const [step, setStep] = useState(0);
+const ref = useRef(null);
+const isInView = useInView(ref, { amount: 0.5 });
+const wasInView = useRef(false); // Tracks if it has been in view before
 
-   useEffect(() => {
-    if (isInView) {
-      setStep(0); // Reset to step 0 when visible
-    }
-  }, [isInView]);
+useEffect(() => {
+  let timers = [];
 
-  useEffect(() => {
-   if (!isInView) return; // Prevent step update if not in view
+  if (isInView ) {
+    //wasInView.current = true;
 
-    const timers = [];
+    setStep(0); // Start from Instagram again
 
-    if (step === 0) {
-      timers.push(setTimeout(() => setStep(1), 1000));
-    } else if (step === 1) {
-      timers.push(setTimeout(() => setStep(2), 1000));
-    } else if (step === 2) {
-      timers.push(setTimeout(() => setStep(3), 1000));
-    }
+    // Advance to YouTube after 0.5 second
+    timers.push(setTimeout(() => {
+      setStep(1);
+    }, 1000));
+  }
 
-    return () => {
-      timers.forEach(clearTimeout);
-    };
-  }, [step, isInView]);
+  // if (!isInView && wasInView.current) {
+  //  // wasInView.current = false;
 
- // console.log(isInView, step);
+  //   // ❗ Reset state for re-triggering animation
+  //   setStep(-1); // Or null, if you prefer
+  // }
 
+  // return () => {
+  //   timers.forEach(clearTimeout);
+  // };
+}, [isInView]);
+
+console.log(isInView)
 
   return (
     <div ref={ref} className={`${InstrumentSans.className}`}>
@@ -421,7 +423,7 @@ const Advertise = () => {
             </motion.div>
 
             {/* Instagram Row */}
-            {step >= 1 && (
+            {step ===0 && (
               <motion.div
                 className="flex justify-between items-start"
                 initial={{ opacity: 0, x: 40 }}
@@ -468,7 +470,7 @@ const Advertise = () => {
             )}
 
             {/* YouTube Row */}
-            {step >= 2 && (
+            {step === 1 && (
               <motion.div
                 className="flex flex-col gap-4"
                 initial={{ opacity: 0, y: 40 }}
@@ -542,7 +544,7 @@ const Advertise = () => {
       {/* ✅ Desktop View */}
       <div className="hidden lg:block">
         <AnimatePresence mode="wait">
-          {step <= 2 && (
+          {step === 0 && (
             <motion.div
               key="desktop"
               className="flex flex-col lg:flex-row items-center justify-evenly gap-12 w-full max-w-7xl px-4 py-20 mx-auto"
@@ -563,7 +565,7 @@ const Advertise = () => {
                   className="h-92 w-70 relative z-10"
                   draggable="false"
                 />
-                {step >= 2 && (
+                {step === 0 && (
                   <motion.img
                     src="/bgLeftImg.png"
                     className="absolute top-4 left-4 w-70 h-92 z-20 rotate-2"
@@ -622,7 +624,7 @@ const Advertise = () => {
                   draggable="false"
 
                 />
-                {step >= 2 && (
+                {step ===0 && (
                   <motion.img
                     src="/bgRightImg..png"
                     className="absolute top-4 right-4 w-70 h-92 z-20 -rotate-2"
@@ -637,7 +639,7 @@ const Advertise = () => {
           )}
 
           {/* Desktop YouTube section */}
-          {step >= 3 && (
+          {step === 1 && (
             <motion.div
               key="youtube"
               className="flex flex-col items-center justify-evenly w-full mt-20 px-4 py-20 "
@@ -683,7 +685,7 @@ const Advertise = () => {
                     className="w-[400px] h-[232px] mt-20 "
                     draggable="false"
                   />
-                  {step >= 3 && (
+                  {step === 1 && (
                     <motion.img
                       src="/Youtubeleft1.png"
                       className="absolute top-24 left-2 w-[400px] h-[232px] z-20 rotate-4"
@@ -726,7 +728,7 @@ const Advertise = () => {
                     className="w-[420px] h-[232px] mt-20  "
                     draggable="false"
                   />
-                  {step >= 3 && (
+                  {step ===1 && (
                     <motion.img
                       src="/YoutubeRight2.png"
                       className="absolute top-24 right-4 w-[400px] h-[232px]  z-20 -rotate-4"
