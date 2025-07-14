@@ -80,7 +80,7 @@ export default function Footer() {
     >
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between  gap-6 md:gap-0 mt-10 md:mt-31">
         {/* Logo */}
-        <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" />
+        <a href="#"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" /></a>
 
         {/* Links */}
         <nav className="flex space-x-6 font-[500] text-sm text-gray-300">
