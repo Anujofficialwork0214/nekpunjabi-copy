@@ -407,7 +407,9 @@ const RealEstateServices = () => {
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
                  viewport={{ once: true }}
-              className="absolute top-0 left-4 h-full w-[2px] bg-white opacity-50 z-0 space-x-4" />
+              className="absolute top-0 left-[17px]   h-full w-[2px] bg-white opacity-50 z-0 space-x-4"
+              
+               />
 
               <motion.div 
                initial={{ y: 50, opacity: 0 }}

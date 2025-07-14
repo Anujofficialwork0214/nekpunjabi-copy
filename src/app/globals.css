@@ -129,3 +129,9 @@ body {
   }
 }
 
+@media (max-width: 1920px) {
+  .ml-4\.2 {
+    margin-left: 8rem;
+  }
+}
+
