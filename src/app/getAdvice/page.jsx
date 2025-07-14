@@ -124,89 +124,86 @@ export default function ContactSection() {
       </div>
 
       {/* Content Wrapper */}
-      <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-20">
+      <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-6 xl:px-6 2xl:px-6 ">
         {/* Text Section */}
 
         <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6 text-center lg:text-left">
           <h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
 
-          <p className="text-base max-w-md mx-auto lg:mx-0">
-            If you'd like to know more information about us and any of our
-            services, please get in touch with the below details or the contact
-            form provided.
-          </p>
-        </div>
 
-
-        {/* Form Section */}
-        <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
+  <p className="text-base max-w-md mx-auto lg:mx-0 px-2">
+    If you'd like to know more information about us and any of our
+    services, please get in touch with the below details or the contact
+    form provided.
+  </p>
+</div>
+      {/* Form Section */}
+       <div className="w-full lg:w-1/2 mt-10 lg:mt-0  px-2 lg:px-1 xl:px-1 2xl:px-1 ">
           {message && <p className="text-gray-800 text-sm mb-2">{message}</p>}
           <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              placeholder=" Name"
-              value={name}
-              onChange={(e) => {
-                const input = e.target.value;
-                if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-                  setName(input.replace(/^\s+/, ""));
-                }
-              }}
-              onBlur={() => setName((prev) => prev.trim())}
-              className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+
+          <input
+  type="text"
+  placeholder=" Name"
+  value={name}
+  onChange={(e) => {
+    const input = e.target.value;
+    if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
+      setName(input.replace(/^\s+/, "")); 
+    }
+  }}
+  onBlur={() => setName((prev) => prev.trim())} 
+  className="w-full rounded-lg border border-white bg-transparent px-4 py-3  placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+/>
+<input
+  type="text"
+  placeholder="Phone Number"
+  value={phone}
+  onChange={(e) => {
+    const input = e.target.value;
+    if (/^\d*$/.test(input)) {
+      setPhone(input);
+    }
+  }}
+  maxLength={10}
+  className="w-full rounded-lg border border-white bg-transparent px-4 py-3  placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+/>
+<input
+  type="text"
+  placeholder="City"
+  value={location}
+  onChange={(e) => {
+    const input = e.target.value;
+    if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
+      setLocation(input.replace(/^\s+/, "")); 
+    }
+  }}
+  onBlur={() => setLocation((prev) => prev.trim())}
+  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
             />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              value={phone}
-              onChange={(e) => {
-                const input = e.target.value;
-                if (/^\d*$/.test(input)) {
-                  setPhone(input);
-                }
-              }}
-              maxLength={10}
-              className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white "
-            />
-
-            <input
-              type="text"
-              placeholder="City"
-              value={location}
-              onChange={(e) => {
-                const input = e.target.value;
-                if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-                  setLocation(input.replace(/^\s+/, ""));
-                }
-              }}
-              onBlur={() => setLocation((prev) => prev.trim())}
-              className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
-            />
-
-            <div className="text-white">
-              <p className="mb-2">Select Investment size</p>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { label: "<1 Cr", value: "< 1cr" },
-                  { label: "1 - 3 Cr", value: "1 - 3 cr" },
-                  { label: "3 - 5 Cr", value: "3 - 5 cr" },
-                  { label: ">5 Cr", value: "> 5 cr" },
-                ].map((option) => (
-                  <button
-                    key={option.value}
-                    onClick={() => setInvestmentSize(option.value)}
-                    className={`rounded-xl border px-4 py-3 text-center transition-all duration-200 ${investmentSize === option.value
-                      ? "bg-white text-black font-semibold"
-                      : "border-white text-white hover:bg-white/20"
-                      }`}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
+<div className="text-white">
+  <p className="mb-2">Select Investment size</p>
+  <div className="grid grid-cols-2 gap-3">
+    {[
+      { label: "<1 Cr", value: "< 1cr" },
+      { label: "1 - 3 Cr", value: "1 - 3 cr" },
+      { label: "3 - 5 Cr", value: "3 - 5 cr" },
+      { label: ">5 Cr", value: "> 5 cr" },
+    ].map((option) => (
+      <button
+        key={option.value}
+        onClick={() => setInvestmentSize(option.value)}
+        className={`rounded-xl border px-4 py-3 text-center transition-all duration-200 ${
+          investmentSize === option.value
+            ? "bg-white text-black font-semibold"
+            : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
+        }`}
+      >
+        {option.label}
+      </button>
+    ))}
+  </div>
+</div>
             {/* reCAPTCHA */}
             <div className="flex justify-center mb-4">
               <ReCAPTCHA
@@ -233,7 +230,7 @@ export default function ContactSection() {
         <Image
           src="/2.png"
           alt="House"
-          width={1920}
+          width={2000}
           height={800}
           className="w-full h-auto object-cover"
         />
