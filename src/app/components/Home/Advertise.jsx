@@ -363,44 +363,44 @@ const InstrumentSans = Instrument_Sans({
   subsets: ["latin"],
 });
 const Advertise = () => {
-const [step, setStep] = useState(-1);
-const ref = useRef(null);
-const isInView = useInView(ref, { amount: 0.5 });
-const wasInView = useRef(false); // Tracks if it has been in view before
+  const [step, setStep] = useState(-1);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.5 });
+  const wasInView = useRef(false); // Tracks if it has been in view before
 
-useEffect(() => {
-  let timers = [];
+  useEffect(() => {
+    let timers = [];
 
-  if (isInView ) {
-    //wasInView.current = true;
+    if (isInView) {
+      //wasInView.current = true;
 
-    setStep(0); // Start from Instagram again
+      setStep(0); // Start from Instagram again
 
-    // Advance to YouTube after 0.5 second
-    timers.push(setTimeout(() => {
-      setStep(1);
-    }, 4000));
-  }
+      // Advance to YouTube after 0.5 second
+      timers.push(setTimeout(() => {
+        setStep(1);
+      }, 4000));
+    }
 
-  // if (!isInView && wasInView.current) {
-  //  // wasInView.current = false;
+    // if (!isInView && wasInView.current) {
+    //  // wasInView.current = false;
 
-  //   // ❗ Reset state for re-triggering animation
-  //   setStep(-1); // Or null, if you prefer
-  // }
+    //   // ❗ Reset state for re-triggering animation
+    //   setStep(-1); // Or null, if you prefer
+    // }
 
-  // return () => {
-  //   timers.forEach(clearTimeout);
-  // };
-}, [isInView]);
+    // return () => {
+    //   timers.forEach(clearTimeout);
+    // };
+  }, [isInView]);
 
-console.log(isInView)
+  console.log(isInView)
 
   return (
     <div ref={ref} className={`${InstrumentSans.className}`}>
       {/* ✅ Mobile View */}
       <div className="block lg:hidden">
-        <div className="flex flex-col items-start justify-start px-8 py-20 w-full max-w-md mx-auto overflow-hidden">
+        <div className="flex flex-col items-start justify-start px-8 py-20 w-full max-w-md mx-auto overflow-hidden h-[520px]">
           <div className="flex flex-col gap-8">
             {/* Static Heading and Paragraph */}
             <motion.div
@@ -409,21 +409,21 @@ console.log(isInView)
               transition={{ duration: 1 }}
             >
               <h2
-                className="text-3xl font-semibold italic "
+                className="text-[28px] text-[#292929] font-semibold italic leading-8"
               // style={{ fontFamily: "Instrument Sans" }}
               >
                 Stay <em>Informed</em>,<br />
                 Stay <em>Inspired</em>
               </h2>
 
-              <p className="text-gray-600 mt-2 font-sans w-[70%]">
+              <p className="text-[#3D3D3D] text-[14px] mt-2 font-sans w-[70%]">
                 Join our community for the latest market insights, property
                 showcases, and expert advice.
               </p>
             </motion.div>
 
             {/* Instagram Row */}
-            {step ===0 && (
+            {step === 0 && (
               <motion.div
                 className="flex justify-between items-start"
                 initial={{ opacity: 0, x: 40 }}
@@ -432,13 +432,13 @@ console.log(isInView)
               >
                 <div className="w-2/3">
                   <h3
-                    className="text-lg font-semibold mt-6 leading-5 tracking-normal text-[#292929]"
+                    className="text-[16px] font-semibold mt-6 leading-5 tracking-normal text-[#292929]"
                   // style={{ fontFamily: "Instrument Sans" }}
                   >
                     Instagram{" "}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mt-1 font-sans leading-[20px]">
+                  <p className="text-[#3D3D3D] text-sm mt-1 font-sans leading-[20px]">
                     Follow us on Instagram for a daily dose of stunning
                     properties, expert advice, and real estate inspiration.
                   </p>
@@ -454,8 +454,8 @@ console.log(isInView)
                     139K+
                   </div>
                   <div
-                    className="text-sm text-gray-500"
-                    style={{ fontSize: "16px" }}
+                    className="text-sm text-[#292929] ml-1"
+                    style={{ fontSize: "10px" }}
                   >
                     Followers
                   </div>
@@ -478,13 +478,13 @@ console.log(isInView)
                 transition={{ duration: 1 }}
               >
                 <h3
-                  className="text-lg font-semibold mt-6 leading-5 tracking-normal text-[#292929]"
+                  className="text-[16px] font-semibold mt-6 leading-5 tracking-normal text-[#292929]"
                 // style={{ fontFamily: "Instrument Sans" }}
                 >
                   {" "}
                   YouTube
                 </h3>
-                <p className="font-sans text-gray-600 text-sm leading-[20px] w-[70%]">
+                <p className="font-sans text-[#3D3D3D] text-sm leading-[20px] w-[70%]">
                   Subscribe to our YouTube channel, Nek Punjabi Estate, for
                   in-depth property tours, informative guides, and expert
                   analyses of the real estate market.
@@ -503,18 +503,18 @@ console.log(isInView)
                       100k+
                     </div>
                     <div
-                      className="text-sm text-gray-500"
-                      style={{
-                        // fontFamily: "Instrument Sans",
-                        fontSize: "16px",
-                      }}
+                      className="text-[10px] text-[#292929] ml-1"
+                    // style={{
+                    //   // fontFamily: "Instrument Sans",
+                    //   fontSize: "10px",
+                    // }}
                     >
                       Subscribers
                     </div>
                   </div>
                   <div className="text-left">
                     <div
-                      className="text-2xl font-normal mt-4"
+                      className="text-2xl font-normal mt-4 "
                       style={{
                         // fontFamily: "Instrument Sans",
                         fontSize: "24px",
@@ -525,11 +525,11 @@ console.log(isInView)
                       139K+
                     </div>
                     <div
-                      className="text-sm text-gray-500 text-left"
-                      style={{
-                        // fontFamily: "Instrument Sans",
-                        fontSize: "16px",
-                      }}
+                      className="text-[10px] text-[#292929] text-left ml-1"
+                    // style={{
+                    //   // fontFamily: "Instrument Sans",
+                    //   fontSize: "16px",
+                    // }}
                     >
                       View
                     </div>
@@ -624,7 +624,7 @@ console.log(isInView)
                   draggable="false"
 
                 />
-                {step ===0 && (
+                {step === 0 && (
                   <motion.img
                     src="/bgRightImg..png"
                     className="absolute top-4 right-4 w-70 h-92 z-20 -rotate-2"
@@ -728,7 +728,7 @@ console.log(isInView)
                     className="w-[420px] h-[232px] mt-20  "
                     draggable="false"
                   />
-                  {step ===1 && (
+                  {step === 1 && (
                     <motion.img
                       src="/YoutubeRight2.png"
                       className="absolute top-24 right-4 w-[400px] h-[232px]  z-20 -rotate-4"
