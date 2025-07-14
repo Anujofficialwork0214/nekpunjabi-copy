@@ -400,7 +400,9 @@ const Advertise = () => {
     <div ref={ref} className={`${InstrumentSans.className}`}>
       {/* ✅ Mobile View */}
       <div className="block lg:hidden">
+
         <div className="flex flex-col items-start justify-start px-8 py-20 w-full max-w-md mx-auto overflow-hidden h-[520px]">
+
           <div className="flex flex-col gap-8">
             {/* Static Heading and Paragraph */}
             <motion.div
@@ -642,7 +644,7 @@ const Advertise = () => {
           {step === 1 && (
             <motion.div
               key="youtube"
-              className="flex flex-col items-center justify-evenly w-full mt-20 px-4 py-20 "
+              className="flex flex-col items-center justify-evenly w-full  px-4 py-20 "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
