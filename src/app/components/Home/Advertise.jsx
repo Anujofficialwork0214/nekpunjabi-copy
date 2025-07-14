@@ -364,7 +364,6 @@ const InstrumentSans = Instrument_Sans({
 });
 const Advertise = () => {
   const [step, setStep] = useState(-1);
-  const [stepMobile, setStepMobile] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5 });
   const wasInView = useRef(false); // Tracks if it has been in view before
