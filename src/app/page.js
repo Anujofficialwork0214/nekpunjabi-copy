@@ -21,16 +21,19 @@ import Invest from "./components/Home/Invest";
 import Advertise from "./components/Home/Advertise";
 import Testinomial from "./components/Home/Testimonial";
 import TrustMobile from "./components/Home/TrustMobile";
+import AdvertiseMobile from "./components/Home/AdvertiseMobile";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     setHasMounted(true);
 
     const handleResize = debounce(() => {
       setIsMobile(window.innerWidth < 768);
+      setIsTablet(window.innerWidth < 1024);
     }, 150);
 
     handleResize();
@@ -69,7 +72,17 @@ export default function Home() {
           <TrustMobile />
           {/* <Invest /> */}
           <InvestAnimation />
-          <Advertise />
+          <AdvertiseMobile />
+          <Testinomial />
+        </div>
+      ) : isTablet ? (
+        <div key="tablet-view">
+          <HomePage />
+          <AboutAnimation />
+          <Service />
+          <TrustAnimation />
+          <InvestAnimation />
+          <AdvertiseMobile />
           <Testinomial />
         </div>
       ) : (
