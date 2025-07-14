@@ -381,7 +381,7 @@ const RealEstateServices = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
                 viewport={{ once: true }}
-                className="text-[24px] lg:text-4xl font-medium lg:font-semibold text-white mb-4 !font-[600] mt-4 px-8 lg:px-0"
+                className="text-[24px] lg:text-4xl  custom-tablet-service  custom-ml-service  font-medium lg:font-semibold text-white mb-4 !font-[600] mt-4 px-8 lg:px-0"
               >
                 Unlock Your Real Estate Potential
               </motion.h2>
@@ -399,7 +399,8 @@ const RealEstateServices = () => {
 
             </div>
 
-            <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13 ml-[-12px] sm:ml-0">
+            <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13 ml-[-12px] sm:ml-0 custom-tablet-ser custom-ml-ser {
+   ">
 
               {/* Vertical Line */}
               <motion.div

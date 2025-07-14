@@ -90,7 +90,7 @@ const TrustSection = () => {
         <div className="flex-1 text-center lg:text-left">
           <h2
             ref={headingRef}
-            className="text-3xl lg:text-[64px] md:text-4xl font-semibold text-black "
+            className="text-3xl lg:text-[64px] md:text-4xl font-semibold text-black custom-tablet-trust1 custom-ml-trust   "
           >
             Trust of more than <br />
             <span className="text-[#f7931e] italic font-bold">9 lakh</span> people
@@ -98,7 +98,7 @@ const TrustSection = () => {
 
           <p
             ref={paragraphRef}
-            className="text-sm text-gray-500 mt-4 max-w-md mx-auto lg:mx-0"
+            className="text-sm text-gray-500 mt-4 max-w-md mx-auto lg:mx-0 custom-tablet-trust1 custom-ml-trust "
           >
             Experience the strength of a community that has placed their confidence in us.
           </p>
@@ -106,25 +106,25 @@ const TrustSection = () => {
           {/* Stats */}
      <div
   ref={statsRef}
-  className="mt-30 mx-auto lg:mx-0 flex flex-col gap-y-8 px-1"
+  className="mt-30 mx-auto lg:mx-0 flex flex-col gap-y-8 px-1 custom-tablet-trust2 custom-ml-trust  "
 >
-  <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14">
+  <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14 " >
     <h3 className="text-4xl !font-[500] text-[#292929] w-20">500+</h3>
-    <p className="text-sm italic text-[#292929] !font-[500]">
+    <p className="text-sm italic text-[#292929] !font-[500] custom-ml-trust8 ">
       Clients <br /> Served
     </p>
   </div>
 
   <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14">
     <h3 className="text-4xl !font-[500] text-[#292929] w-20">10+</h3>
-    <p className="text-sm italic text-[#292929] !font-[500]">
+    <p className="text-sm italic text-[#292929] !font-[500] custom-ml-trust9">
       Years of <br /> Expertise
     </p>
   </div>
 
   <div className="flex items-start gap-x-14">
     <h3 className="text-4xl !font-[500] text-[#292929] w-20">400</h3>
-    <p className="text-sm italic text-[#292929] !font-[500]">
+    <p className="text-sm italic text-[#292929] !font-[500] custom-ml-trust6">
       Successful <br /> Investments
     </p>
   </div>
@@ -134,7 +134,7 @@ const TrustSection = () => {
         </div>
         <div
   ref={imageRef}
-  className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[602px]"
+  className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[602px] custom-tablet-trust3"
 >
   <Image
     src="/nek1.jpeg"
