@@ -360,7 +360,7 @@ const RealEstateServices = () => {
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
                  viewport={{ once: true }}
-                 className='-ml-2  flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 className='-ml-2 mt-2 md:mt-0  flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.4" y="0.4" width="17.2" height="17.2" rx="8.6" stroke="white" stroke-width="0.8"/>
                 <rect x="3" y="3" width="12" height="12" rx="6" fill="#F58106"/>
                 </svg>
