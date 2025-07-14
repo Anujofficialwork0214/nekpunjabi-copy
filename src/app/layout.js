@@ -11,7 +11,6 @@ const instrumentSans = Instrument_Sans({
 });
 
 
-
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
