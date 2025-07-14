@@ -103,7 +103,7 @@ export default function Footer() {
 
           </a>
           <a href="#" className="hover:text-white">
-            <Image src="/instagramFooter.svg" alt="instagram"
+            <Image src="/InstagramFooter.svg" alt="instagram"
               width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
           </a>
           <a href="#" className="hover:text-white pt-1">
@@ -111,12 +111,12 @@ export default function Footer() {
               width={16} height={14} className=' w-[12px] h-[10px] md:w-[14px] md:h-[12px] lg:w-[16px] lg:h-[14px]' />
           </a>
           <a href="#" className="hover:text-white">
-            <Image src="/Linkedin.svg" alt="linkedin"
+            <Image src="/LinkedIn.svg" alt="linkedin"
               width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
           </a>
 
           <a href="#" className="hover:text-white">
-            <Image src="/youtube.svg" alt="youtube"
+            <Image src="/Youtube.svg" alt="youtube"
               width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
           </a>
         </div>
