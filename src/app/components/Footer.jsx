@@ -51,6 +51,7 @@
 import { motion } from 'framer-motion'
 import { Instrument_Sans } from 'next/font/google';
 import Image from 'next/image'
+import { usePathname } from 'next/navigation';
 
 const InstrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -68,6 +69,8 @@ export default function Footer() {
       },
     }),
   }
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   return (
     <motion.footer
@@ -80,16 +83,23 @@ export default function Footer() {
     >
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between  gap-6 md:gap-0 mt-10 md:mt-31">
         {/* Logo */}
-        <a href="#"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" /></a>
+        <a href="/"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" /></a>
 
         {/* Links */}
         <nav className="flex space-x-6 font-[500] text-sm text-gray-300">
-          <a href="#about" className="text-[#CCCCCC] hover:text-white">
-            About Us
-          </a>
-          <a href="#services" className="hidden  md:block text-[#CCCCCC] hover:text-white ">
+          {
+            isHome ? <a href="#about" className="text-[#CCCCCC] hover:text-white">
+              About Us
+            </a> :
+              <a href="/" className="text-[#CCCCCC] hover:text-white">
+                About Us
+              </a>
+          }
+          {isHome ? <a href="#services" className="hidden  md:block text-[#CCCCCC] hover:text-white ">
             Services
-          </a>
+          </a> : <a href="/" className="hidden  md:block text-[#CCCCCC] hover:text-white ">
+            Services
+          </a>}
           <a href="/getAdvice" className=" text-[#CCCCCC] hover:text-white">
             Contact Us
           </a>
