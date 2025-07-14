@@ -687,7 +687,7 @@ console.log(isInView)
                   />
                   {step === 1 && (
                     <motion.img
-                      src="/Youtubeleft1.png"
+                      src="/YoutubeLeft1.png"
                       className="absolute top-24 left-2 w-[400px] h-[232px] z-20 rotate-4"
                       draggable="false"
                       initial={{ opacity: 0, y: 40 }}
@@ -724,7 +724,7 @@ console.log(isInView)
                   transition={{ duration: 1, delay: 0.6 }}
                 >
                   <motion.img
-                    src="/Youtubeleft.png"
+                    src="/YoutubeLeft.png"
                     className="w-[420px] h-[232px] mt-20  "
                     draggable="false"
                   />
