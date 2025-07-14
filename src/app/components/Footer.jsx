@@ -76,7 +76,7 @@ export default function Footer() {
       whileInView="visible"
       viewport={{ once: true }}
       custom={2}
-      className={`bg-[#292929] text-white px-4  md:px-16 py-10  -mt-20 md:-mt-37 ${InstrumentSans.className} `}
+      className={`bg-[#292929] text-white px-4  md:px-16 py-10  -mt-20 md:-mt-37 ${InstrumentSans.className}  -z-50`}
     >
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between  gap-6 md:gap-0 mt-10 md:mt-31">
         {/* Logo */}

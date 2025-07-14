@@ -31,7 +31,7 @@ const Demo = () => {
   }, [isMobile]);
 
   return (
-    <div className="px-4 py-8 overflow-hidden  ">
+    <div className="px-4 py-8 overflow-hidden  z-50 ">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
