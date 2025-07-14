@@ -52,7 +52,7 @@ export default function Home() {
           setTimeout(scrollToHash, 200);
         }
       };
-  
+
       setTimeout(scrollToHash, 300);
     }
   }, [hasMounted]);
@@ -64,10 +64,11 @@ export default function Home() {
       {isMobile ? (
         <div key="mobile-view">
           <HeroMobile />
-         <AboutAnimation />
+          <AboutAnimation />
           <Service />
           <TrustMobile />
-          <Invest />
+          {/* <Invest /> */}
+          <InvestAnimation />
           <Advertise />
           <Testinomial />
         </div>
