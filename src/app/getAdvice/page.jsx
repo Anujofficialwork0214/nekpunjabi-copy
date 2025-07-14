@@ -56,7 +56,7 @@ export default function ContactSection() {
       setMessage("Please select an investment size.");
       return;
     }
-    
+
 
     if (!captchaToken) {
       setMessage("Please complete the reCAPTCHA.");
@@ -100,16 +100,16 @@ export default function ContactSection() {
   };
 
   return (
-    <section   className="relative pt-30"
-     style={{
-  backgroundImage: `
+    <section className="relative pt-30 mb-15 md:mb-20 "
+      style={{
+        backgroundImage: `
     linear-gradient(180deg, rgba(255, 255, 255, 0.00) -32.49%, rgba(125, 145, 168, 0.45) 28.16%, #7DA7DE 100%),
     url('/bg.svg')
   `,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center'
-}}
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
+      }}
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
@@ -126,9 +126,10 @@ export default function ContactSection() {
       {/* Content Wrapper */}
       <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-6 xl:px-6 2xl:px-6 ">
         {/* Text Section */}
-        
+
         <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6 text-center lg:text-left">
-        <h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
+          <h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
+
 
   <p className="text-base max-w-md mx-auto lg:mx-0 px-2">
     If you'd like to know more information about us and any of our
@@ -136,12 +137,11 @@ export default function ContactSection() {
     form provided.
   </p>
 </div>
-
-
-        {/* Form Section */}
-        <div className="w-full lg:w-1/2 mt-10 lg:mt-0  px-2 lg:px-1 xl:px-1 2xl:px-1 ">
+      {/* Form Section */}
+       <div className="w-full lg:w-1/2 mt-10 lg:mt-0  px-2 lg:px-1 xl:px-1 2xl:px-1 ">
           {message && <p className="text-gray-800 text-sm mb-2">{message}</p>}
           <form onSubmit={handleSubmit} className="space-y-4">
+
           <input
   type="text"
   placeholder=" Name"
@@ -155,7 +155,6 @@ export default function ContactSection() {
   onBlur={() => setName((prev) => prev.trim())} 
   className="w-full rounded-lg border border-white bg-transparent px-4 py-3  placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
-
 <input
   type="text"
   placeholder="Phone Number"
@@ -169,7 +168,6 @@ export default function ContactSection() {
   maxLength={10}
   className="w-full rounded-lg border border-white bg-transparent px-4 py-3  placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
-
 <input
   type="text"
   placeholder="City"
@@ -183,7 +181,6 @@ export default function ContactSection() {
   onBlur={() => setLocation((prev) => prev.trim())}
   className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
             />
-
 <div className="text-white">
   <p className="mb-2">Select Investment size</p>
   <div className="grid grid-cols-2 gap-3">
@@ -207,7 +204,6 @@ export default function ContactSection() {
     ))}
   </div>
 </div>
-
             {/* reCAPTCHA */}
             <div className="flex justify-center mb-4">
               <ReCAPTCHA
