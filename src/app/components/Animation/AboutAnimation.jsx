@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const SHRINK_START_TRIGGER = 'bottom bottom'
 const SHRINK_END_TRIGGER = 'bottom+=1000 bottom'
 const SHRINK_TARGET_SCALE = 0.75
-const SHRINK_TARGET_Y = -300
+const SHRINK_TARGET_Y = -20
 const SHRINK_TARGET_OPACITY = 1
 
 const AboutAnimation = () => {
@@ -74,7 +74,7 @@ const AboutAnimation = () => {
   2xl:-ml-30">
 
              <motion.h2
-  className="text-4xl !font-[600] text-white mb-6 text-center md:text-left md:translate-x-[-180px] md:translate-y-[70px]"
+  className="text-[25px] md:text-4xl !font-[600] font-regular text-white mb-6 text-center md:text-left md:translate-x-[-180px] md:translate-y-[70px]"
   initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
@@ -82,6 +82,7 @@ const AboutAnimation = () => {
 >
   About Us
 </motion.h2>
+
 
        
              <motion.div
@@ -117,9 +118,10 @@ const AboutAnimation = () => {
 
 
 {/* ✅ For below 900px (mobile) */}
-<div className="block lg:hidden text-[15px] leading-[22px] max-w-[650px] mx-auto text-center px-4 ">
+{/* ✅ For below 900px (mobile) */}
+<div className="block lg:hidden text-[12px] leading-[22px] text-white max-w-[310px] mx-auto text-center px-4">
   <p>
-    Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. We aim to make real estate terms easy to understand, share helpful housing tips, keep you updated, and explore investment tips. With a strong presence and commitment to client satisfaction, we offer expert guidance for all your real estate needs.
+    Nek Punjabi Estate is your trusted partner in navigating Punjab’s real estate world. We aim to make real estate terms easy to understand, share helpful housing tips, keep you updated, and explore investment tips. With a strong presence and a commitment to client satisfaction, we offer expert guidance for all your real estate needs.
   </p>
 </div>
 
@@ -128,15 +130,15 @@ const AboutAnimation = () => {
 
        
                <motion.blockquote
-                 className="italic text-xl font-medium my-4 text-white flex justify-center md:justify-start md:text-left ml-6  md:ml-6 custom-5-lines "
+                 className="italic  text-xl font-medium my-4 text-white flex justify-center md:justify-start md:text-left ml-6  md:ml-6 custom-5-lines "
                  initial={{ y: 50, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 1.5 }}
                  viewport={{ once: true }}
                >
                  <svg
-                   width="48"
-                   height="48"
+                className="w-[30px] h-[30px] md:w-[48px] md:h-[48px] mx-auto md:mx-0 translate-x-[-10px] md:translate-x-0"
+
                    viewBox="0 0 48 48"
                    fill="none"
                    xmlns="http://www.w3.org/2000/svg"
@@ -148,18 +150,33 @@ const AboutAnimation = () => {
                  </svg>
                </motion.blockquote>
        
-                     <motion.p
-                 className="mb-6 text-lg text-white text-center md:text-left ml-6 font-[500]   custom-4-lines custom-5-lines  "
-                 initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
-                 viewport={{ once: true }}
-               >
-                <p>  Nek Punjabi Estate empowers their audience and customers to build</p>
-                 <p>generational wealth through safe and sound real estate investments</p>
-               </motion.p>
+                    {/* ✅ Mobile view only (with manual <br />) */}
+<motion.p
+  className="block md:hidden mb-6 text-[14px] text-white text-center font-italic font-[500] px-14 "
+  initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
+  viewport={{ once: true }}
+>
+  Nek Punjabi Estate empowers their audience and customers to
+  build <br />generational wealth through safe<br />
+  and sound real estate investments.
+</motion.p>
+
+{/* ✅ Desktop view only */}
+<motion.p
+  className="hidden md:block mb-6 text-lg text-white text-center md:text-left ml-6 font-[500] custom-4-lines custom-5-lines translate-x-[-10px] md:translate-x-0"
+  initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
+  viewport={{ once: true }}
+>
+  <p>Nek Punjabi Estate empowers their audience and customers to build</p>
+  <p>generational wealth through safe and sound real estate investments</p>
+</motion.p>
+
                <motion.p
-                 className="uppercase text-sm tracking-wide text-white  font-[600]  text-center md:text-left ml-6 mt-15 custom-4-lines custom-5-lines   " // Centered text
+                 className="uppercase text-sm tracking-wide text-white translate-x-[-15px] md:translate-x-0  font-[600]  text-center md:text-left ml-6 mt-15 custom-4-lines custom-5-lines   " // Centered text
                  initial={{ y: 20, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 2.5 }}
@@ -179,7 +196,7 @@ const AboutAnimation = () => {
                  whileInView={{ y: 0, opacity: 3.5 }}
                  transition={{ duration: 0.6, ease: 'easeOut', delay: 2.8 }}
                  viewport={{ once: true }}
-                    className="flex justify-center w-full md:w-auto md:justify-start shrink-0   -ml-10 md:ml-0  ">
+                    className="flex justify-center w-full md:w-auto md:justify-start shrink-0  translate-x-[-10px] md:translate-x-0  -ml-10 md:ml-0  ">
                        {/* Centered on mobile by parent (items-center), aligned start on md+ */}
                      <svg width="138" height="100" viewBox="0 0 138 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_67179_27533)">
@@ -214,7 +231,7 @@ const AboutAnimation = () => {
        
             
                  
-                   <div className="flex flex-row items-center justify-center gap-8 md:gap-16 w-full md:w-auto -ml-10 md:ml-0  ">
+                   <div className="flex flex-row items-center justify-center gap-8 md:gap-16 w-full md:w-auto -ml-10 md:ml-0 translate-x-[-10px] md:translate-x-0  ">
                     
                      <motion.div 
                       initial={{ y: 20, opacity: 0 }}

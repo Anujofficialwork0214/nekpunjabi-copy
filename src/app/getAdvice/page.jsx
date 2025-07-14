@@ -124,13 +124,13 @@ export default function ContactSection() {
       </div>
 
       {/* Content Wrapper */}
-      <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-20">
+      <div className="relative z-10 mx-auto py-16 flex flex-col lg:flex-row items-center lg:items-start px-6 lg:px-6 xl:px-6 2xl:px-6 ">
         {/* Text Section */}
         
         <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6 text-center lg:text-left">
         <h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
 
-  <p className="text-base max-w-md mx-auto lg:mx-0">
+  <p className="text-base max-w-md mx-auto lg:mx-0 px-2">
     If you'd like to know more information about us and any of our
     services, please get in touch with the below details or the contact
     form provided.
@@ -139,7 +139,7 @@ export default function ContactSection() {
 
 
         {/* Form Section */}
-        <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
+        <div className="w-full lg:w-1/2 mt-10 lg:mt-0  px-2 lg:px-1 xl:px-1 2xl:px-1 ">
           {message && <p className="text-gray-800 text-sm mb-2">{message}</p>}
           <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -153,7 +153,7 @@ export default function ContactSection() {
     }
   }}
   onBlur={() => setName((prev) => prev.trim())} 
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+  className="w-full rounded-lg border border-white bg-transparent px-4 py-3  placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
 <input
@@ -167,7 +167,7 @@ export default function ContactSection() {
     }
   }}
   maxLength={10}
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white "
+  className="w-full rounded-lg border border-white bg-transparent px-4 py-3  placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
 />
 
 <input
@@ -181,7 +181,7 @@ export default function ContactSection() {
     }
   }}
   onBlur={() => setLocation((prev) => prev.trim())}
-  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-white focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+  className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
             />
 
 <div className="text-white">
@@ -199,7 +199,7 @@ export default function ContactSection() {
         className={`rounded-xl border px-4 py-3 text-center transition-all duration-200 ${
           investmentSize === option.value
             ? "bg-white text-black font-semibold"
-            : "border-white text-white hover:bg-white/20"
+            : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
         }`}
       >
         {option.label}
@@ -234,7 +234,7 @@ export default function ContactSection() {
         <Image
           src="/2.png"
           alt="House"
-          width={1920}
+          width={2000}
           height={800}
           className="w-full h-auto object-cover"
         />
