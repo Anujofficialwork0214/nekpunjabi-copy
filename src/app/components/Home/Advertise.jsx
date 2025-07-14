@@ -396,29 +396,7 @@ const Advertise = () => {
 
   console.log(isInView)
 
-
-
-
-
-  useEffect(() => {
-    if (isInView) {
-      setStepMobile(0);
-    }
-  }, [isInView]);
-
-  useEffect(() => {
-    let timers = [];
-
-    if (stepMobile === 0) {
-      timers.push(setTimeout(() => setStepMobile(1), 3000));
-    } else if (stepMobile === 1) {
-      timers.push(setTimeout(() => setStepMobile(2), 1000));
-    } else if (stepMobile === 2) {
-      timers.push(setTimeout(() => setStepMobile(3), 1000));
-    }
-
-    return () => timers.forEach(clearTimeout);
-  }, [stepMobile]);
+  
   return (
     <div ref={ref} className={`${InstrumentSans.className}`}>
       {/* ✅ Desktop View */}
