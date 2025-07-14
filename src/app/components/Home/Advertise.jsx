@@ -363,7 +363,7 @@ const InstrumentSans = Instrument_Sans({
   subsets: ["latin"],
 });
 const Advertise = () => {
-const [step, setStep] = useState(0);
+const [step, setStep] = useState(-1);
 const ref = useRef(null);
 const isInView = useInView(ref, { amount: 0.5 });
 const wasInView = useRef(false); // Tracks if it has been in view before
@@ -379,7 +379,7 @@ useEffect(() => {
     // Advance to YouTube after 0.5 second
     timers.push(setTimeout(() => {
       setStep(1);
-    }, 1000));
+    }, 4000));
   }
 
   // if (!isInView && wasInView.current) {
