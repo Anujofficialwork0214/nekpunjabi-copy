@@ -113,13 +113,13 @@
 //         className="scroll-mt-20 w-full overflow-hidden -mt-1"
 //         style={{
 //           willChange: 'transform, opacity',
-          
+
 //         }}
 //       >
 //         <div 
 //         ref={shrinkRef}
 //         >
-        
+
 //           <div
 //           style={{
 //           willChange: 'transform, opacity',
@@ -133,9 +133,9 @@
 //             className="absolute bottom-0 right-0 w-[70%] md:w-[60%] lg:w-[70%] h-auto opacity-40 pointer-events-none z-0 rounded-b-3xl "
 //           />
 //             <div className="mb-16 flex flex-col items-center text-center sm:items-start sm:text-left xl:-ml-7  2xl:-ml-10 ">
-            
+
 //               <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2  ">
-              
+
 //                 <div />
 //                 <motion.div
 //                 initial={{ y: 50, opacity: 0 }}
@@ -203,11 +203,11 @@
 //               </motion.div>
 //             </div>
 //           </div>
-        
+
 //         </div>
 //       </section>
 //       {/* Spacer to allow the section to move up and not disappear abruptly */}
-    
+
 //     </>
 //   );
 // };
@@ -325,98 +325,98 @@ const RealEstateServices = () => {
 
   return (
     <>
-      <section 
+      <section
         id='services'
         ref={sectionRef}
         className="scroll-mt-20 w-full overflow-hidden -mt-1"
         style={{
           willChange: 'transform, opacity',
-          
+
         }}
       >
-        <div 
-        ref={shrinkRef}
+        <div
+          ref={shrinkRef}
         >
-        
-          <div
-          style={{
-          willChange: 'transform, opacity',
-          background: "linear-gradient(180deg, #568FC7 0%, #8DB5DB 56%, #C5E1FB 100%)"
-        }}
-           className=" px-6 md:px-20 py-20 relative z-10  rounded-b-3xl pointer-events-none  w-full ">
 
-             <img
-            src="/nek2.png"
-            alt="Decorative Real Estate visual"
-            className="absolute bottom-0 right-0 w-[70%] md:w-[60%] lg:w-[70%] h-auto opacity-40 pointer-events-none z-0 rounded-b-3xl "
-          />
+          <div
+            style={{
+              willChange: 'transform, opacity',
+              background: "linear-gradient(180deg, #568FC7 0%, #8DB5DB 56%, #C5E1FB 100%)"
+            }}
+            className=" px-6 md:px-20 py-20 relative z-10  rounded-b-3xl pointer-events-none  w-full ">
+
+            <img
+              src="/nek2.png"
+              alt="Decorative Real Estate visual"
+              className="absolute bottom-0 right-0 w-[70%] md:w-[60%] lg:w-[70%] h-auto opacity-40 pointer-events-none z-0 rounded-b-3xl "
+            />
             <div className="mb-16 flex flex-col items-center text-center sm:items-start sm:text-left xl:-ml-7  2xl:-ml-10 ">
-            
+
               <div className="text-sm font-semibold text-white mb-2 tracking-widest flex items-center gap-2  ">
-              
+
                 <div />
                 <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
-                 viewport={{ once: true }}
-                 className='-ml-2 mt-2 md:mt-0  flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.4" y="0.4" width="17.2" height="17.2" rx="8.6" stroke="white" stroke-width="0.8"/>
-                <rect x="3" y="3" width="12" height="12" rx="6" fill="#F58106"/>
-                </svg>
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className='-ml-2 mt-2 md:mt-0  flex items-center gap-2 !font-[500]'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.4" y="0.4" width="17.2" height="17.2" rx="8.6" stroke="white" stroke-width="0.8" />
+                    <rect x="3" y="3" width="12" height="12" rx="6" fill="#F58106" />
+                  </svg>
                 </motion.div>
-                 <motion.div 
-  initial={{ y: 50, opacity: 0 }}
-  whileInView={{ y: 0, opacity: 1 }}
-  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
-  viewport={{ once: true }}
-  className="text-[10px] md:text-base mt-2 md:mt-0 !font-[500]"
->
-  SERVICES
-</motion.div>
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="text-[10px] md:text-base mt-2 md:mt-0 !font-[500]"
+                >
+                  SERVICES
+                </motion.div>
 
               </div>
-           <motion.h2 
-  initial={{ y: 10, opacity: 0 }}
-  whileInView={{ y: 0, opacity: 1 }}
-  transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
-  viewport={{ once: true }}
-  className="text-[24px] lg:text-4xl font-medium lg:font-semibold text-white mb-4 !font-[600] mt-4 px-8 lg:px-0"
->
-  Unlock Your Real Estate Potential
-</motion.h2>
+              <motion.h2
+                initial={{ y: 10, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
+                viewport={{ once: true }}
+                className="text-[24px] lg:text-4xl font-medium lg:font-semibold text-white mb-4 !font-[600] mt-4 px-8 lg:px-0"
+              >
+                Unlock Your Real Estate Potential
+              </motion.h2>
 
 
-             <motion.p
-  initial={{ y: -10, opacity: 0 }}
-  whileInView={{ y: 0, opacity: 1 }}
-  transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
-  viewport={{ once: true }}
-  className="text-[14px] md:text-base px-6 md:px-0 text-white max-w-2xl"
->
-  From groundbreaking investments to crafting your dream home, we’re with you every step of the way.
-</motion.p>
+              <motion.p
+                initial={{ y: -10, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
+                viewport={{ once: true }}
+                className="text-[14px] md:text-base px-6 md:px-0 text-white max-w-2xl"
+              >
+                From groundbreaking investments to crafting your dream home, we’re with you every step of the way.
+              </motion.p>
 
             </div>
 
-           <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13 ml-[-12px] sm:ml-0">
+            <div className="relative h-[500px] mt-10 overflow-hidden xl:-ml-10 2xl:-ml-13 ml-[-12px] sm:ml-0">
 
               {/* Vertical Line */}
-              <motion.div 
-               initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
-                 viewport={{ once: true }}
-              className="absolute top-0 left-[17px]   h-full w-[2px] bg-white opacity-50 z-0 space-x-4"
-              
-               />
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                viewport={{ once: true }}
+                className="absolute top-0 left-[17px]   h-full w-[2px] bg-white opacity-50 z-0 space-x-4"
 
-              <motion.div 
-               initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
-                 viewport={{ once: true }}
-              ref={itemsWrapperRef} className="absolute top-0 left-0 w-full gap-4">
+              />
+
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
+                viewport={{ once: true }}
+                ref={itemsWrapperRef} className="absolute top-0 left-0 w-full gap-4">
                 {services.map((service) => (
                   <div
                     key={service.title}
@@ -426,19 +426,19 @@ const RealEstateServices = () => {
                     {/*  Marker */}
                     <div className="absolute left-3 top-2 w-3 h-3 bg-white rotate-45 z-10 " />
                     <h3 className="text-white font-medium text-xl mb-2 italic !font-[600] -mt-2">{service.title}</h3>
-                 <p className="text-[12px] md:text-base  text-white max-w-xl">
-  {service.description}
-</p>
+                    <p className="text-[12px] md:text-base  text-white max-w-xl">
+                      {service.description}
+                    </p>
 
                   </div>
                 ))}
               </motion.div>
             </div>
           </div>
-        
+
         </div>
       </section>
-   
+
     </>
   );
 };
