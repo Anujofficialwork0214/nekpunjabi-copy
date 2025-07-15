@@ -250,7 +250,7 @@ const HeroMobile = () => {
 
         <button
           type="submit"
-          className="w-full py-3  rounded-lg bg-white text-[#AECAEA] font-semibold hover:bg-blue-500 hover:text-black transition"
+          className="w-full py-3 !font-[500] rounded-lg bg-white text-[#AECAEA] font-medium hover:bg-blue-500 hover:text-black transition"
           disabled={loading}
         >
           {loading ? "Sending..." : "Send message"}
