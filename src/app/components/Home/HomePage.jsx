@@ -123,7 +123,7 @@ const HomePage = () => {
 
 
     gsap.set(textRef.current, { opacity: 1, yPercent: 0 });
-    gsap.set(imageComContainerRef.current, { opacity: 0, yPercent: 100 });
+    gsap.set(imageComContainerRef.current, { opacity: 50, yPercent: 50 });
    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: firstSectionRef.current,

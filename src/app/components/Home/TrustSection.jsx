@@ -93,12 +93,12 @@ const TrustSection = () => {
             className="text-3xl lg:text-[64px] md:text-4xl font-semibold text-black custom-tablet-trust1 custom-ml-trust   "
           >
             Trust of more than <br />
-            <span className="text-[#f7931e] italic font-bold">9 lakh</span> people
+            <span className='text-[#f7931e] '>9</span>   <span className="text-[#f7931e] italic font-bold"> lakh</span> people
           </h2>
 
           <p
             ref={paragraphRef}
-            className="text-sm text-gray-500 mt-4 max-w-md mx-auto lg:mx-0 custom-tablet-trust1 custom-ml-trust "
+            className="text-sm text-[#3D3D3D] mt-4 max-w-md mx-auto lg:mx-0 custom-tablet-trust1 custom-ml-trust "
           >
             Experience the strength of a community that has placed their confidence in us.
           </p>
