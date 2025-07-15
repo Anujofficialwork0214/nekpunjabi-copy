@@ -52,6 +52,7 @@ import { motion } from 'framer-motion'
 import { Instrument_Sans } from 'next/font/google';
 import Image from 'next/image'
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const InstrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -71,10 +72,19 @@ export default function Footer() {
   }
   const pathname = usePathname()
   const isHome = pathname === '/'
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowFooter(true);
+    }, 500); // Delay for 500ms 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <motion.footer
-      variants={fadeInUp}
+    showFooter && <motion.footer
+      // variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
