@@ -83,7 +83,7 @@ export default function Footer() {
     >
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between  gap-6 md:gap-0 mt-10 md:mt-31">
         {/* Logo */}
-        <a href="/"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" /></a>
+        <a href="/"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px]" draggable="false" /></a>
 
         {/* Links */}
         <nav className="flex space-x-6 font-[500] text-sm text-gray-300">
@@ -109,25 +109,25 @@ export default function Footer() {
         <div className="flex space-x-4 text-gray-300">
           <a href="#" className="hover:text-white">
             <Image src="/facebookFooter.svg" alt="Facebook"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' draggable="false" />
 
           </a>
           <a href="#" className="hover:text-white">
             <Image src="/InstagramFooter.svg" alt="instagram"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' draggable="false" />
           </a>
           <a href="#" className="hover:text-white pt-1">
             <Image src="/x.svg" alt="x"
-              width={16} height={14} className=' w-[12px] h-[10px] md:w-[14px] md:h-[12px] lg:w-[16px] lg:h-[14px]' />
+              width={16} height={14} className=' w-[12px] h-[10px] md:w-[14px] md:h-[12px] lg:w-[16px] lg:h-[14px]' draggable="false" />
           </a>
           <a href="#" className="hover:text-white">
             <Image src="/LinkedIn.svg" alt="linkedin"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' draggable="false" />
           </a>
 
           <a href="#" className="hover:text-white">
             <Image src="/Youtube.svg" alt="youtube"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]' draggable="false" />
           </a>
         </div>
       </div>
