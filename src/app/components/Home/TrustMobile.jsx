@@ -94,12 +94,12 @@ const TrustSection = () => {
             className="text-3xl lg:text-[64px] md:text-4xl font-semibold text-black "
           >
             Trust of more than <br />
-            <span className="text-[#f7931e] italic font-bold">9 lakh</span> people
+         <span className='text-[#f7931e] '>9</span> <span className="text-[#f7931e] italic font-bold">lakh</span> people
           </h2>
 
           <p
             ref={paragraphRef}
-            className="text-sm text-gray-500 mt-4 max-w-md mx-auto lg:mx-0"
+            className="text-sm text-[#3D3D3D] mt-4 max-w-md mx-auto lg:mx-0"
           >
             Experience the strength of a community that has placed their confidence in us.
           </p>
@@ -136,14 +136,14 @@ const TrustSection = () => {
   ref={statsRef}
   className="mt-4 lg:mx-0 flex flex-col justify-start gap-y-8 px-2 items-start w-full"
 >
-  <div className="flex items-center border-b border-gray-300 w-[75%] pb-4 gap-x-10">
+  <div className="flex items-center border-b border-gray-300 w-[100%] pb-4 gap-x-10">
     <h3 className="text-4xl font-semibold text-[#292929] w-20">500+</h3>
     <p className="text-sm italic text-[#292929] leading-snug">
       Clients <br /> Served
     </p>
   </div>
 
-  <div className="flex items-center border-b border-gray-300 w-[75%] pb-4 gap-x-10">
+  <div className="flex items-center border-b border-gray-300 w-[100%] pb-4 gap-x-10">
     <h3 className="text-4xl font-semibold text-[#292929] w-20">10+</h3>
     <p className="text-sm italic text-[#292929] leading-snug">
       Years of <br /> Expertise
