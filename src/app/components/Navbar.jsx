@@ -204,7 +204,7 @@ const Navbar = () => {
               height={0}
               sizes="100vw"
               className="w-full h-auto"
-              draggable={false}
+                draggable={false}
             />
           </Link>
         </div>
