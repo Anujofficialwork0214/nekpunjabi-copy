@@ -152,7 +152,7 @@ const AboutAnimation = () => {
 
             {/* ✅ Mobile view only (with manual <br />) */}
             <motion.p
-              className="block md:hidden mb-6 text-[14px] custom-tablet-below text-white text-center font-italic font-[500] px-14 "
+              className="block md:hidden mb-6 text-[14px] custom-tablet-below text-white text-center italic font-[500] px-14 "
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
@@ -165,7 +165,7 @@ const AboutAnimation = () => {
 
             {/* ✅ Desktop view only */}
             <motion.p
-              className="hidden md:block mb-6 custom-tablet-below  text-[20px] text-white text-center md:text-left ml-6 font-[500] custom-4-lines custom-5-lines translate-x-[-10px] md:translate-x-0"
+              className="hidden md:block mb-6 custom-tablet-below  text-[20px] text-white text-center md:text-left ml-6 italic font-[500] custom-4-lines custom-5-lines translate-x-[-10px] md:translate-x-0"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
