@@ -310,7 +310,7 @@ const HomePage = () => {
 
         <button
           type="submit"
-          className="w-full py-3 rounded-2xl bg-white text-blue-400 font-semibold hover:bg-blue-500 hover:text-black transition"
+          className="w-full py-3 rounded-2xl bg-white font-[500] font-medium hover:bg-blue-500 hover:text-black text-[#AECAEA] transition"
           disabled={loading}
         >
           {loading ? "Sending..." : "Send message"}

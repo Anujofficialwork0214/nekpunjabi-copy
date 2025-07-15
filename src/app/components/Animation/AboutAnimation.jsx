@@ -165,7 +165,7 @@ const AboutAnimation = () => {
 
             {/* ✅ Desktop view only */}
             <motion.p
-              className="hidden md:block mb-6 custom-tablet-below  text-lg text-white text-center md:text-left ml-6 font-[500] custom-4-lines custom-5-lines translate-x-[-10px] md:translate-x-0"
+              className="hidden md:block mb-6 custom-tablet-below  text-[20px] text-white text-center md:text-left ml-6 font-[500] custom-4-lines custom-5-lines translate-x-[-10px] md:translate-x-0"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 2 }}
