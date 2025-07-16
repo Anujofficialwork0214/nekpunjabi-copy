@@ -5,7 +5,23 @@ const ImageCom = () => {
   return (
     <div
       className="w-screen h-screen bg-center flex flex-col items-center justify-center relative overflow-hidden z-0 bg-no-repeat bg-cover bg-cente"
-      style={{ backgroundImage: "url('/one (1).png')" }}
+      
+//     style={{
+//   backgroundImage: "linear-gradient(180deg, #99BAE5 100%, #99BAE5 100%, #99BAE5 100%), url('/one (1).png')"
+// }}
+
+ style={{
+  backgroundImage: `
+    linear-gradient(180deg, rgba(153, 186, 229, 0.8), rgba(153, 186, 229, 0.8)),
+    url('/one%20(1).png')
+  `,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center'
+}}
+
+
+
     >
       {/* Orange gradient overlay */}
       <div className="absolute top-0 left-0 w-full h-full z-20 pointer-events-none"
