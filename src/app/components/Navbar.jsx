@@ -187,7 +187,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full px-6 py-4 transition-transform duration-300 ease-in-out ${hideNavbar ? "-translate-y-full" : "translate-y-0"
+      className={`fixed top-0 left-0 max-w-[1920px] mx-auto right-0 z-50 w-full px-6 py-4 transition-transform duration-300 ease-in-out ${hideNavbar ? "-translate-y-full" : "translate-y-0"
         } bg-white/30 backdrop-blur-lg shadow-md`}
       style={{
         willChange: "transform",
