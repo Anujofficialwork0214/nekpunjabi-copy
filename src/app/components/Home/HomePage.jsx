@@ -123,7 +123,7 @@ const HomePage = () => {
 
 
     gsap.set(textRef.current, { opacity: 1, yPercent: 0 });
-    gsap.set(imageComContainerRef.current, { opacity: 50, yPercent: 50 });
+    gsap.set(imageComContainerRef.current, { opacity: 30, yPercent: 80 });
    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: firstSectionRef.current,
@@ -325,6 +325,7 @@ const HomePage = () => {
             ref={imageComContainerRef}
            
             className="absolute inset-0 z-0 flex items-center justify-center  "
+            
            
           >
       
