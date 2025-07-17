@@ -89,14 +89,14 @@ export default function Footer() {
       whileInView="visible"
       viewport={{ once: true }}
       custom={2}
-      className={`bg-[#292929] text-white px-4  md:px-16 py-10  -mt-20 md:-mt-37 ${InstrumentSans.className}  -z-50`}
+      className={`bg-[#292929]  text-white px-4  md:px-16 py-10  -mt-20 md:-mt-37 ${InstrumentSans.className}  -z-50`}
     >
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between  gap-6 md:gap-0 mt-10 md:mt-31">
         {/* Logo */}
-        <a href="/"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px] 3xl:w-[108px] 3xl:h-[58.5px] " draggable="false" /></a>
+        <a href="/"> <img src="/neklogo.png" alt="Nek Punjabi Estate" className="w-[63px] h-[33.5px] md:w-[78px] md:h-[40.5px] lg:w-[98px] lg:h-[50.5px] 2xl:w-[108px] 2xl:h-[58.5px] " draggable="false" /></a>
 
         {/* Links */}
-        <nav className="flex space-x-6 font-[500] text-sm 3xl:text-lg text-gray-300">
+        <nav className="flex space-x-6 font-[500] text-sm 2xl:text-lg text-gray-300">
           {
             isHome ? <a href="#about" className="text-[#CCCCCC] hover:text-white">
               About Us
@@ -119,25 +119,25 @@ export default function Footer() {
         <div className="flex space-x-4 text-gray-300">
           <a href="#" className="hover:text-white">
             <Image src="/facebookFooter.svg" alt="Facebook"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 3xl:w-[24px] 3xl:h-[24px] ' draggable="false" />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 2xl:w-[24px] 2xl:h-[24px] ' draggable="false" />
 
           </a>
           <a href="#" className="hover:text-white">
             <Image src="/InstagramFooter.svg" alt="instagram"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 3xl:w-[24px] 3xl:h-[24px] ' draggable="false" />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 2xl:w-[24px] 2xl:h-[24px] ' draggable="false" />
           </a>
           <a href="#" className="hover:text-white pt-1">
             <Image src="/x.svg" alt="x"
-              width={20} height={14} className=' w-[12px] h-[10px] md:w-[14px] md:h-[12px] lg:w-[16px] lg:h-[14px] 3xl:w-[20px] 3xl:h-[18px]' draggable="false" />
+              width={20} height={14} className=' w-[12px] h-[10px] md:w-[14px] md:h-[12px] lg:w-[16px] lg:h-[14px] 2xl:w-[20px] 2xl:h-[18px]' draggable="false" />
           </a>
           <a href="#" className="hover:text-white">
             <Image src="/LinkedIn.svg" alt="linkedin"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 3xl:w-[24px] 3xl:h-[24px] ' draggable="false" />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 2xl:w-[24px] 2xl:h-[24px] ' draggable="false" />
           </a>
 
           <a href="#" className="hover:text-white">
             <Image src="/Youtube.svg" alt="youtube"
-              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 3xl:w-[24px] 3xl:h-[24px] ' draggable="false" />
+              width={20} height={20} className=' w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] 2xl:w-[24px] 2xl:h-[24px] ' draggable="false" />
           </a>
         </div>
       </div>
@@ -146,7 +146,7 @@ export default function Footer() {
       <hr className="border-gray-700 my-6  md:my-14" />
 
       {/* Bottom Text */}
-      <span className=" flex  flex-col md:flex-row  justify-center items-center space-y-2 md:space-y-0  text-[12px] md:text-sm 3xl:text-lg text-[#CCCCCC]">
+      <span className=" flex  flex-col md:flex-row  justify-center items-center space-y-2 md:space-y-0  text-[12px] md:text-sm 2xl:text-lg text-[#CCCCCC]">
         <p>© 2025 Nek Punjabi. All rights reserved.</p>
         <a href="#" className="hover:text-white pl-0 md:pl-4">
           Terms of Service
