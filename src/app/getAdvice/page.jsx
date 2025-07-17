@@ -128,14 +128,17 @@ export default function ContactSection() {
         {/* Text Section */}
 
         <div className="w-full lg:w-1/2 text-white lg:pr-12 space-y-6 text-center lg:text-left">
-          <h2 className="text-5xl lg:text-[70px] xl:text-[80px] font-medium">Get in Touch</h2>
+          <h2 className="text-5xl lg:text-[70px] xl:text-[80px] 2xl:text-[92px] font-medium">Get in Touch</h2>
 
 
-          <p className="text-base max-w-md mx-auto lg:mx-0 px-2">
-            If you'd like to know more information about us and any of our
-            services, please get in touch with the below details or the contact
-            form provided.
-          </p>
+          <snap className="text-base  2xl:text-xl max-w-md mx-auto lg:mx-0 px-2">
+            <p>If you'd like to know more information about us and any of our</p>
+            <p>
+              services, please get in touch with the below details or the </p>
+            <p>contact
+              form provided.</p>
+
+          </snap>
         </div>
         {/* Form Section */}
         <div className="w-full lg:w-1/2 mt-10 lg:mt-0  px-2 lg:px-1 xl:px-1 2xl:px-1 ">
@@ -182,7 +185,7 @@ export default function ContactSection() {
               className="w-full rounded-lg border border-white bg-transparent px-4 py-3 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
             />
             <div className="text-white">
-              <p className="mb-2">Select Investment size</p>
+              <p className="mb-2 2xl:text-xl">Select Investment size</p>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { label: "<1 Cr", value: "< 1cr" },
@@ -214,7 +217,7 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="w-full py-3 rounded-lg bg-white text-blue-400 font-semibold hover:bg-blue-500 hover:text-black transition"
+              className="w-full py-3 rounded-lg bg-white text-blue-400 font-semibold hover:bg-blue-500 hover:text-black transition cursor-pointer"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send message"}
