@@ -221,7 +221,7 @@ const HomePage = () => {
       transition={{ duration: 0.6, delay: 0.6 }}
               >
                      <motion.p
-        className="mt-4 mb-6 text-base"
+        className="mt-4 mb-6 text-[18px]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -275,7 +275,7 @@ const HomePage = () => {
 
 
 <div className="text-white ">
-  <p className="mb-2">Select Investment size</p>
+  <p className="mb-2 text-[18px]">Select Investment size</p>
 <div className="grid grid-cols-2 gap-3">
   {[
     { label: "<1 Cr", value: "< 1cr" },
