@@ -396,7 +396,7 @@ const Advertise = () => {
 
   console.log(isInView)
 
-  
+
   return (
     <div ref={ref} className={`${InstrumentSans.className}`}>
       {/* ✅ Desktop View */}
@@ -447,12 +447,12 @@ const Advertise = () => {
                   Stay <em>Informed</em>,<br />
                   Stay <em>Inspired</em>
                 </h2>
-                <span className="text-[#292929]  text-[16px] lg:text-lg mt-4">
+                <span className="text-[#292929]  text-[16px] lg:text-lg 2xl:text-xl mt-4">
                   <p>Join our community for the latest market insights,</p>
                   <p>property showcases, and expert advice.</p>
 
                 </span>
-                <h3 className="text-[28px] xl:text-[32px] font-semibold  mt-6  flex items-center justify-center ">
+                <h3 className="text-[28px] xl:text-[32px] 3xl:text-[34px] font-semibold  mt-6  flex items-center justify-center ">
                   Instagram
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
                     stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -461,12 +461,12 @@ const Advertise = () => {
                   </svg>
                 </h3>
 
-                <span className="text-[#292929]  text-[16px] lg:text-lg mt-2 ">
+                <span className="text-[#292929]  text-[16px] lg:text-lg 3xl:text-xl mt-2 ">
                   <p> Follow us on Instagram for a daily dose of stunning</p>
                   <p>properties, expert advice, and real estate inspiration.</p>
                 </span>
                 <div className="text-5xl xl:text-6xl   mt-10">139K+</div>
-                <div className="text-sm xl:text-[16px] text-[#292929] mt-2">Followers</div>
+                <div className="text-sm xl:text-[16px] 3xl:text-lg text-[#292929] mt-2">Followers</div>
               </motion.div>
 
               {/* Right Image */}
@@ -561,7 +561,7 @@ const Advertise = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.3 }}
                 >
-                  <span className="text-[#292929] text-sm lg:text-[16px]  mt-4">
+                  <span className="text-[#292929] text-sm lg:text-[16px]  3xl:text-lg mt-4">
                     <p>Subscribe to our YouTube channel, Nek</p>
                     <p>Punjabi Estate, for in-depth property tours,</p>
                     <p>informative guides, and expert analyses of</p>
@@ -570,9 +570,9 @@ const Advertise = () => {
 
 
                   <div className="text-5xl xl:text-6xl text-[#292929] mt-10">100k+</div>
-                  <div className=" text-sm xl:text-[16px] text-[#292929]">Subscribers</div>
+                  <div className=" text-sm xl:text-[16px] 3xl:text-lg text-[#292929]">Subscribers</div>
                   <div className=" text-5xl xl:text-6xl mt-10 text-[#292929]">139k+</div>
-                  <div className=" text-sm xl:text-[16px] text-[#292929]">View</div>
+                  <div className=" text-sm xl:text-[16px] 3xl:text-lg text-[#292929]">View</div>
                 </motion.span>
 
                 <motion.div

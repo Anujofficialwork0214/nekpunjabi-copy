@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap");
 
 /* :root {
   --background: #ffffff;
@@ -27,7 +27,7 @@ body {
 } */
 
 body {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Instrument Sans", sans-serif;
 }
 
 @media (min-width: 1920px) {
@@ -54,7 +54,6 @@ body {
   }
 }
 
-
 @media (min-width: 1600px) and (max-width: 1700px) {
   .ml-1600-1700 {
     margin-left: -13rem !important;
@@ -69,9 +68,8 @@ body {
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .px-1800-1920 {
-    padding-left: -12rem;     /* corrected: no negative padding */
+    padding-left: -12rem; /* corrected: no negative padding */
     padding-right: 6.5rem;
-   
   }
 }
 
@@ -122,20 +120,18 @@ body {
   }
 }
 
-
 @media (min-width: 1000px) and (max-width: 1099px) {
   .custom-5-lines {
-     margin-left: 2.5rem !important;
+    margin-left: 2.5rem !important;
   }
 }
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-style {
-    margin-left: 28rem;          /* -ml-40 */
-            /* mt-6 */
-transform: translateY(-80px) !important;
-    font-size: 18px;              /* text-[14px] */
+    margin-left: 28rem; /* -ml-40 */
+    /* mt-6 */
+    transform: translateY(-80px) !important;
+    font-size: 18px; /* text-[14px] */
   }
 }
 
@@ -150,149 +146,119 @@ transform: translateY(-80px) !important;
   }
 }
 
-
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-qot {
-    margin-left: 18rem;          /* -ml-40 */
-            /* mt-6 */
-             /* text-[14px] */
+    margin-left: 18rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-com {
-    margin-left: 16rem;          /* -ml-40 */
-            /* mt-6 */
-             /* text-[14px] */
+    margin-left: 16rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-logo {
-    margin-left: 4rem;          /* -ml-40 */
-            /* mt-6 */
-             /* text-[14px] */
+    margin-left: 4rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-service {
-    margin-left: -1.9rem;          /* -ml-40 */
-            /* mt-6 */
-              /* text-[14px] */
+    margin-left: -1.9rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
-
-  
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-ser {
-    margin-left: -0.8rem;          /* -ml-40 */
-            /* mt-6 */
-              /* text-[14px] */
+    margin-left: -0.8rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
-
-  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-trust1 {
-    margin-left: 6.5rem;          /* -ml-40 */
-            /* mt-6 */
-              /* text-[14px] */
+    margin-left: 6.5rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
-
-  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-trust2 {
-    margin-left: 14rem;          /* -ml-40 */
-            /* mt-6 */
-              /* text-[14px] */
+    margin-left: 14rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
-
-  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .custom-tablet-trust3 {
-    margin-left: 2rem;          /* -ml-40 */
-            /* mt-6 */
-              /* text-[14px] */
+    margin-left: 2rem; /* -ml-40 */
+    /* mt-6 */
+    /* text-[14px] */
   }
-
-  
 }
 
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-1024 {
     transform: translateX(50px) translateY(-12px) !important;
-     margin-left:-1rem;
-   font-size: 20px !important;
+    margin-left: -1rem;
+    font-size: 20px !important;
   }
 }
 
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-service {
-   
-     margin-left:-0.1rem;
-  
+    margin-left: -0.1rem;
   }
 }
 
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-service {
-   
-     margin-left:-0.1rem;
-  
+    margin-left: -0.1rem;
   }
 }
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-ser {
-   
-     margin-left:-0.7rem;
-  
+    margin-left: -0.7rem;
   }
 }
-
 
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-trust {
-   
-     margin-left:-0.8rem;
-  
+    margin-left: -0.8rem;
   }
 }
 
-
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-trust8 {
-   
-     margin-left:-0.5rem;
-  
+    margin-left: -0.5rem;
   }
 }
 
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-trust9 {
-   
-     margin-left:0.8rem;
-  
+    margin-left: 0.8rem;
   }
 }
-
 
 @media (min-width: 1020px) and (max-width: 1030px) and (min-height: 1360px) and (max-height: 1370px) {
   .custom-ml-trust6 {
-   
-     margin-left:-0.8rem;
-  
+    margin-left: -0.8rem;
   }
 }
+
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-xxxl {
@@ -362,4 +328,8 @@ transform: translateY(-80px) !important;
     font-size: 28px;
    
   }
+
+@theme {
+  --breakpoint-3xl: 1800px;
+
 }
