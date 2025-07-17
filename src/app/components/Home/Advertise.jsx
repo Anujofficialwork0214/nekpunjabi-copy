@@ -437,17 +437,17 @@ const Advertise = () => {
 
               {/* Text */}
               <motion.div
-                className="text-center max-w-xl"
+                className="text-center max-w-xl "
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -40, transition: { duration: 1 } }}
                 transition={{ duration: 1 }}
               >
-                <h2 className="text-5xl lg:text-6xl xl:text-7xl font-semibold ">
+                <h2 className="text-5xl lg:text-6xl xl:text-7xl font-semibold  mb-4  ">
                   Stay <em>Informed</em>,<br />
-                  Stay <em>Inspired</em>
+                  Stay <em>Inspired </em>
                 </h2>
-                <span className="text-[#292929]  text-[16px] lg:text-lg 2xl:text-xl mt-4">
+                <span className="text-[#292929]  text-[16px] lg:text-lg 2xl:text-xl mt-6">
                   <p>Join our community for the latest market insights,</p>
                   <p>property showcases, and expert advice.</p>
 
