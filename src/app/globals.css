@@ -321,10 +321,15 @@ body {
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .service-text {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .heading-xxxl {
+    font-size: 20px;
+  }
+}
 @theme {
   --breakpoint-3xl: 1800px;
 }
