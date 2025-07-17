@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef,useState } from "react";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,7 +68,7 @@ const HomePage = () => {
       setMessage("Please select an investment size.");
       return;
     }
-    
+
 
     if (!captchaToken) {
       setMessage("Please complete the reCAPTCHA.");
@@ -111,9 +111,9 @@ const HomePage = () => {
     }
   };
 
-  
- useGSAP(() => {
-    
+
+  useGSAP(() => {
+
     const imageElement = imageComContainerRef.current?.querySelector('img') || imageComContainerRef.current;
 
     if (!firstSectionRef.current || !textRef.current || !imageElement) {
@@ -124,7 +124,7 @@ const HomePage = () => {
 
     gsap.set(textRef.current, { opacity: 1, yPercent: 0 });
     gsap.set(imageComContainerRef.current, { opacity: 30, yPercent: 80 });
-   const tl = gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: firstSectionRef.current,
         start: "top top",
@@ -132,11 +132,11 @@ const HomePage = () => {
         scrub: 1,
         pin: true,
         pinSpacing: true,
-     
-          
+
+
       },
-   });
-   tl.to(
+    });
+    tl.to(
       textRef.current,
       {
         opacity: 0,
@@ -146,7 +146,7 @@ const HomePage = () => {
       0
     );
 
-  
+
     tl.to(
       imageComContainerRef.current,
       {
@@ -161,184 +161,183 @@ const HomePage = () => {
 
   return (
     <>
-    
+
       <div ref={containerRef}>
-     
+
         <section
           ref={firstSectionRef}
           className="relative h-[100vh] flex flex-col items-center justify-center w-full overflow-hidden  bg-no-repeat bg-cover bg-center"
- 
+
           //  style={{ backgroundImage: "url('/bg.svg')" }}
-         
-     style={{
-  backgroundImage: `
+
+          style={{
+            backgroundImage: `
     linear-gradient(180deg, #99BAE5 100%, #99BAE5 100%, #99BAE5 100%),
     url('/bg.svg')
   `,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center'
-}}
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }}
 
         >
-          
-        
-  <motion.div
-  ref={textRef}
-  className="text-white z-10 relative pt-40 px-4"
-  initial="hidden"
-  animate="visible"
-  variants={{
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  }}
->
- <div className="flex flex-col md:flex-row items-start justify-between gap-5 2xl:gap-20 max-w-8xl mx-auto">
 
-    {/* Left Section - Heading */}
-    <motion.div
-      className="w-full md:w-1/2 text-center  md:text-left mt-20 lg:px-5 xl:px-4 2xl:px-4 "
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <h1 className="text-xl md:text-5xl lg:text-[64px] font-medium leading-tight">
-        Invest With <span className="italic font-bold">Confidence </span>
-        For Your Real Estate Future
-      </h1>
- 
-    </motion.div>
 
-    {/* Right Section - Form */}
-    <motion.div
-      className="w-full md:w-1/2  lg:px-4   xl:px-4 2xl:px-3 !font-[500] "
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.6 }}
+          <motion.div
+            ref={textRef}
+            className="text-white z-10 relative pt-40 px-4"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.3,
+                },
+              },
+            }}
+          >
+            <div className="flex flex-col md:flex-row items-start justify-between gap-5 2xl:gap-20 max-w-8xl mx-auto">
+
+              {/* Left Section - Heading */}
+              <motion.div
+                className="w-full md:w-1/2 text-center  md:text-left mt-20 lg:px-5 xl:px-4 2xl:px-4 "
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
               >
-                     <motion.p
-        className="mt-4 mb-6 text-[18px]"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        Submit your number to receive the best advice from our experts.
-      </motion.p>
-      {message && <p className="text-[#FFFFFFA3] text-sm mb-2">{message}</p>}
+                <h1 className="text-xl md:text-5xl lg:text-[64px] font-medium leading-tight">
+                  Invest With <span className="italic font-bold">Confidence </span>
+                  For Your Real Estate Future
+                </h1>
 
-      <form onSubmit={handleSubmit} className="space-y-4 ">
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => {
-            const input = e.target.value;
-            if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-              setName(input.replace(/^\s+/, ""));
-            }
-          }}
-          onBlur={() => setName((prev) => prev.trim())}
-          className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
-        />
+              </motion.div>
 
-        <input
-          type="text"
-          placeholder="Phone Number"
-          value={phone}
-          onChange={(e) => {
-            const input = e.target.value;
-            if (/^\d*$/.test(input)) {
-              setPhone(input);
-            }
-          }}
-          maxLength={10}
-           className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
-        />
+              {/* Right Section - Form */}
+              <motion.div
+                className="w-full md:w-1/2  lg:px-4   xl:px-4 2xl:px-3 !font-[500] "
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <motion.p
+                  className="mt-4 mb-6 text-[18px]"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  Submit your number to receive the best advice from our experts.
+                </motion.p>
+                {message && <p className="text-[#FFFFFFA3] text-sm mb-2">{message}</p>}
 
-        <input
-          type="text"
-          placeholder="City"
-          value={location}
-          onChange={(e) => {
-            const input = e.target.value;
-            if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
-              setLocation(input.replace(/^\s+/, ""));
-            }
-          }}
-          onBlur={() => setLocation((prev) => prev.trim())}
-           className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
-        />
+                <form onSubmit={handleSubmit} className="space-y-4 ">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => {
+                      const input = e.target.value;
+                      if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
+                        setName(input.replace(/^\s+/, ""));
+                      }
+                    }}
+                    onBlur={() => setName((prev) => prev.trim())}
+                    className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+                  />
 
+                  <input
+                    type="text"
+                    placeholder="Phone Number"
+                    value={phone}
+                    onChange={(e) => {
+                      const input = e.target.value;
+                      if (/^\d*$/.test(input)) {
+                        setPhone(input);
+                      }
+                    }}
+                    maxLength={10}
+                    className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+                  />
 
-<div className="text-white ">
-  <p className="mb-2 text-[18px]">Select Investment size</p>
-<div className="grid grid-cols-2 gap-3">
-  {[
-    { label: "<1 Cr", value: "< 1cr" },
-    { label: "1 - 3 Cr", value: "1 - 3 cr" },
-    { label: "3 - 5 Cr", value: "3 - 5 cr" },
-    { label: ">5 Cr", value: "> 5 cr" },
-  ].map((option) => (
-    <button
-      key={option.value}
-      onClick={() => setInvestmentSize(option.value)}
-      className={`rounded-xl border-2 px-4 py-4 text-center transition-all duration-200 ${
-        investmentSize === option.value
-          ? "bg-white text-black font-semibold"
-          : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
-      }`}
-    >
-      {option.label}
-    </button>
-  ))}
-</div>
+                  <input
+                    type="text"
+                    placeholder="City"
+                    value={location}
+                    onChange={(e) => {
+                      const input = e.target.value;
+                      if (input === "" || /^[A-Za-z\s]*$/.test(input)) {
+                        setLocation(input.replace(/^\s+/, ""));
+                      }
+                    }}
+                    onBlur={() => setLocation((prev) => prev.trim())}
+                    className="w-full rounded-2xl border border-white bg-transparent px-4 py-4 placeholder-[#FFFFFFA3] focus:placeholder-transparent text-white focus:outline-none focus:ring-2 focus:ring-white"
+                  />
 
 
-</div>
+                  <div className="text-white ">
+                    <p className="mb-2 text-[18px]">Select Investment size</p>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { label: "<1 Cr", value: "< 1cr" },
+                        { label: "1 - 3 Cr", value: "1 - 3 cr" },
+                        { label: "3 - 5 Cr", value: "3 - 5 cr" },
+                        { label: ">5 Cr", value: "> 5 cr" },
+                      ].map((option) => (
+                        <button
+                          key={option.value}
+                          onClick={() => setInvestmentSize(option.value)}
+                          className={`rounded-xl border-2 px-4 py-4 text-center transition-all duration-200 ${investmentSize === option.value
+                              ? "bg-white text-black font-semibold"
+                              : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
+                            }`}
+                        >
+                          {option.label}
+                        </button>
+                      ))}
+                    </div>
 
-        <div className="col-span-1 md:col-span-2 flex justify-center mb-2">
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            onChange={(token) => setCaptchaToken(token)}
-            onExpired={() => setCaptchaToken(null)}
-          />
-        </div>
 
-        <button
-          type="submit"
-          className="w-full py-3 rounded-2xl bg-white font-[500] font-medium hover:bg-blue-500 hover:text-black text-[#AECAEA] transition"
-          disabled={loading}
-        >
-          {loading ? "Sending..." : "Send message"}
-        </button>
-      </form>
-    </motion.div>
-  </div>
-</motion.div>
+                  </div>
+
+                  <div className="col-span-1 md:col-span-2 flex justify-center mb-2">
+                    <ReCAPTCHA
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                      onChange={(token) => setCaptchaToken(token)}
+                      onExpired={() => setCaptchaToken(null)}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full py-3 rounded-2xl bg-white font-[500] font-medium hover:bg-blue-500 hover:text-black text-[#AECAEA] transition"
+                    disabled={loading}
+                  >
+                    {loading ? "Sending..." : "Send message"}
+                  </button>
+                </form>
+              </motion.div>
+            </div>
+          </motion.div>
 
 
           <div
             ref={imageComContainerRef}
-           
-            className="absolute inset-0 z-0 flex items-center justify-center  "
-            
-           
+
+            className="absolute inset-0 z-50 flex items-center justify-center  "
+
+
           >
-      
+
             <ImageCom />
-          
+
           </div>
-          
-       
+
+
         </section>
-     {showPopup && <SuccessPopup onClose={() => setShowPopup(false)} />}
+        {showPopup && <SuccessPopup onClose={() => setShowPopup(false)} />}
       </div>
 
-    
+
     </>
   );
 };

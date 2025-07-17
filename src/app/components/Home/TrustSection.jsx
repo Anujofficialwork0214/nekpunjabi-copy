@@ -84,13 +84,13 @@ const TrustSection = () => {
   return (
 
     <section ref={mainRef} className="bg-white py-8 px-4 md:px-16 overflow-hidden">
-     <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
 
 
         <div className="flex-1 text-center lg:text-left">
           <h2
             ref={headingRef}
-            className="text-3xl lg:text-[64px] md:text-4xl font-semibold text-black custom-tablet-trust1 custom-ml-trust   "
+            className="text-3xl lg:text-[64px] md:text-4xl  2xl:text-[70px] font-semibold text-black custom-tablet-trust1 custom-ml-trust   "
           >
             Trust of more than <br />
             <span className='text-[#f7931e] '>9</span>   <span className="text-[#f7931e] italic font-bold"> lakh</span> people
@@ -98,63 +98,63 @@ const TrustSection = () => {
 
           <p
             ref={paragraphRef}
-            className="text-sm text-[#3D3D3D] mt-4 max-w-md mx-auto lg:mx-0 custom-tablet-trust1 custom-ml-trust "
+            className="text-sm  2xl:text-lg text-[#3D3D3D] mt-4 max-w-md 2xl:max-w-lg mx-auto lg:mx-0 custom-tablet-trust1 custom-ml-trust "
           >
             Experience the strength of a community that has placed their confidence in us.
           </p>
 
           {/* Stats */}
-     <div
-  ref={statsRef}
-  className="mt-30 mx-auto lg:mx-0 flex flex-col gap-y-8 px-1 custom-tablet-trust2 custom-ml-trust  "
->
-  <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14 " >
-    <h3 className="text-4xl !font-[500] text-[#292929] w-20">500+</h3>
-    <p className="text-sm italic text-[#292929] !font-[500] custom-ml-trust8 ">
-      Clients <br /> Served
-    </p>
-  </div>
+          <div
+            ref={statsRef}
+            className="mt-30 mx-auto lg:mx-0 flex flex-col gap-y-8 px-1 custom-tablet-trust2 custom-ml-trust  "
+          >
+            <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14 " >
+              <h3 className="text-4xl 2xl:text-5xl !font-[500] text-[#292929] w-20">500+</h3>
+              <p className="text-sm  2xl:text-base italic text-[#292929] !font-[500] custom-ml-trust8 ">
+                Clients <br /> Served
+              </p>
+            </div>
 
-  <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14">
-    <h3 className="text-4xl !font-[500] text-[#292929] w-20">10+</h3>
-    <p className="text-sm italic text-[#292929] !font-[500] custom-ml-trust9">
-      Years of <br /> Expertise
-    </p>
-  </div>
+            <div className="flex items-start w-[75%] border-b border-[#E0E0E0] pb-10 gap-x-14">
+              <h3 className="text-4xl 2xl:text-5xl  !font-[500] text-[#292929] w-20">10+</h3>
+              <p className="text-sm 2xl:text-base italic text-[#292929] !font-[500] custom-ml-trust9">
+                Years of <br /> Expertise
+              </p>
+            </div>
 
-  <div className="flex items-start gap-x-14">
-    <h3 className="text-4xl !font-[500] text-[#292929] w-20">400</h3>
-    <p className="text-sm italic text-[#292929] !font-[500] custom-ml-trust6">
-      Successful <br /> Investments
-    </p>
-  </div>
-</div>
+            <div className="flex items-start gap-x-14">
+              <h3 className="text-4xl 2xl:text-5xl !font-[500] text-[#292929] w-20">400</h3>
+              <p className="text-sm  2xl:text-base italic text-[#292929] !font-[500] custom-ml-trust6">
+                Successful <br /> Investments
+              </p>
+            </div>
+          </div>
 
 
         </div>
         <div
-  ref={imageRef}
-  className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[602px] custom-tablet-trust3"
->
-  <Image
-    src="/nek1.jpeg"
-    alt="Buildings"
-    width={581}
-    height={602}
-    className="object-cover w-full h-full"
-    draggable="false"
-  />
+          ref={imageRef}
+          className="relative rounded-2xl overflow-hidden shadow-lg w-[581px] h-[602px] custom-tablet-trust3"
+        >
+          <Image
+            src="/nek1.jpeg"
+            alt="Buildings"
+            width={581}
+            height={602}
+            className="object-cover w-full h-full"
+            draggable="false"
+          />
 
-  <div
-    ref={contactRef}
-    className="absolute top-4 right-4 sm:right-4 sm:left-auto sm:translate-x-0 left-1/2 -translate-x-1/2 bg-white text-[#525252] px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm font-medium"
-  >
-    <MdOutlineWifiCalling3 className="text-xl" />
-    <span>
-      Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
-    </span>
-  </div>
-</div>
+          <div
+            ref={contactRef}
+            className="absolute top-4 right-4 sm:right-4 sm:left-auto sm:translate-x-0 left-1/2 -translate-x-1/2 bg-white text-[#525252] px-4 py-2 rounded-lg shadow flex items-center gap-2 text-sm 2xl:text-lg font-medium"
+          >
+            <MdOutlineWifiCalling3 className="text-xl 2xl:text-2xl" />
+            <span>
+              Contact us now to get the <br className="hidden sm:block" /> best advice with our experts
+            </span>
+          </div>
+        </div>
 
       </div>
     </section>

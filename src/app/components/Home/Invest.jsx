@@ -145,7 +145,7 @@ const WhyInvest = () => {
         <div>
           <h2
             ref={headingRef}
-            className="text-[28px] md:text-5xl lg:text-6xl xl:text-7xl 3xl:text-8xl font-semibold lg:leading-[70px]  leading-[32px]"
+            className="text-[28px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold lg:leading-[70px] 2xl:leading-[108px]  leading-[32px]"
           >
             Why{' '}
             <span className="text-[#F58106] italic ">Invest</span>{' '}
@@ -153,7 +153,7 @@ const WhyInvest = () => {
           </h2>
           <p
             ref={paragraphRef}
-            className=" text-[12px] md:text-[14px] xl:text-[16px] 3xl:text-2xl text-[#FFFFFF] mt-4 md:mt-2 lg:pl-4  leading-[23px] "
+            className=" text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-2xl text-[#FFFFFF] mt-4 md:mt-2 lg:pl-4  leading-[23px] 2xl:leading-[33px] "
           >
             Discover why thousands trust Nek Punjabi Estate <br />
             for reliable and profitable real estate investments.
@@ -164,10 +164,10 @@ const WhyInvest = () => {
         <Link
           href="/getAdvice"
           ref={buttonRef}
-          className=" hidden md:flex items-center  justify-center gap-2 bg-white text-[#525252] font-medium md:h-[40px] md:w-[170px] lg:h-[52px] lg:w-[203px] rounded-[15.56px]  mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
+          className=" hidden md:flex items-center  justify-center gap-2 bg-white text-[#3D3D3D] hover:text-[#5C5C5C] font-medium md:h-[40px] md:w-[170px] lg:h-[52px] lg:w-[203px] rounded-[15.56px]  mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
         >
-          <FiPhoneCall className="text-sm  3xl:text-lg w-[14.35px] h-[13.62px] " />
-          <p className="text-[16px]  lg:text-[17.5px] 3xl:text-[20px]">Contact us now </p>
+          <FiPhoneCall className="text-sm  2xl:text-lg w-[14.35px] h-[13.62px] " />
+          <p className="text-[16px]  lg:text-[17.5px] 2xl:text-[20px]">Contact us now </p>
         </Link>
       </div>
       <div className="pt-12">

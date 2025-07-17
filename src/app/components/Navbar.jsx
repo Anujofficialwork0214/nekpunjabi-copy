@@ -204,7 +204,7 @@ const Navbar = () => {
               height={0}
               sizes="100vw"
               className="w-full h-auto"
-                draggable={false}
+              draggable={false}
             />
           </Link>
         </div>
@@ -238,7 +238,7 @@ const Navbar = () => {
 
         <Link href="/getAdvice" className="block sm:block md:hidden">
           <button
-            className={`bg-white text-[#99BDE5] text-[12px] font-medium px-4 py-2 rounded-[12px] shadow-sm hover:shadow-md transition ${pathname === "/getAdvice" ? "text-black" : "hover:text-black"
+            className={`bg-white text-[#759DD1] hover:text-[#94B3DB] text-[12px] font-medium px-4 py-2 rounded-[12px] shadow-sm hover:shadow-md transition ${pathname === "/getAdvice" ? "text-black" : "hover:text-black"
               }`}
           >
             Get advice

@@ -259,7 +259,6 @@ body {
   }
 }
 
-
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-xxxl {
     font-size: 25px;
@@ -268,38 +267,37 @@ body {
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-mll {
-      margin-left:28rem;
+    margin-left: 28rem;
   }
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-ml1l {
-      margin-left:30rem;
+    margin-left: 30rem;
   }
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-qut {
-      margin-left:32.1rem;
-       font-size: 18px
+    margin-left: 32.1rem;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-logo2 {
-      margin-left:16.3rem;
-       font-size: 19px
+    margin-left: 16.3rem;
+    font-size: 19px;
   }
   .shift-down {
-  transform: translateY(30px);
-}
-
+    transform: translateY(30px);
+  }
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .text-nek {
-      margin-left:32.1rem;
-       font-size: 30px;
+    margin-left: 32.1rem;
+    font-size: 30px;
   }
 }
 
@@ -312,24 +310,26 @@ body {
 @media (min-width: 1800px) and (max-width: 1920px) {
   .about-text {
     font-size: 40px;
-   
   }
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .about-ml {
     margin-left: 2.2rem;
-   
   }
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
   .service-text {
-    font-size: 28px;
-   
+    font-size: 32px;
   }
+}
 
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .heading-xxxl {
+    font-size: 20px;
+  }
+}
 @theme {
   --breakpoint-3xl: 1800px;
-
 }

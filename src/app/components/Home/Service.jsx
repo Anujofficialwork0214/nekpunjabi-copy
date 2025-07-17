@@ -370,7 +370,7 @@ const RealEstateServices = () => {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
                   viewport={{ once: true }}
-                  className="text-[10px] md:text-base mt-2 md:mt-0 !font-[500]"
+                  className="text-[10px] md:text-base heading-xxxl mt-2 md:mt-0 !font-[500]"
                 >
                   SERVICES
                 </motion.div>
@@ -381,7 +381,7 @@ const RealEstateServices = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
                 viewport={{ once: true }}
-                className="text-[24px] lg:text-4xl service-text  custom-tablet-service  custom-ml-service  font-medium lg:font-semibold text-white mb-4 !font-[600] mt-4 px-8 lg:px-0"
+                className="text-[24px] lg:text-4xl service-text  custom-tablet-service  custom-ml-service  font-medium lg:font-semibold text-white mb-4  mt-4 px-8 lg:px-0"
               >
                 Unlock Your Real Estate Potential
               </motion.h2>
@@ -392,7 +392,7 @@ const RealEstateServices = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
                 viewport={{ once: true }}
-                className="text-[14px] md:text-base px-6 md:px-0 text-white max-w-2xl"
+                className="text-[14px] md:text-base 2xl:text-lg px-6 md:px-0 text-white max-w-2xl 2xl:max-w-[750px]"
               >
                 From groundbreaking investments to crafting your dream home, we’re with you every step of the way.
               </motion.p>
@@ -426,8 +426,8 @@ const RealEstateServices = () => {
                   >
                     {/*  Marker */}
                     <div className="absolute left-3 top-2 w-3 h-3 bg-white rotate-45 z-10 " />
-                    <h3 className="text-white font-medium text-xl mb-2 italic !font-[600] -mt-2">{service.title}</h3>
-                    <p className="text-[12px] md:text-base  text-white max-w-xl">
+                    <h3 className="text-white font-medium text-xl 2xl:text-2xl mb-2 italic -mt-2">{service.title}</h3>
+                    <p className="text-[12px] md:text-base  2xl:text-lg text-white max-w-xl 2xl:max-w-2xl">
                       {service.description}
                     </p>
 
