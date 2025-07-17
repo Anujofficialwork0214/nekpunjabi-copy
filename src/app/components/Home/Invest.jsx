@@ -164,7 +164,7 @@ const WhyInvest = () => {
         <Link
           href="/getAdvice"
           ref={buttonRef}
-          className=" hidden md:flex items-center  justify-center gap-2 bg-white text-[#525252] font-medium md:h-[40px] md:w-[170px] lg:h-[52px] lg:w-[203px] rounded-[15.56px]  mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
+          className=" hidden md:flex items-center  justify-center gap-2 bg-white text-[#3D3D3D] hover:text-[#5C5C5C] font-medium md:h-[40px] md:w-[170px] lg:h-[52px] lg:w-[203px] rounded-[15.56px]  mt-6 md:mt-0 hover:bg-opacity-90 transition-colors"
         >
           <FiPhoneCall className="text-sm  3xl:text-lg w-[14.35px] h-[13.62px] " />
           <p className="text-[16px]  lg:text-[17.5px] 3xl:text-[20px]">Contact us now </p>

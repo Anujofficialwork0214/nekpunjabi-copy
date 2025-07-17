@@ -59,7 +59,7 @@ const Demo = () => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, delay: 4.5 }}
-              className="bg-white text-[#99BDE5]  font-[500] px-6 py-2 rounded-[16px] border-[0.25px] md:border-[2px] text-[14px] md:text-[20px] cursor-pointer"
+              className="bg-white text-[#759DD1] hover:text-[#94B3DB]  font-[500] px-6 py-2 rounded-[16px] border-[0.25px] md:border-[2px] text-[14px] md:text-[20px] cursor-pointer"
             >
               Contact Us
             </motion.button>
