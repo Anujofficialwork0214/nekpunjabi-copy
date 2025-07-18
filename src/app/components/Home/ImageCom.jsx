@@ -30,19 +30,18 @@ const ImageCom = () => {
         }}
       />
 
-<div className="relative w-[1920px] max-lg:w-[1024px] z-10 overflow-x-auto ml-95 max-lg:ml-30
-                [@media(min-width:1700px)]:ml-0 [@media(min-width:1921px)]:ml-95">
+<div className="relative w-[1920px]  4xl:w-[2400px]  max-lg:w-[1024px] z-10 mx-auto mt-50
+                ">
   <Image
     src="/2.png"
     alt="House"
     width={1920}
     height={800}
-    className="w-[1920px] max-lg:w-[1024px] h-auto object-cover 
-               [@media(max-width:1799px)]:w-[100%]"
+    className="w-[1920px] max-lg:w-[1024px]  4xl:w-[2400px]
+"
     draggable="false"
   />
 </div>
-
 
 
 
