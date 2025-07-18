@@ -343,7 +343,7 @@ const RealEstateServices = () => {
               willChange: 'transform, opacity',
               background: "linear-gradient(180deg, #568FC7 0%, #8DB5DB 56%, #C5E1FB 100%)"
             }}
-            className=" px-6 md:px-20 py-20 relative z-10  rounded-b-3xl pointer-events-none  w-full ">
+            className=" px-6 md:px-20 py-20 pt-60 relative z-10  rounded-b-3xl pointer-events-none  w-full ">
 
             <img
               src="/nek2.png"

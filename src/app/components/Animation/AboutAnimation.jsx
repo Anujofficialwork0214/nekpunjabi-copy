@@ -48,7 +48,7 @@ const AboutAnimation = () => {
     >
       <div
         ref={shrinkRef}
-        className="relative w-full min-h-screen flex items-center justify-center"
+        className="relative w-full min-h-screen flex items-center justify-center pt-52"
         style={{ willChange: 'transform, opacity' }}
       >
         {/* Orange gradient overlay, behind the content */}

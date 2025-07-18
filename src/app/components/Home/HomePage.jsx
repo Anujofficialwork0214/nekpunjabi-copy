@@ -185,7 +185,7 @@ const HomePage = () => {
 
           <motion.div
             ref={textRef}
-            className="text-white z-10 relative pt-40 px-4"
+            className="text-white z-20 relative pt-30  px-4"
             initial="hidden"
             animate="visible"
             variants={{
@@ -230,7 +230,7 @@ const HomePage = () => {
                 </motion.p>
                 {message && <p className="text-[#FFFFFFA3] text-sm mb-2">{message}</p>}
 
-                <form onSubmit={handleSubmit} className="space-y-4 ">
+                <form onSubmit={handleSubmit} className="space-y-4 z-50 ">
                   <input
                     type="text"
                     placeholder="Name"
@@ -284,11 +284,12 @@ const HomePage = () => {
                         { label: ">5 Cr", value: "> 5 cr" },
                       ].map((option) => (
                         <button
+                          type="button"
                           key={option.value}
                           onClick={() => setInvestmentSize(option.value)}
                           className={`rounded-xl border-2 px-4 py-4 text-center transition-all duration-200 ${investmentSize === option.value
-                              ? "bg-white text-black font-semibold"
-                              : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
+                            ? "bg-white text-black font-semibold"
+                            : "border-[#FFFFFFA3] text-[#FFFFFFA3] hover:border-white hover:text-white"
                             }`}
                         >
                           {option.label}
@@ -309,7 +310,7 @@ const HomePage = () => {
 
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-2xl bg-white font-[500] font-medium hover:bg-blue-500 hover:text-black text-[#AECAEA] transition"
+                    className="w-full py-3 rounded-2xl bg-white font-[500] hover:bg-blue-500 hover:text-black text-[#AECAEA] transition cursor-pointer"
                     disabled={loading}
                   >
                     {loading ? "Sending..." : "Send message"}
@@ -323,7 +324,7 @@ const HomePage = () => {
           <div
             ref={imageComContainerRef}
 
-            className="absolute inset-0 z-50 flex items-center justify-center w-full  "
+            className="absolute inset-0 z-90 flex items-center justify-center w-full pointer-events-none "
 
 
           >
