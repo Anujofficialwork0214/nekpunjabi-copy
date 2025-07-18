@@ -217,7 +217,7 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="w-full py-3 rounded-lg bg-white text-blue-400 font-semibold hover:bg-blue-500 hover:text-black transition cursor-pointer"
+              className="w-full py-3 rounded-lg bg-white text-[#AECAEA] font-semibold hover:bg-blue-500 hover:text-black transition cursor-pointer"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send message"}
