@@ -69,7 +69,7 @@ export default async function handler(req, res) {
   });
   const mailOptions = {
     from: process.env.ZOHO_EMAIL,
-    to: "priya.kumari@quadbtech.com",
+    to: process.env.ZOHO_EMAIL,
     subject: `📩 New Inquiry: ${location} | ${name} | nekPunjabi`,
     text: `Name: ${name}\nPhone: ${phone}\nLocation: ${location}\nInvestment Size: ${investmentSize}`,
     html: `
