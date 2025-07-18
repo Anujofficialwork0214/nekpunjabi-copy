@@ -323,7 +323,7 @@ const HomePage = () => {
           <div
             ref={imageComContainerRef}
 
-            className="absolute inset-0 z-50 flex items-center justify-center  "
+            className="absolute inset-0 z-50 flex items-center justify-center w-full  "
 
 
           >
