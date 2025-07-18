@@ -31,16 +31,18 @@ const ImageCom = () => {
       />
 
       {/* House Image */}
-      <div className="relative w-full z-10">
-        <Image
-          src="/2.png"
-          alt="House"
-          width={1920}
-          height={800}
-          className="w-full h-auto object-cover"
-          draggable="false"
-        />
-      </div>
+ <div className="relative w-[1920px] max-lg:w-[1024px] z-10 overflow-x-auto ml-95 max-lg:ml-30">
+  <Image
+    src="/2.png"
+    alt="House"
+    width={1920}
+    height={800}
+    className="w-[1920px] max-lg:w-[1024px] h-auto object-cover"
+    draggable="false"
+  />
+</div>
+
+
     </div>
   )
 }
