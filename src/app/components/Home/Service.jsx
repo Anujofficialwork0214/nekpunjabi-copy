@@ -541,30 +541,38 @@ const RealEstateServices = () => {
       const totalItems = serviceItemsRef.current.length;
       const totalScrollDistance = SCROLL_DISTANCE_PER_ITEM * (totalItems - 1);
 
-      serviceItemsRef.current.forEach((item, index) => {
-        const itemY = index * ITEM_VERTICAL_SPACE;
+ serviceItemsRef.current.forEach((item, index) => {
+  const itemY = index * ITEM_VERTICAL_SPACE;
+  const scrollOffset = itemY - diamondY;
+  const scrollPoint = scrollOffset / totalScrollDistance;
+  const clampedScrollPoint = Math.max(0, Math.min(scrollPoint, 1));
+  const moveY = diamondY - itemY;
 
-
-        const scrollOffset = itemY - diamondY;
-
-
-        const scrollPoint = scrollOffset / totalScrollDistance;
-
-
-        const clampedScrollPoint = Math.max(0, Math.min(scrollPoint, 1));
-
-        const moveY = diamondY - itemY;
-
-
-        tlRef.current.to(item, {
-          opacity: 0,
-          y: moveY,
-          ease: 'power1.out',
-          duration: 0.4,
-        }, clampedScrollPoint);
-
-        console.log(`Item ${index} → y: ${moveY}, scrollPoint: ${clampedScrollPoint}`);
-      });
+  if (index < serviceItemsRef.current.length - 2) {
+   
+    tlRef.current.to(item, {
+      opacity: 0,
+      y: moveY,
+      ease: 'power1.out',
+      duration: 0.6,
+    }, clampedScrollPoint);
+  } else if (index === 5) {
+   
+    tlRef.current.to(item, {
+      y: moveY,    
+      ease: 'power1.out',
+      duration: 0.8,
+    }, clampedScrollPoint);
+  } else {
+    
+    tlRef.current.to(item, {
+      y: moveY * 0.05,
+      opacity: 1,
+      ease: 'power1.out',
+      duration: 0.5,
+    }, clampedScrollPoint);
+  }
+});
 
 
 
@@ -699,3 +707,4 @@ const RealEstateServices = () => {
 };
 
 export default RealEstateServices;
+
